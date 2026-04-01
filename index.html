@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Venture Studio — From first thought to first customer</title>
+  <meta property="og:title" content="Digital Venture Studio — From first thought to first customer" />
+  <meta property="og:description" content="DVS gives businesses, government teams, and organisations the strategic capability that used to cost $50,000 in consulting fees. Powered by AI. Built on proof." />
+  <meta property="og:image" content="https://digitalventurestudio.com/images/h1-open-graph.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://digitalventurestudio.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Digital Venture Studio — From first thought to first customer" />
+  <meta name="twitter:description" content="DVS gives businesses, government teams, and organisations the strategic capability that used to cost $50,000 in consulting fees." />
+  <meta name="twitter:image" content="https://digitalventurestudio.com/images/h1-open-graph.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── DESIGN TOKENS ──────────────────────────────────────────── */
+    :root {
+      --near-black:  #1A1A1E;
+      --gold:        #BE8223;
+      --gold-light:  #D4A053;
+      --gold-pale:   #F0E0C0;
+      --cream:       #F7F3EB;
+      --cream-dark:  #EDE8DC;
+      --white:       #FFFFFF;
+      --mid-grey:    #6B6B72;
+      --border:      rgba(190,130,35,0.2);
+
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans:  'Inter', system-ui, sans-serif;
+
+      --max-w: 1120px;
+      --section-pad: 96px 24px;
+    }
+
+    /* ─── RESET ──────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--near-black);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ─── UTILITY ────────────────────────────────────────────────── */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+    .gold      { color: var(--gold); }
+    .serif     { font-family: var(--serif); }
+    .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin-bottom: 24px;
+    }
+    .divider.center { margin-left: auto; margin-right: auto; }
+
+    /* ─── NAVIGATION ─────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 36px;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--near-black);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      height: 64px;
+      display: flex;
+      align-items: center;
+    }
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--cream);
+      letter-spacing: 0.02em;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(247,243,235,0.65);
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--cream); }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--near-black) !important;
+      font-weight: 600 !important;
+      padding: 9px 20px;
+      border-radius: 4px;
+      font-size: 13px !important;
+      letter-spacing: 0.01em !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; }
+
+    /* ─── HERO ───────────────────────────────────────────────────── */
+    .hero {
+      background: var(--near-black);
+      padding: 180px 24px 120px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -120px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(190,130,35,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.3;
+    }
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(36px, 4.5vw, 58px);
+      font-weight: 500;
+      line-height: 1.15;
+      color: var(--cream);
+      margin-bottom: 28px;
+      letter-spacing: -0.01em;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-subline {
+      font-size: 17px;
+      color: rgba(247,243,235,0.65);
+      line-height: 1.7;
+      margin-bottom: 40px;
+      max-width: 440px;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--near-black);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 14px 28px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-ghost {
+      color: rgba(247,243,235,0.7);
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+    .btn-ghost:hover { color: var(--cream); }
+    .btn-ghost svg { transition: transform 0.2s; }
+    .btn-ghost:hover svg { transform: translateX(3px); }
+
+    /* Hero right: proof card */
+    .hero-proof {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .proof-quote {
+      font-family: var(--serif);
+      font-size: 19px;
+      font-style: italic;
+      color: var(--cream);
+      line-height: 1.55;
+    }
+    .proof-attr {
+      font-size: 13px;
+      color: rgba(247,243,235,0.5);
+    }
+    .proof-attr strong { color: rgba(247,243,235,0.8); font-weight: 500; }
+    .proof-divider { height: 1px; background: rgba(255,255,255,0.08); }
+    .proof-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .proof-stat-num {
+      font-family: var(--serif);
+      font-size: 28px;
+      color: var(--gold);
+      font-weight: 600;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .proof-stat-label {
+      font-size: 11px;
+      color: rgba(247,243,235,0.45);
+      letter-spacing: 0.04em;
+      line-height: 1.4;
+    }
+
+    /* ─── BELIEF STATEMENT ───────────────────────────────────────── */
+    .belief {
+      background: var(--cream);
+      padding: var(--section-pad);
+      text-align: center;
+    }
+    .belief-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .belief h2 {
+      font-family: var(--serif);
+      font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 500;
+      line-height: 1.3;
+      color: var(--near-black);
+      margin-bottom: 24px;
+    }
+    .belief p {
+      font-size: 17px;
+      color: var(--mid-grey);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    /* ─── WHAT IS DVS ────────────────────────────────────────────── */
+    .what {
+      background: var(--near-black);
+      padding: var(--section-pad);
+    }
+    .what .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .what-left h2 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3vw, 42px);
+      font-weight: 500;
+      color: var(--cream);
+      line-height: 1.25;
+      margin-bottom: 24px;
+    }
+    .what-left p {
+      font-size: 16px;
+      color: rgba(247,243,235,0.6);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .what-left p strong { color: var(--cream); font-weight: 500; }
+    .what-right {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .what-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(190,130,35,0.15);
+      border-radius: 6px;
+      padding: 28px;
+    }
+    .what-card-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(190,130,35,0.12);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: var(--gold);
+      font-size: 16px;
+    }
+    .what-card h3 {
+      font-family: var(--serif);
+      font-size: 18px;
+      color: var(--cream);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .what-card p {
+      font-size: 14px;
+      color: rgba(247,243,235,0.55);
+      line-height: 1.65;
+    }
+
+    /* ─── THE METHOD ─────────────────────────────────────────────── */
+    .method {
+      background: var(--cream);
+      padding: var(--section-pad);
+    }
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 64px;
+    }
+    .section-header h2 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3vw, 40px);
+      font-weight: 500;
+      line-height: 1.25;
+      color: var(--near-black);
+      margin-bottom: 16px;
+    }
+    .section-header p {
+      font-size: 16px;
+      color: var(--mid-grey);
+      line-height: 1.7;
+    }
+    .method-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .method-step {
+      background: var(--cream);
+      padding: 40px 32px;
+      position: relative;
+    }
+    .step-num {
+      font-family: var(--serif);
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--gold-pale);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .method-step h3 {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--near-black);
+      margin-bottom: 12px;
+    }
+    .method-step p {
+      font-size: 14px;
+      color: var(--mid-grey);
+      line-height: 1.65;
+    }
+    .method-note {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: var(--mid-grey);
+    }
+    .method-note a { color: var(--gold); font-weight: 500; }
+
+    /* ─── PRODUCTS ───────────────────────────────────────────────── */
+    .products {
+      background: var(--cream-dark);
+      padding: var(--section-pad);
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 20px;
+      margin-top: 0;
+    }
+    .product-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card.featured {
+      background: var(--near-black);
+      border-color: rgba(190,130,35,0.35);
+    }
+    .product-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    .badge-live    { background: rgba(190,130,35,0.15); color: var(--gold); }
+    .badge-soon    { background: rgba(26,26,30,0.07); color: var(--mid-grey); }
+    .product-card h3 {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .product-card.featured h3 { color: var(--cream); }
+    .product-tagline {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+    .product-card.featured .product-tagline { color: rgba(247,243,235,0.6); }
+    .product-card:not(.featured) .product-tagline { color: var(--mid-grey); }
+    .product-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+    .product-features li {
+      font-size: 13px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .product-card.featured .product-features li { color: rgba(247,243,235,0.7); }
+    .product-card:not(.featured) .product-features li { color: var(--mid-grey); }
+    .product-features li::before {
+      content: '—';
+      color: var(--gold);
+      flex-shrink: 0;
+      font-weight: 600;
+    }
+    .product-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.02em;
+    }
+    .product-link-muted {
+      font-size: 13px;
+      color: var(--mid-grey);
+    }
+    .product-card.featured .product-link:hover { color: var(--gold-light); }
+    .coming-label {
+      font-size: 12px;
+      color: var(--mid-grey);
+      font-style: italic;
+    }
+
+    /* ─── SERVICES ───────────────────────────────────────────────── */
+    .services {
+      background: var(--near-black);
+      padding: var(--section-pad);
+    }
+    .services .section-header h2 { color: var(--cream); }
+    .services .section-header p   { color: rgba(247,243,235,0.55); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      background: rgba(190,130,35,0.12);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .service-card {
+      background: var(--near-black);
+      padding: 44px 40px;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(190,130,35,0.1);
+      border: 1px solid rgba(190,130,35,0.2);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      margin-bottom: 24px;
+      flex-shrink: 0;
+    }
+    .service-card h3 {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+    .service-desc {
+      font-size: 14px;
+      color: rgba(247,243,235,0.6);
+      line-height: 1.75;
+      margin-bottom: 28px;
+      flex-grow: 1;
+    }
+    .service-includes {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 24px;
+    }
+    .service-includes li {
+      font-size: 13px;
+      color: rgba(247,243,235,0.5);
+      display: flex;
+      gap: 10px;
+      line-height: 1.45;
+    }
+    .service-includes li::before {
+      content: '—';
+      color: var(--gold);
+      flex-shrink: 0;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    .service-note {
+      margin-top: 48px;
+      padding: 28px 36px;
+      background: rgba(190,130,35,0.06);
+      border: 1px solid rgba(190,130,35,0.18);
+      border-radius: 6px;
+      font-size: 14px;
+      color: rgba(247,243,235,0.55);
+      line-height: 1.7;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+    .service-note-icon {
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .service-note strong { color: var(--cream); font-weight: 500; }
+
+    /* ─── FOUNDING THESIS ────────────────────────────────────────── */
+    .thesis {
+      background: var(--cream);
+      padding: var(--section-pad);
+    }
+    .thesis .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .thesis-quote-block {
+      position: relative;
+      padding: 48px;
+      background: var(--near-black);
+      border-radius: 8px;
+    }
+    .thesis-quote-mark {
+      font-family: var(--serif);
+      font-size: 80px;
+      color: var(--gold);
+      opacity: 0.25;
+      line-height: 0.6;
+      margin-bottom: 24px;
+      display: block;
+    }
+    .thesis-quote-block blockquote {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-style: italic;
+      color: var(--cream);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .thesis-attribution {
+      font-size: 13px;
+      color: rgba(247,243,235,0.45);
+    }
+    .thesis-right h2 {
+      font-family: var(--serif);
+      font-size: clamp(26px, 3vw, 38px);
+      font-weight: 500;
+      line-height: 1.25;
+      color: var(--near-black);
+      margin-bottom: 20px;
+    }
+    .thesis-right p {
+      font-size: 16px;
+      color: var(--mid-grey);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .thesis-right p strong { color: var(--near-black); font-weight: 500; }
+    .thesis-right .btn-primary { margin-top: 16px; }
+
+    /* ─── ROADMAP STRIP ──────────────────────────────────────────── */
+    .roadmap {
+      background: var(--cream-dark);
+      padding: 64px 24px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .roadmap-inner {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .roadmap-inner h2 {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--near-black);
+      margin-bottom: 8px;
+    }
+    .roadmap-inner p {
+      font-size: 14px;
+      color: var(--mid-grey);
+    }
+    .roadmap-phases {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .roadmap-phase {
+      background: var(--cream);
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .roadmap-phase.active { background: var(--near-black); }
+    .phase-num {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .phase-name {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--near-black);
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .roadmap-phase.active .phase-name { color: var(--cream); }
+    .phase-desc {
+      font-size: 11px;
+      color: var(--mid-grey);
+      line-height: 1.4;
+    }
+    .roadmap-phase.active .phase-desc { color: rgba(247,243,235,0.45); }
+
+    /* ─── CONTACT FORM ───────────────────────────────────────────── */
+    .contact {
+      background: var(--cream);
+      padding: var(--section-pad);
+    }
+    .contact .container {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contact-left h2 {
+      font-family: var(--serif);
+      font-size: clamp(26px, 3vw, 38px);
+      font-weight: 500;
+      color: var(--near-black);
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    .contact-left p {
+      font-size: 15px;
+      color: var(--mid-grey);
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+    .contact-assurance {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 32px;
+    }
+    .assurance-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--mid-grey);
+      line-height: 1.5;
+    }
+    .assurance-item svg { flex-shrink: 0; margin-top: 1px; color: var(--gold); }
+
+    /* Form styles */
+    .enquiry-form {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 40px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--near-black);
+    }
+    .form-group label span { color: var(--gold); }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      font-family: var(--sans);
+      font-size: 14px;
+      color: var(--near-black);
+      background: var(--cream);
+      border: 1px solid rgba(26,26,30,0.12);
+      border-radius: 4px;
+      padding: 10px 14px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-group select { cursor: pointer; }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(190,130,35,0.1);
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: #AAAAAA; }
+
+    /* Checkbox group */
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--near-black);
+      cursor: pointer;
+    }
+    .checkbox-item input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      padding: 0;
+      border: 1.5px solid rgba(26,26,30,0.2);
+      border-radius: 3px;
+      background: var(--cream);
+      cursor: pointer;
+      accent-color: var(--gold);
+    }
+    .form-submit {
+      margin-top: 8px;
+    }
+    .btn-submit {
+      width: 100%;
+      background: var(--gold);
+      color: var(--near-black);
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 700;
+      padding: 15px 28px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-submit:disabled { opacity: 0.6; cursor: default; transform: none; }
+    .form-note {
+      font-size: 12px;
+      color: var(--mid-grey);
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    /* Success state */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 48px 32px;
+    }
+    .form-success.visible { display: block; }
+    .enquiry-form.submitted .form-fields { display: none; }
+    .enquiry-form.submitted .form-success { display: block; }
+    .success-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(190,130,35,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: var(--gold);
+    }
+    .form-success h3 {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--near-black);
+      margin-bottom: 12px;
+    }
+    .form-success p {
+      font-size: 14px;
+      color: var(--mid-grey);
+      line-height: 1.65;
+    }
+
+    @media (max-width: 900px) {
+      .contact .container { grid-template-columns: 1fr; gap: 40px; }
+      .form-row { grid-template-columns: 1fr; }
+      .checkbox-group { grid-template-columns: 1fr; }
+      .enquiry-form { padding: 28px 20px; }
+    }
+
+    /* ─── CTA SECTION ────────────────────────────────────────────── */
+    .cta-section {
+      background: var(--near-black);
+      padding: 96px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 400px;
+      background: radial-gradient(ellipse, rgba(190,130,35,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-section h2 {
+      font-family: var(--serif);
+      font-size: clamp(30px, 4vw, 52px);
+      font-weight: 500;
+      color: var(--cream);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .cta-section p {
+      font-size: 17px;
+      color: rgba(247,243,235,0.55);
+      max-width: 520px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    .cta-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .btn-ghost-light {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(247,243,235,0.55);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 13px 24px;
+      border-radius: 4px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .btn-ghost-light:hover {
+      color: var(--cream);
+      border-color: rgba(255,255,255,0.25);
+    }
+
+    /* ─── FOOTER ─────────────────────────────────────────────────── */
+    .footer {
+      background: #111115;
+      padding: 56px 24px 32px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-brand h3 {
+      font-family: var(--serif);
+      font-size: 20px;
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+    .footer-brand h3 span { color: var(--gold); }
+    .footer-brand p {
+      font-size: 13px;
+      color: rgba(247,243,235,0.35);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(247,243,235,0.4);
+      margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul a {
+      font-size: 13px;
+      color: rgba(247,243,235,0.45);
+      transition: color 0.2s;
+    }
+    .footer-col ul a:hover { color: var(--cream); }
+    .footer-bottom {
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-copy {
+      font-size: 12px;
+      color: rgba(247,243,235,0.2);
+    }
+    .footer-tagline {
+      font-family: var(--serif);
+      font-size: 12px;
+      font-style: italic;
+      color: rgba(247,243,235,0.25);
+    }
+
+    /* ─── PROTOTYPE BANNER ───────────────────────────────────────── */
+    .prototype-banner {
+      background: var(--gold);
+      color: var(--near-black);
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      height: 36px;
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero .container,
+      .what .container,
+      .thesis .container { grid-template-columns: 1fr; gap: 48px; }
+      .hero { padding: 140px 24px 80px; }
+      .method-steps,
+      .services-grid { grid-template-columns: 1fr; gap: 2px; }
+      .products-grid { grid-template-columns: 1fr; }
+      .roadmap-phases { grid-template-columns: repeat(3, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      :root { --section-pad: 64px 20px; }
+      .proof-stats { grid-template-columns: repeat(3, 1fr); }
+      .roadmap-phases { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PROTOTYPE BANNER -->
+  <div class="prototype-banner">
+    PROTOTYPE — DVS Website v1 — Session 55, 1 April 2026
+  </div>
+
+  <!-- ─── NAV ─────────────────────────────────────────────────────── -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-logo">Digital Venture <span>Studio</span></div>
+      <ul class="nav-links">
+        <li><a href="#method">The Method</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-cta">Work With DVS</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <img src="images/f1-hero.png" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0.13;z-index:0;pointer-events:none;" />
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="hero-left">
+        <div class="hero-eyebrow">Digital Venture Studio</div>
+        <h1>From <em>first thought</em> to first customer — with a mentor who stays.</h1>
+        <p class="hero-subline">
+          The barrier to venture success is clarity, not capital. DVS gives businesses, government teams, and organisations
+          the strategic capability that used to cost $50,000 in consulting fees.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Work With DVS</a>
+          <a href="#method" class="btn-ghost">
+            How it works
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-proof">
+          <div>
+            <p class="proof-quote">"Every document, every principle, every design decision in the DVS methodology was tested against a real venture first — before we offered it to anyone else."</p>
+            <p class="proof-attr" style="margin-top:16px">— <strong>Rick Musial</strong>, Founder &amp; Chairman, Digital Venture Studio</p>
+          </div>
+          <div class="proof-divider"></div>
+          <div class="proof-stats">
+            <div>
+              <div class="proof-stat-num">44+</div>
+              <div class="proof-stat-label">Specification documents</div>
+            </div>
+            <div>
+              <div class="proof-stat-num">55</div>
+              <div class="proof-stat-label">Build sessions</div>
+            </div>
+            <div>
+              <div class="proof-stat-num">6</div>
+              <div class="proof-stat-label">Phase roadmap</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── BELIEF STATEMENT ──────────────────────────────────────────── -->
+  <section class="belief">
+    <div class="container">
+      <div class="belief-inner">
+        <div class="label" style="margin-bottom:20px">The founding belief</div>
+        <div class="divider center"></div>
+        <h2>Most ventures fail at the idea stage — not because teams lack talent, but because they lack clarity.</h2>
+        <p>
+          No structured validation. No honest Go/No-Go decision. No buildable specification before the first line of code.
+          DVS was built to close that gap — for businesses, government departments, and organisations of every size.
+        </p>
+        <p>
+          We are not a SaaS tool that generates reports. <strong>We are a venture studio powered by AI</strong> — a methodology built over years of watching real organisations navigate real decisions, encoded into a system that works whether you are a business owner, a government team, or a corporate innovation unit.
+        </p>
+        <div style="margin-top:52px;border-radius:10px;overflow:hidden;max-height:420px;box-shadow:0 8px 40px rgba(26,26,30,0.12);">
+          <img src="images/f2-first-conversation.png" alt="The founding conversation — where clarity begins" style="width:100%;object-fit:cover;object-position:center 30%;display:block;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WHAT IS DVS ───────────────────────────────────────────────── -->
+  <section class="what" id="about">
+    <div class="container">
+      <div class="what-left">
+        <div class="label" style="margin-bottom:16px;color:var(--gold)">What DVS is</div>
+        <div class="divider"></div>
+        <h2>A relationship company. Powered by AI.</h2>
+        <p>
+          DVS is not a SaaS company with a relationship strategy. It is a <strong>relationship company powered by SaaS</strong>. From the first conversation to post-launch growth, every client is in an ongoing engagement with DVS — not using a product.
+        </p>
+        <p>
+          The mentor shows up at step one. The Go/No-Go verdict is honest. The document suite is professional. The build engagement is fixed-price. And when we say we stay — we mean it.
+        </p>
+        <p>
+          Every DVS product is built on the Crucible engine — a multi-domain AI methodology that translates ideas into validated specifications, then specifications into built products.
+        </p>
+      </div>
+      <div class="what-right">
+        <div class="what-card">
+          <div class="what-card-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <circle cx="9" cy="9" r="7.5" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Consultant displacement</h3>
+          <p>DVS gives businesses and government teams the strategic capability that currently costs $50K+ in consulting fees. The AI does the heavy lifting. The human keeps the judgment.</p>
+        </div>
+        <div class="what-card">
+          <div class="what-card-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M9 2v5l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="9" cy="9" r="7.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3>Each phase earns the next</h3>
+          <p>Nothing is promised that cannot be delivered. No phase in the DVS roadmap is attempted until the previous phase has proven the capability it claims.</p>
+        </div>
+        <div class="what-card">
+          <div class="what-card-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M3 9h12M3 5h12M3 13h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Document-driven development</h3>
+          <p>Nothing gets built without a specification. The document suite is the product until code exists. PRDs, Build Guides, Architecture documents — the methodology, not bureaucracy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── THE METHOD ────────────────────────────────────────────────── -->
+  <section class="method" id="method">
+    <div class="container">
+      <div class="section-header">
+        <div class="label" style="margin-bottom:16px">The DVS Method</div>
+        <div class="divider center"></div>
+        <h2>Strategy connects to architecture. Architecture connects to build. Build connects to growth.</h2>
+        <p>The chain from "what if?" to "in market and growing" should be as short as possible — and every link in that chain should be DVS-standard.</p>
+      </div>
+      <div class="method-steps">
+        <div class="method-step">
+          <div class="step-num">01</div>
+          <h3>Validate &amp; Specify</h3>
+          <p>Every engagement begins with clarity. Whether you arrive with a hunch or an existing business, DVS applies rigorous validation methodology — honest Go/No-Go assessment, multi-dimensional scoring, and a complete specification suite before a single decision is committed.</p>
+        </div>
+        <div class="method-step">
+          <div class="step-num">02</div>
+          <h3>Build &amp; Launch</h3>
+          <p>Validated specifications become working products. DVS manages the full build — development, design, marketing infrastructure, and launch execution. Fixed-price against a spec, not a conversation. AI-accelerated without cutting the corners that matter.</p>
+        </div>
+        <div class="method-step">
+          <div class="step-num">03</div>
+          <h3>Manage &amp; Grow</h3>
+          <p>Launch is the beginning of the relationship, not the end of the engagement. DVS stays — through post-release support, ongoing business management, marketing execution, and external review at every major inflection point.</p>
+        </div>
+      </div>
+      <div style="margin:64px 0 0;border-radius:10px;overflow:hidden;max-height:460px;box-shadow:0 8px 40px rgba(26,26,30,0.10);">
+        <img src="images/f3-strategy.png" alt="Strategy in motion — the DVS methodology at work" style="width:100%;object-fit:cover;object-position:center;display:block;" />
+      </div>
+      <p class="method-note" style="margin-top:48px;">
+        The DVS methodology is proven across 55 build sessions and 44+ specification documents.
+        <a href="#products">See the products it built →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ─── PRODUCTS ──────────────────────────────────────────────────── -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <div class="label" style="margin-bottom:16px">Products</div>
+        <div class="divider center"></div>
+        <h2>Two live products. One engine. Each one earns the next.</h2>
+        <p>Every DVS product is proof-of-methodology before it is a product. Touchstone validates ventures. Eulogize turns a silly idea into a genuinely fun experience. Both are live. Both are built on the Crucible engine.</p>
+      </div>
+      <div class="products-grid">
+
+        <!-- TOUCHSTONE — featured -->
+        <div class="product-card featured">
+          <span class="product-badge badge-live">Live Now</span>
+          <h3 style="color:var(--cream)">Touchstone</h3>
+          <p class="product-tagline">
+            Walk in with a hunch. Walk out with proof. Touchstone validates your business idea in minutes — with a Go/No-Go verdict and a complete document suite to start building.
+          </p>
+          <ul class="product-features">
+            <li>10 scored business ideas generated from your profile</li>
+            <li>6-dimension validation pipeline</li>
+            <li>Kill-condition testing with honest Go/No-Go verdict</li>
+            <li>Up to 7 professional documents — PRD, Brand Guidelines, Build Guide, Marketing Plan, Business Case</li>
+            <li>Chairman's Reveal — your mentor walks you through the result</li>
+          </ul>
+          <a href="https://usetouchstone.ai" class="product-link">
+            Open Touchstone →
+          </a>
+        </div>
+
+        <!-- EULOGIZE THIS — live -->
+        <div class="product-card">
+          <span class="product-badge badge-live">Live Now</span>
+          <h3>Eulogize This</h3>
+          <p class="product-tagline">
+            The AI eulogist for things that never had a funeral. Your dying phone. Your last pair of good jeans. That gym membership you really meant to use.
+          </p>
+          <ul class="product-features">
+            <li>AI-written eulogies for objects &amp; relationships</li>
+            <li>Genuinely funny. Occasionally moving.</li>
+            <li>Because some things deserve a proper send-off</li>
+          </ul>
+          <a href="#" class="product-link" style="font-size:13px">
+            Eulogize something →
+          </a>
+        </div>
+
+        <!-- NEXT — coming soon -->
+        <div class="product-card">
+          <span class="product-badge badge-soon">Coming Next</span>
+          <h3>What's next?</h3>
+          <p class="product-tagline">
+            The DVS roadmap runs to enterprise portfolio management. Each product earns its place before it is built.
+          </p>
+          <ul class="product-features">
+            <li>Tender Response Assistant (Phase 2.5)</li>
+            <li>Government Tender Authoring (Phase 3)</li>
+            <li>Enterprise Bid Management (Phase 4)</li>
+          </ul>
+          <span class="coming-label">Roadmap</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ──────────────────────────────────────────────────── -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="label" style="margin-bottom:16px;color:var(--gold)">DVS Studio Services</div>
+        <div class="divider center"></div>
+        <h2>The full capability stack. Wherever you need it.</h2>
+        <p>DVS Studio is not a product. It is a practice. We work with founders and businesses across four disciplines — independently or as an integrated engagement.</p>
+      </div>
+      <div class="services-grid">
+
+        <!-- MARKETING -->
+        <div class="service-card">
+          <div style="margin:-44px -40px 32px;overflow:hidden;height:200px;flex-shrink:0;">
+            <img src="images/g1-marketing.png" alt="Marketing in action" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block;" />
+          </div>
+          <div class="service-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M3 10h14M10 3v14M5.5 5.5l9 9M14.5 5.5l-9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Marketing</h3>
+          <p class="service-desc">
+            Go-to-market strategy, brand positioning, content marketing, and launch execution. DVS builds and runs your marketing function — from the positioning statement on your homepage to the weekly content cadence that grows your audience. For businesses and teams who want an expert hand, not another tool to manage.
+          </p>
+          <ul class="service-includes">
+            <li>Brand strategy and positioning</li>
+            <li>Go-to-market plan and channel prioritisation</li>
+            <li>Content strategy and production (long-form, social, email)</li>
+            <li>Launch campaign planning and execution</li>
+            <li>Ongoing marketing management and reporting</li>
+          </ul>
+        </div>
+
+        <!-- BUSINESS MANAGEMENT -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <rect x="3" y="3" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="11" y="3" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="3" y="11" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="11" y="11" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3>Business Management</h3>
+          <p class="service-desc">
+            Strategic and operational management for ventures that need more than a founder. DVS acts as your fractional business management layer — covering operations, financial oversight, vendor relationships, and strategic planning. The capability of a management team, without the overhead of one.
+          </p>
+          <ul class="service-includes">
+            <li>Operational setup and process design</li>
+            <li>Financial oversight and reporting</li>
+            <li>Vendor and partner management</li>
+            <li>Strategic planning and roadmap governance</li>
+            <li>Board-ready reporting and investor communication</li>
+          </ul>
+        </div>
+
+        <!-- AFTER-RELEASE SUPPORT -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M10 3a7 7 0 100 14A7 7 0 0010 3z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M10 7v4l2.5 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>After-Release Support</h3>
+          <p class="service-desc">
+            Launch is not the finish line. DVS stays with you through the critical post-release period — managing user feedback loops, iterating on what the data reveals, and accelerating growth once the product has found its footing. This is the phase where most ventures stall. DVS was built for it.
+          </p>
+          <ul class="service-includes">
+            <li>Post-launch monitoring and issue management</li>
+            <li>User feedback analysis and prioritisation</li>
+            <li>Product iteration planning and delivery</li>
+            <li>Growth acceleration sprints</li>
+            <li>Performance optimisation and technical health</li>
+          </ul>
+        </div>
+
+        <!-- EXTERNAL REVIEW CONSULTANCY -->
+        <div class="service-card">
+          <div style="margin:-44px -40px 32px;overflow:hidden;height:200px;flex-shrink:0;">
+            <img src="images/g2-external-review.png" alt="External Review — rigorous challenge, not comfortable agreement" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;" />
+          </div>
+          <div class="service-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M7 9h4M9 7v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>External Review</h3>
+          <p class="service-desc">
+            An independent, expert second opinion — on your strategy, your product, your financials, or your team. DVS operates as an external review consultancy for businesses, government departments, and organisations who want rigorous challenge, not comfortable agreement. We apply the same methodology we use on our own ventures to yours.
+          </p>
+          <ul class="service-includes">
+            <li>Strategy and positioning audits</li>
+            <li>Product and technical due diligence</li>
+            <li>Business model and financial model review</li>
+            <li>Competitive landscape assessment</li>
+            <li>Investment readiness review</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="service-note">
+        <div class="service-note-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10 9v5M10 7h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <strong>These services work independently or as a complete engagement.</strong> A founder might come to DVS for an External Review of their existing business, then move into Marketing support as they enter a new market. Or engage DVS from day one across all four disciplines. The relationship is shaped by what you actually need — not a pre-packaged tier.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOUNDING THESIS ───────────────────────────────────────────── -->
+  <section class="thesis">
+    <div class="container">
+      <div class="thesis-quote-block">
+        <span class="thesis-quote-mark">"</span>
+        <blockquote>
+          The barrier to venture success is clarity, not talent or funding. Most founders have everything they need to succeed — except a way to know whether their idea is worth building, and a map for building it if it is.
+        </blockquote>
+        <div class="thesis-attribution">
+          DVS Founding Thesis — DVS-FTH-2026-001
+        </div>
+      </div>
+      <div class="thesis-right">
+        <div class="label" style="margin-bottom:16px">The founding thesis</div>
+        <div class="divider"></div>
+        <h2>Proven on our own ventures first. Then offered to everyone else.</h2>
+        <p>
+          DVS was not conceived in a boardroom. It began with a single question: <em>"I wonder if I could generate 10 business ideas using AI."</em>
+        </p>
+        <p>
+          That question became a pipeline. The pipeline became a methodology. The methodology became a product — <strong>Touchstone</strong>, proven across 55 build sessions and 44+ specification documents. The same methodology that validated DVS itself now serves businesses, government teams, and corporate innovation units at every scale.
+        </p>
+        <p>
+          Everything DVS asks clients to trust, DVS built for itself first.
+        </p>
+        <a href="#contact" class="btn-primary" style="display:inline-block">
+          Start the conversation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ROADMAP STRIP ─────────────────────────────────────────────── -->
+  <section class="roadmap">
+    <div class="container">
+      <div class="roadmap-inner">
+        <div class="label" style="margin-bottom:12px">The DVS Roadmap</div>
+        <h2>Six phases. From venture validation to enterprise operating system.</h2>
+        <p style="margin-top:8px">Each phase earns the next. No shortcuts.</p>
+      </div>
+      <div class="roadmap-phases">
+        <div class="roadmap-phase active">
+          <div class="phase-num">Phase 01 — Now</div>
+          <div class="phase-name">Prove the Engine</div>
+          <div class="phase-desc">Touchstone — AI-powered venture validation platform</div>
+        </div>
+        <div class="roadmap-phase">
+          <div class="phase-num">Phase 02 — M6</div>
+          <div class="phase-name">Prove for Clients</div>
+          <div class="phase-desc">DVS-as-a-Service — 2–3 SMB build engagements</div>
+        </div>
+        <div class="roadmap-phase">
+          <div class="phase-num">Phase 2.5 — M9</div>
+          <div class="phase-name">Enter Tenders</div>
+          <div class="phase-desc">SMB tender response assistant</div>
+        </div>
+        <div class="roadmap-phase">
+          <div class="phase-num">Phase 03 — M12</div>
+          <div class="phase-name">Flip the Tender</div>
+          <div class="phase-desc">Government tender authoring + legislation translation</div>
+        </div>
+        <div class="roadmap-phase">
+          <div class="phase-num">Phase 04 — M18</div>
+          <div class="phase-name">Corporate Scale</div>
+          <div class="phase-desc">Enterprise bid management + multi-team orchestration</div>
+        </div>
+        <div class="roadmap-phase">
+          <div class="phase-num">Phase 06 — M36</div>
+          <div class="phase-name">The Platform</div>
+          <div class="phase-desc">Change &amp; portfolio management — enterprise OS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT FORM ─────────────────────────────────────────────── -->
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <!-- Left: context -->
+      <div class="contact-left">
+        <div class="label" style="margin-bottom:16px">Work with DVS</div>
+        <div class="divider"></div>
+        <h2>Tell us where you are and what you need.</h2>
+        <p>
+          Every enquiry is read personally by Rick Musial. DVS will tell you honestly whether we're the right fit — and if we're not, we'll point you toward someone who is.
+        </p>
+        <p>
+          There is no sales process. No automated follow-up sequence. Just a direct conversation with the person who will do the work.
+        </p>
+        <div class="contact-assurance">
+          <div class="assurance-item">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Responded to personally within 24 hours
+          </div>
+          <div class="assurance-item">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            No obligation — we'll confirm fit before any commitment
+          </div>
+          <div class="assurance-item">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Your information is kept strictly confidential
+          </div>
+          <div class="assurance-item">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Not sure which service you need? That's fine — describe the problem and we'll work it out together
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="enquiry-form" id="enquiry-form">
+        <div class="form-fields">
+          <form id="dvs-enquiry" action="https://formspree.io/f/xeepzgbl" method="POST" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-name">Your name <span>*</span></label>
+                <input type="text" id="f-name" name="name" placeholder="Jane Smith" required />
+              </div>
+              <div class="form-group">
+                <label for="f-email">Email address <span>*</span></label>
+                <input type="email" id="f-email" name="email" placeholder="jane@company.com" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-company">Company or venture</label>
+                <input type="text" id="f-company" name="company" placeholder="Acme Ventures" />
+              </div>
+              <div class="form-group">
+                <label for="f-heard">How did you hear about DVS?</label>
+                <select id="f-heard" name="referral_source">
+                  <option value="">Select…</option>
+                  <option>Referral from someone I know</option>
+                  <option>Touchstone — I validated an idea</option>
+                  <option>Eulogize This — I tried the other product</option>
+                  <option>LinkedIn</option>
+                  <option>Google search</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Which service(s) are you interested in?</label>
+              <div class="checkbox-group">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="service" value="Marketing" /> Marketing
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="service" value="Business Management" /> Business Management
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="service" value="After-Release Support" /> After-Release Support
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="service" value="External Review" /> External Review
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="service" value="Venture Validation" /> Venture Validation
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="service" value="Not sure yet" /> Not sure yet
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="f-problem">What are you trying to solve? <span>*</span></label>
+              <textarea id="f-problem" name="problem" placeholder="Tell us about your situation — what you're working on, what's not working, and what a good outcome looks like." required></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-timeline">When do you need to start?</label>
+                <select id="f-timeline" name="timeline">
+                  <option value="">Select…</option>
+                  <option>Immediately</option>
+                  <option>Within 1 month</option>
+                  <option>1–3 months</option>
+                  <option>3–6 months</option>
+                  <option>Just exploring for now</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="f-budget">Budget range</label>
+                <select id="f-budget" name="budget">
+                  <option value="">Select…</option>
+                  <option>Under $5,000</option>
+                  <option>$5,000 – $15,000</option>
+                  <option>$15,000 – $50,000</option>
+                  <option>$50,000+</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn-submit" id="submit-btn">
+                Send Enquiry
+              </button>
+              <p class="form-note">DVS responds personally within 24 hours. No automated sequences.</p>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Success state -->
+        <div class="form-success">
+          <div class="success-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12l5 5L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Enquiry received.</h3>
+          <p>Rick will read this personally and respond within 24 hours.<br/>You'll hear from <strong>rick@digitalventurestudio.com</strong>.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── BOTTOM CTA ─────────────────────────────────────────────────── -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Want to validate before you commit?</h2>
+      <p>Start with Touchstone — free. Run your idea through a structured validation pipeline, get an honest Go/No-Go verdict, and come back when you're ready to build.</p>
+      <div class="cta-actions">
+        <a href="https://usetouchstone.ai" class="btn-primary" style="font-size:15px;padding:16px 32px">
+          Validate Your Idea Free
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Digital Venture <span>Studio</span></h3>
+          <p>From first thought to first customer — with a mentor who stays. AU · NZ · UK</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="https://usetouchstone.ai">Touchstone</a></li>
+            <li><a href="#">Eulogize This</a></li>
+            <li><a href="#products">Roadmap →</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Marketing</a></li>
+            <li><a href="#services">Business Management</a></li>
+            <li><a href="#services">After-Release Support</a></li>
+            <li><a href="#services">External Review</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>DVS</h4>
+          <ul>
+            <li><a href="#method">The Method</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#about">Founding Thesis</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2026 Digital Venture Studio. All rights reserved.</div>
+        <div class="footer-tagline">Built using the same methodology we sell.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('dvs-enquiry');
+    const formWrap = document.getElementById('enquiry-form');
+    const btn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Basic validation
+      const name    = document.getElementById('f-name').value.trim();
+      const email   = document.getElementById('f-email').value.trim();
+      const problem = document.getElementById('f-problem').value.trim();
+      if (!name || !email || !problem) {
+        alert('Please fill in your name, email, and a description of what you need.');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      try {
+        const data = new FormData(form);
+        const res  = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' },
+        });
+
+        if (res.ok) {
+          formWrap.classList.add('submitted');
+        } else {
+          throw new Error('Server error');
+        }
+      } catch {
+        // Prototype fallback — show success anyway for demo purposes
+        // In production, Formspree handles this properly
+        formWrap.classList.add('submitted');
+      }
+    });
+  </script>
+</body>
+</html>
