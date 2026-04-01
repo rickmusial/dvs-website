@@ -716,6 +716,37 @@
     }
     .roadmap-phase.active .phase-desc { color: rgba(247,243,235,0.45); }
 
+    /* ─── FAQ ────────────────────────────────────────────────────── */
+    .faq {
+      background: var(--cream);
+      padding: var(--section-pad);
+      border-top: 1px solid var(--border);
+    }
+    .faq .section-header { margin-bottom: 56px; }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px 64px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .faq-item {}
+    .faq-q {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--near-black);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .faq-a {
+      font-size: 14px;
+      color: var(--mid-grey);
+      line-height: 1.75;
+    }
+    .faq-a strong { color: var(--near-black); font-weight: 500; }
+    @media (max-width: 680px) { .faq-grid { grid-template-columns: 1fr; } }
+
     /* ─── CONTACT FORM ───────────────────────────────────────────── */
     .contact {
       background: var(--cream);
@@ -1104,16 +1135,16 @@
           <div class="proof-divider"></div>
           <div class="proof-stats">
             <div>
-              <div class="proof-stat-num">44+</div>
-              <div class="proof-stat-label">Specification documents</div>
+              <div class="proof-stat-num">2</div>
+              <div class="proof-stat-label">Live products built on the engine</div>
             </div>
             <div>
-              <div class="proof-stat-num">55</div>
-              <div class="proof-stat-label">Build sessions</div>
+              <div class="proof-stat-num">$50K+</div>
+              <div class="proof-stat-label">Consulting fees we displace</div>
             </div>
             <div>
               <div class="proof-stat-num">6</div>
-              <div class="proof-stat-label">Phase roadmap</div>
+              <div class="proof-stat-label">Phase roadmap to enterprise</div>
             </div>
           </div>
         </div>
@@ -1236,7 +1267,7 @@
         <div class="label" style="margin-bottom:16px">Products</div>
         <div class="divider center"></div>
         <h2>Two live products. One engine. Each one earns the next.</h2>
-        <p>Every DVS product is proof-of-methodology before it is a product. Touchstone validates ventures. Eulogize turns a silly idea into a genuinely fun experience. Both are live. Both are built on the Crucible engine.</p>
+        <p>Every DVS product is proof-of-methodology before it is offered to clients. Touchstone is the core product — AI-powered venture validation for serious decisions. Eulogize This is a proof-of-concept: a deliberately playful product that demonstrates what the DVS engine can produce at speed and at scale. Both are live. Both are built on the same Crucible engine.</p>
       </div>
       <div class="products-grid">
 
@@ -1422,7 +1453,7 @@
           The barrier to venture success is clarity, not talent or funding. Most founders have everything they need to succeed — except a way to know whether their idea is worth building, and a map for building it if it is.
         </blockquote>
         <div class="thesis-attribution">
-          DVS Founding Thesis — DVS-FTH-2026-001
+          DVS Founding Thesis
         </div>
       </div>
       <div class="thesis-right">
@@ -1455,14 +1486,14 @@
       </div>
       <div class="roadmap-phases">
         <div class="roadmap-phase active">
-          <div class="phase-num">Phase 01 — Now</div>
-          <div class="phase-name">Prove the Engine</div>
+          <div class="phase-num">Phase 01 — Live</div>
+          <div class="phase-name">Venture Validation</div>
           <div class="phase-desc">Touchstone — AI-powered venture validation platform</div>
         </div>
         <div class="roadmap-phase">
           <div class="phase-num">Phase 02 — M6</div>
-          <div class="phase-name">Prove for Clients</div>
-          <div class="phase-desc">DVS-as-a-Service — 2–3 SMB build engagements</div>
+          <div class="phase-name">Client Engagements</div>
+          <div class="phase-desc">DVS Studio — full-service build engagements for founders and businesses</div>
         </div>
         <div class="roadmap-phase">
           <div class="phase-num">Phase 2.5 — M9</div>
@@ -1488,6 +1519,50 @@
     </div>
   </section>
 
+  <!-- ─── FAQ ─────────────────────────────────────────────────────── -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="label" style="margin-bottom:16px">Common questions</div>
+        <div class="divider center"></div>
+        <h2>What working with DVS actually looks like.</h2>
+      </div>
+      <div class="faq-grid">
+
+        <div class="faq-item">
+          <div class="faq-q">What does a DVS engagement look like from the outside?</div>
+          <div class="faq-a">It starts with a conversation — not a proposal. We confirm there's a genuine fit, then agree on scope. Every engagement runs through the DVS methodology: validate first, specify completely, build against a fixed spec. You're never handed a document and left alone with it. <strong>We stay through every stage.</strong></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">How much does it cost?</div>
+          <div class="faq-a">DVS doesn't publish a rate card because every engagement is scoped against what you actually need — not a pre-packaged tier. What we can say: the methodology displaces $50,000+ in consulting fees. Our pricing reflects the value delivered, not the hours spent. The first conversation is free and there's no commitment at that stage.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">How long does it take from first conversation to a validated specification?</div>
+          <div class="faq-a">Touchstone can take an idea through validation and produce a complete document suite in a single session. A full DVS Studio engagement — from scoping call to validated specification with PRD, Build Guide, Brand Guidelines, Business Case, and Marketing Plan — typically runs 2–4 weeks depending on complexity and availability.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">What if my idea fails the Go/No-Go assessment?</div>
+          <div class="faq-a">That's a success, not a failure. A kill decision at the validation stage costs days and a conversation fee. The same decision discovered after 12 months of building costs everything. If your idea doesn't pass, DVS tells you exactly why — and in most cases, identifies what would need to change for it to pass. <strong>Honest advice is the service.</strong></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Can DVS work with teams and organisations, not just individual founders?</div>
+          <div class="faq-a">Yes — and increasingly, that's where the methodology adds the most value. Government departments, SMBs, and corporate innovation units all face the same core problem: clarity before commitment. The DVS methodology scales from a single founder with a hunch to a team with a portfolio of initiatives.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">What's the difference between Touchstone and working with DVS Studio directly?</div>
+          <div class="faq-a">Touchstone is self-service — you run your idea through the pipeline yourself and receive a document suite at the end. DVS Studio is a full engagement: we work alongside you, bring strategic judgment to every decision, and take responsibility for the output. Touchstone is the product. DVS Studio is the relationship.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ─── CONTACT FORM ─────────────────────────────────────────────── -->
   <section class="contact" id="contact">
     <div class="container">
@@ -1502,6 +1577,9 @@
         </p>
         <p>
           There is no sales process. No automated follow-up sequence. Just a direct conversation with the person who will do the work.
+        </p>
+        <p>
+          After you submit: Rick reads your enquiry personally and responds within 24 hours. If there's a fit, we schedule a 30-minute conversation to confirm scope and outline what an engagement looks like. No commitment required at that stage.
         </p>
         <div class="contact-assurance">
           <div class="assurance-item">
