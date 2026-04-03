@@ -1071,6 +1071,8 @@
       .hero { padding: 140px 24px 80px; }
       .method-steps,
       .services-grid { grid-template-columns: 1fr; gap: 2px; }
+      .services-grid .service-card[style*="span 2"] { grid-column: span 1; }
+      .services-grid .service-card[style*="span 2"] > div[style*="grid-template-columns"] { grid-template-columns: 1fr; gap: 32px; }
       .products-grid { grid-template-columns: 1fr; }
       .roadmap-phases { grid-template-columns: repeat(3, 1fr); }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -1336,6 +1338,42 @@
         <p>DVS Studio is not a product. It is a practice. We work with founders and businesses across four disciplines — independently or as an integrated engagement.</p>
       </div>
       <div class="services-grid">
+
+        <!-- VENTURE BUILD — featured, full width -->
+        <div class="service-card" style="grid-column: span 2; border-bottom: 1px solid rgba(190,130,35,0.2);">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+            <div>
+              <div class="service-icon" style="color:var(--gold);">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M3 17l4-4m0 0l3-3m-3 3l-2-2m5-1l4-4M10 3l2 2-7 7-2-2 7-7z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 style="font-size:28px;margin-bottom:16px;">Venture Build</h3>
+              <p class="service-desc">
+                A validated specification is the beginning. DVS takes it from there — managing the full product build from first line of code to launch-ready product. Scoped and priced against your specification, not a conversation. AI-accelerated without cutting the corners that matter.
+              </p>
+              <p class="service-desc" style="margin-top:16px;color:rgba(247,243,235,0.55);font-size:14px;">
+                This is the service that closes the chain. Touchstone validates your idea and produces a buildable spec. DVS Studio builds it. You walk out with a live product — not a document.
+              </p>
+            </div>
+            <div>
+              <ul class="service-includes" style="margin-top:8px;">
+                <li>Full-stack product development against a DVS specification</li>
+                <li>Design, UX, and brand implementation</li>
+                <li>Infrastructure setup, configuration, and deployment</li>
+                <li>QA, testing, and launch readiness</li>
+                <li>Handover with full documentation</li>
+                <li>Ongoing support pathway from day one</li>
+              </ul>
+              <div style="margin-top:32px;padding:20px 24px;background:rgba(190,130,35,0.08);border:1px solid rgba(190,130,35,0.2);border-radius:6px;">
+                <p style="font-size:13px;color:rgba(247,243,235,0.7);margin:0;line-height:1.6;">
+                  <strong style="color:var(--gold);display:block;margin-bottom:6px;">How it works</strong>
+                  Bring a validated Touchstone specification — or come to DVS first and we validate together. Either way, the build starts from a spec, not a guess. Engagements are scoped before they start and priced before you commit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- MARKETING -->
         <div class="service-card">
