@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The question you should answer before you write a single line of code — Digital Venture Studio</title>
+  <meta name="description" content="There is a question most founders never ask. Not because they don't care about the answer. Because asking it feels like it might stop them. It shouldn't." />
+  <meta property="og:title" content="The question you should answer before you write a single line of code" />
+  <meta property="og:description" content="There is a question most founders never ask. Not because they don't care about the answer. Because asking it feels like it might stop them." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://digitalventurestudio.com/blog/the-question-you-should-answer-before-you-write-a-single-line-of-code.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The question you should answer before you write a single line of code" />
+  <meta name="twitter:description" content="There is a question most founders never ask. Not because they don't care about the answer. Because asking it feels like it might stop them." />
+
+  <!-- BlogPosting structured data — ChatGPT / search citation infrastructure -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "The question you should answer before you write a single line of code",
+    "description": "There is a question most founders never ask. Not because they don't care about the answer. Because asking it feels like it might stop them. The question is: Is this idea actually worth betting on?",
+    "datePublished": "2026-04-27",
+    "dateModified": "2026-04-27",
+    "author": {
+      "@type": "Person",
+      "name": "Rick Musial",
+      "jobTitle": "Founder & Chairman",
+      "url": "https://digitalventurestudio.com",
+      "sameAs": ["https://www.linkedin.com/in/rickmusial"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Digital Venture Studio",
+      "url": "https://digitalventurestudio.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://digitalventurestudio.com/images/h1-open-graph.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://digitalventurestudio.com/blog/the-question-you-should-answer-before-you-write-a-single-line-of-code.html"
+    },
+    "keywords": ["startup validation", "go no-go decision", "founder advice", "venture validation", "idea validation", "should I build this", "startup idea"],
+    "articleSection": "Go/No-Go Decision",
+    "wordCount": 900
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── DESIGN TOKENS ──────────────────────────────────────────── */
+    :root {
+      --near-black:  #1A1A1E;
+      --gold:        #BE8223;
+      --gold-light:  #D4A053;
+      --gold-pale:   #F0E0C0;
+      --cream:       #F7F3EB;
+      --cream-dark:  #EDE8DC;
+      --white:       #FFFFFF;
+      --mid-grey:    #6B6B72;
+      --border:      rgba(190,130,35,0.2);
+
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans:  'Inter', system-ui, sans-serif;
+
+      --max-w: 1120px;
+      --prose-w: 680px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--near-black);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+    /* ─── NAVIGATION ─────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--near-black);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      height: 64px;
+      display: flex;
+      align-items: center;
+    }
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--cream);
+      letter-spacing: 0.02em;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(247,243,235,0.65);
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--cream); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--near-black) !important;
+      font-weight: 600 !important;
+      padding: 9px 20px;
+      border-radius: 4px;
+      font-size: 13px !important;
+      letter-spacing: 0.01em !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; }
+
+    /* ─── ARTICLE HEADER ─────────────────────────────────────────── */
+    .article-header {
+      background: var(--near-black);
+      padding: 120px 24px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.3;
+    }
+    .article-header::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -120px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(190,130,35,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .article-header .container {
+      position: relative;
+      z-index: 1;
+      max-width: var(--prose-w);
+    }
+    .article-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(247,243,235,0.45);
+      margin-bottom: 32px;
+      transition: color 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .article-back:hover { color: rgba(247,243,235,0.8); }
+    .article-category {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(190,130,35,0.12);
+      padding: 5px 12px;
+      border-radius: 3px;
+      margin-bottom: 24px;
+    }
+    .article-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 500;
+      color: var(--cream);
+      line-height: 1.2;
+      margin-bottom: 28px;
+      letter-spacing: -0.01em;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .article-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .author-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(190,130,35,0.2);
+      border: 1px solid rgba(190,130,35,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 14px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .author-info { display: flex; flex-direction: column; gap: 2px; }
+    .author-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(247,243,235,0.8);
+    }
+    .author-title {
+      font-size: 11px;
+      color: rgba(247,243,235,0.4);
+    }
+    .meta-divider {
+      width: 1px;
+      height: 28px;
+      background: rgba(255,255,255,0.1);
+    }
+    .meta-item {
+      font-size: 12px;
+      color: rgba(247,243,235,0.4);
+    }
+
+    /* ─── ARTICLE BODY ───────────────────────────────────────────── */
+    .article-body {
+      padding: 72px 24px 96px;
+    }
+    .article-body .container {
+      max-width: var(--prose-w);
+    }
+    .prose p {
+      font-size: 17px;
+      line-height: 1.75;
+      color: #2A2A2E;
+      margin-bottom: 28px;
+    }
+    .prose h2 {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--near-black);
+      margin-top: 52px;
+      margin-bottom: 20px;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+    .prose h2:first-child { margin-top: 0; }
+    .prose strong { font-weight: 600; color: var(--near-black); }
+    .prose em { font-style: italic; }
+    .prose ul {
+      list-style: none;
+      margin: 0 0 28px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .prose ul li {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #2A2A2E;
+      padding-left: 20px;
+      position: relative;
+    }
+    .prose ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .prose hr {
+      border: none;
+      border-top: 1px solid rgba(26,26,30,0.1);
+      margin: 48px 0;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 3px solid var(--gold);
+      padding: 4px 0 4px 28px;
+      margin: 40px 0;
+    }
+    .pull-quote p {
+      font-family: var(--serif);
+      font-size: 22px !important;
+      font-style: italic;
+      color: var(--near-black) !important;
+      line-height: 1.5 !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* Author byline at end */
+    .article-byline {
+      margin-top: 64px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(26,26,30,0.1);
+    }
+    .byline-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .byline-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(190,130,35,0.1);
+      border: 1px solid rgba(190,130,35,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 20px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .byline-text h3 {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--near-black);
+      margin-bottom: 6px;
+    }
+    .byline-text p {
+      font-size: 14px !important;
+      color: var(--mid-grey) !important;
+      line-height: 1.6 !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* Back to blog CTA */
+    .article-next {
+      margin-top: 48px;
+      padding: 32px;
+      background: var(--white);
+      border: 1px solid rgba(26,26,30,0.07);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .article-next p {
+      font-size: 14px !important;
+      color: var(--mid-grey) !important;
+      margin-bottom: 0 !important;
+    }
+    .article-next strong { color: var(--near-black); }
+    .btn-back {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+    }
+    .btn-back:hover { gap: 10px; }
+
+    /* ─── FOOTER ─────────────────────────────────────────────────── */
+    .footer {
+      background: #111115;
+      padding: 56px 24px 32px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-brand h3 {
+      font-family: var(--serif);
+      font-size: 20px;
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+    .footer-brand h3 span { color: var(--gold); }
+    .footer-brand p {
+      font-size: 13px;
+      color: rgba(247,243,235,0.35);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(247,243,235,0.4);
+      margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul a {
+      font-size: 13px;
+      color: rgba(247,243,235,0.45);
+      transition: color 0.2s;
+    }
+    .footer-col ul a:hover { color: var(--cream); }
+    .footer-bottom {
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-copy { font-size: 12px; color: rgba(247,243,235,0.2); }
+    .footer-tagline {
+      font-family: var(--serif);
+      font-size: 12px;
+      font-style: italic;
+      color: rgba(247,243,235,0.25);
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .nav-links { display: none; }
+      .article-next { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 600px) {
+      .footer-top { grid-template-columns: 1fr; }
+      .prose p, .prose ul li { font-size: 16px; }
+      .pull-quote p { font-size: 19px !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── NAV ──────────────────────────────────────────────────────── -->
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-logo">Digital Venture <span>Studio</span></a>
+      <ul class="nav-links">
+        <li><a href="/#method">The Method</a></li>
+        <li><a href="/#products">Products</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/blog/" class="active">Writing</a></li>
+        <li><a href="/#contact" class="nav-cta">Work With DVS</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ─── ARTICLE HEADER ───────────────────────────────────────────── -->
+  <header class="article-header">
+    <div class="container">
+      <a href="/blog/" class="article-back">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+          <path d="M13 8H3M7 4l-4 4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        All writing
+      </a>
+      <div class="article-category">Go/No-Go Decision</div>
+      <h1>The question you should answer before you write a single line of code</h1>
+      <div class="article-meta">
+        <div class="article-author">
+          <div class="author-avatar">R</div>
+          <div class="author-info">
+            <span class="author-name">Rick Musial</span>
+            <span class="author-title">Founder &amp; Chairman, DVS</span>
+          </div>
+        </div>
+        <div class="meta-divider"></div>
+        <time class="meta-item" datetime="2026-04-27">27 April 2026</time>
+        <div class="meta-divider"></div>
+        <span class="meta-item">5 min read</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── ARTICLE BODY ─────────────────────────────────────────────── -->
+  <main class="article-body">
+    <div class="container">
+      <article class="prose" itemscope itemtype="https://schema.org/BlogPosting">
+
+        <meta itemprop="headline" content="The question you should answer before you write a single line of code" />
+        <meta itemprop="datePublished" content="2026-04-27" />
+        <meta itemprop="dateModified" content="2026-04-27" />
+        <meta itemprop="author" content="Rick Musial" />
+
+        <div itemprop="articleBody">
+
+        <p>There is a question most founders never ask.</p>
+
+        <p>Not because they don't care about the answer. Because asking it feels like it might stop them. And they don't want to be stopped.</p>
+
+        <p>The question is this: <em>Is this idea actually worth betting on?</em></p>
+
+        <p>Not "could this work?" Almost anything could work. Not "is there a market?" Markets exist for almost everything. Not "can I build it?" Technology constraints are rarely the limiting factor now.</p>
+
+        <p>The real question is harder. And more specific.</p>
+
+        <div class="pull-quote">
+          <p>"Is this idea — in your hands, with your resources, at this exact moment in time — worth the next 12 months of your life?"</p>
+        </div>
+
+        <hr />
+
+        <h2>Most founders skip this question.</h2>
+
+        <p>They feel the pull of an idea. They tell a few people. The people are encouraging — because people are kind, not because the idea is good. They start building. Six months later — sometimes two years later — they discover they were building something nobody wanted badly enough to pay for.</p>
+
+        <p>This is not a story about bad ideas. Most of the ideas were reasonable. Some were genuinely good.</p>
+
+        <p>It is a story about an assumption that sat underneath the build, unexamined, the entire time: <em>This is worth doing.</em></p>
+
+        <p>That assumption needed to be tested. It wasn't. And so the build happened on top of it — brick by brick — until the whole thing had to come down.</p>
+
+        <hr />
+
+        <h2>The go/no-go decision is not a gut call.</h2>
+
+        <p>Here is what I have observed watching founders make decisions about their ideas: the ones who succeed are not necessarily the ones with the best ideas. They are the ones who asked the hard question early — and got a rigorous answer — before they committed.</p>
+
+        <p>The question has a structure. It requires asking:</p>
+
+        <ul>
+          <li>Does this idea solve a problem people feel urgently enough to act on?</li>
+          <li>Is the market large enough to sustain a business — and small enough that you can reach it?</li>
+          <li>Does this idea fit this founder's specific strengths and context?</li>
+          <li>Are there structural factors that protect the idea long enough to build traction?</li>
+          <li>Can this be validated before significant resources are spent?</li>
+        </ul>
+
+        <p>None of these questions require a 50-page business plan. They require honest, ordered thinking — applied before the first line of code.</p>
+
+        <p>That is what a go/no-go decision actually is.</p>
+
+        <hr />
+
+        <h2>Why founders skip it.</h2>
+
+        <p>Three reasons.</p>
+
+        <p><strong>The first is emotional.</strong> Once you have the idea, you want to build. The decision feels like it might take that away from you. So you don't make it consciously — you just start, and let momentum substitute for judgement.</p>
+
+        <p><strong>The second is practical.</strong> Most founders don't have a structured framework for making the decision. They know they should think carefully. But "thinking carefully" without a framework produces overthinking — not clarity.</p>
+
+        <p><strong>The third is social.</strong> Asking "should I actually build this?" out loud invites doubt from the people around you. Most of us would rather ask the question quietly, late at night, and hope the answer isn't no.</p>
+
+        <hr />
+
+        <h2>What changes when you make the decision deliberately.</h2>
+
+        <p>I have seen founders arrive at a GO verdict and build with a different quality of conviction than they had before. Not because the decision removed uncertainty — it didn't — but because they understood <em>why</em> they were proceeding despite the uncertainty.</p>
+
+        <p>I have seen founders arrive at a NO verdict and experience relief. Not failure — relief. Because the decision returned 12 months of their life.</p>
+
+        <p>And I have seen founders arrive at a CONDITIONAL GO: proceed, but only if these specific assumptions can be validated first. That structure — the conditions — becomes the build plan.</p>
+
+        <p>The decision gives founders a framework to hold their idea with honesty. Not enthusiasm, not fear — honesty.</p>
+
+        <div class="pull-quote">
+          <p>"The barrier to venture success is not capital. It is not technology. It is not even talent. It is clarity about whether the thing you are about to spend the next year of your life building is worth building."</p>
+        </div>
+
+        <hr />
+
+        <h2>The question that started DVS.</h2>
+
+        <p>The first product DVS built — <a href="https://usetouchstone.ai" style="color:var(--gold);border-bottom:1px solid rgba(190,130,35,0.3);">Touchstone</a> — was built to answer this question for founders. Not to validate their enthusiasm. To give them a rigorous go/no-go verdict that a mentor who genuinely wants them to succeed would stand behind.</p>
+
+        <p>Because the go/no-go question has a rigorous answer. It just requires asking the right things in the right order.</p>
+
+        <p>That question deserves that answer.</p>
+
+        <p>And you should have it before you write a single line of code.</p>
+
+        </div><!-- /articleBody -->
+
+        <!-- Author byline -->
+        <div class="article-byline">
+          <div class="byline-inner">
+            <div class="byline-avatar">R</div>
+            <div class="byline-text">
+              <h3>Rick Musial</h3>
+              <p>Founder &amp; Chairman of Digital Venture Studio. DVS builds tools that help founders make better bets on their ideas — starting with the go/no-go decision most founders skip.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Back to blog -->
+        <div class="article-next">
+          <p><strong>Want more like this?</strong> Rick writes about the go/no-go decision, founder counterintuitions, and the business of building ventures worth building.</p>
+          <a href="/blog/" class="btn-back">
+            All writing
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- ─── FOOTER ───────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Digital Venture <span>Studio</span></h3>
+          <p>From first thought to first customer — with a mentor who stays.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="https://usetouchstone.ai">Touchstone</a></li>
+            <li><a href="https://www.eulogizethis.com">Eulogize This</a></li>
+            <li><a href="/#products">Roadmap →</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/#services">Marketing</a></li>
+            <li><a href="/#services">Business Management</a></li>
+            <li><a href="/#services">After-Release Support</a></li>
+            <li><a href="/#services">External Review</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>DVS</h4>
+          <ul>
+            <li><a href="/#method">The Method</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#about">Founding Thesis</a></li>
+            <li><a href="/blog/">Writing</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2026 Digital Venture Studio. All rights reserved.
+          <span style="margin-left:20px;opacity:0.5;">·</span>
+          <a href="/privacy" style="margin-left:12px;opacity:0.55;font-size:12px;color:var(--cream);text-decoration:none;">Privacy Policy</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:20px;">
+          <a href="https://www.linkedin.com/company/digital-venture-studio" target="_blank" rel="noopener" aria-label="DVS on LinkedIn" style="color:rgba(247,243,235,0.45);transition:color 0.2s;" onmouseover="this.style.color='rgba(247,243,235,0.85)'" onmouseout="this.style.color='rgba(247,243,235,0.45)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <div class="footer-tagline" style="margin:0;">Built using the same methodology we sell.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
