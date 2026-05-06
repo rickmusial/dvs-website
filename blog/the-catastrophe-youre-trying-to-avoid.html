@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The catastrophe you're trying to avoid — Digital Venture Studio</title>
+  <meta name="description" content="I have been out of the day-to-day building game for fifteen years. The structure of the go/no-go decision hasn't changed in those fifteen years — and the catastrophes founders walk into haven't either. Drawing on Rory Sutherland's 'always invert' frame and the public anatomies of Quibi, WeWork, and Clubhouse, this is the gate that protects your time before you write a single line of code." />
+  <meta property="og:title" content="The catastrophe you're trying to avoid" />
+  <meta property="og:description" content="I have been out of the day-to-day building game for fifteen years. The structure of the go/no-go decision hasn't changed in those fifteen years — and the catastrophes founders walk into haven't either." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://digitalventurestudio.com/blog/the-catastrophe-youre-trying-to-avoid.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The catastrophe you're trying to avoid" />
+  <meta name="twitter:description" content="Fifteen years out of the building game, returning to build DVS, drawing on Sutherland and public failure anatomies to name the catastrophe most founders walk into." />
+
+  <!-- BlogPosting structured data — ChatGPT / search citation infrastructure -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "The catastrophe you're trying to avoid",
+    "description": "Fifteen years out of the day-to-day building game, returning to build DVS. The structure of the go/no-go decision hasn't changed in those fifteen years, and the catastrophes founders walk into haven't either. Drawing on Rory Sutherland's 'always invert' frame and the public anatomies of Quibi, WeWork, and Clubhouse — why founders should invert before they optimise, and why distance from the day-to-day is sometimes the clearer vantage point.",
+    "datePublished": "2026-05-06",
+    "dateModified": "2026-05-06",
+    "author": {
+      "@type": "Person",
+      "name": "Rick Musial",
+      "jobTitle": "Founder & Chairman",
+      "url": "https://digitalventurestudio.com",
+      "sameAs": ["https://www.linkedin.com/in/rickmusial"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Digital Venture Studio",
+      "url": "https://digitalventurestudio.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://digitalventurestudio.com/images/h1-open-graph.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://digitalventurestudio.com/blog/the-catastrophe-youre-trying-to-avoid.html"
+    },
+    "citation": [
+      {
+        "@type": "Book",
+        "name": "Alchemy: The Surprising Power of Ideas That Don't Make Sense",
+        "author": {
+          "@type": "Person",
+          "name": "Rory Sutherland"
+        }
+      }
+    ],
+    "keywords": ["startup validation", "go no-go decision", "founder advice", "venture validation", "always invert", "Rory Sutherland", "catastrophe avoidance", "should I build this", "startup idea", "Quibi failure", "WeWork failure", "Clubhouse decline", "returned founder"],
+    "articleSection": "Go/No-Go Decision",
+    "wordCount": 1320
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── DESIGN TOKENS ──────────────────────────────────────────── */
+    :root {
+      --near-black:  #1A1A1E;
+      --gold:        #BE8223;
+      --gold-light:  #D4A053;
+      --gold-pale:   #F0E0C0;
+      --cream:       #F7F3EB;
+      --cream-dark:  #EDE8DC;
+      --white:       #FFFFFF;
+      --mid-grey:    #6B6B72;
+      --border:      rgba(190,130,35,0.2);
+
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans:  'Inter', system-ui, sans-serif;
+
+      --max-w: 1120px;
+      --prose-w: 680px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--near-black);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+    /* ─── NAVIGATION ─────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--near-black);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      height: 64px;
+      display: flex;
+      align-items: center;
+    }
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--cream);
+      letter-spacing: 0.02em;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(247,243,235,0.65);
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--cream); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--near-black) !important;
+      font-weight: 600 !important;
+      padding: 9px 20px;
+      border-radius: 4px;
+      font-size: 13px !important;
+      letter-spacing: 0.01em !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; }
+
+    /* ─── ARTICLE HEADER ─────────────────────────────────────────── */
+    .article-header {
+      background: var(--near-black);
+      padding: 120px 24px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.3;
+    }
+    .article-header::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -120px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(190,130,35,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .article-header .container {
+      position: relative;
+      z-index: 1;
+      max-width: var(--prose-w);
+    }
+    .article-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(247,243,235,0.45);
+      margin-bottom: 32px;
+      transition: color 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .article-back:hover { color: rgba(247,243,235,0.8); }
+    .article-category {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(190,130,35,0.12);
+      padding: 5px 12px;
+      border-radius: 3px;
+      margin-bottom: 24px;
+    }
+    .article-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 500;
+      color: var(--cream);
+      line-height: 1.2;
+      margin-bottom: 28px;
+      letter-spacing: -0.01em;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .article-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .author-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(190,130,35,0.2);
+      border: 1px solid rgba(190,130,35,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 14px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .author-info { display: flex; flex-direction: column; gap: 2px; }
+    .author-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(247,243,235,0.8);
+    }
+    .author-title {
+      font-size: 11px;
+      color: rgba(247,243,235,0.4);
+    }
+    .meta-divider {
+      width: 1px;
+      height: 28px;
+      background: rgba(255,255,255,0.1);
+    }
+    .meta-item {
+      font-size: 12px;
+      color: rgba(247,243,235,0.4);
+    }
+
+    /* ─── ARTICLE BODY ───────────────────────────────────────────── */
+    .article-body {
+      padding: 72px 24px 96px;
+    }
+    .article-body .container {
+      max-width: var(--prose-w);
+    }
+    .prose p {
+      font-size: 17px;
+      line-height: 1.75;
+      color: #2A2A2E;
+      margin-bottom: 28px;
+    }
+    .prose h2 {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--near-black);
+      margin-top: 52px;
+      margin-bottom: 20px;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+    .prose h2:first-child { margin-top: 0; }
+    .prose strong { font-weight: 600; color: var(--near-black); }
+    .prose em { font-style: italic; }
+    .prose ul {
+      list-style: none;
+      margin: 0 0 28px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .prose ul li {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #2A2A2E;
+      padding-left: 20px;
+      position: relative;
+    }
+    .prose ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .prose hr {
+      border: none;
+      border-top: 1px solid rgba(26,26,30,0.1);
+      margin: 48px 0;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 3px solid var(--gold);
+      padding: 4px 0 4px 28px;
+      margin: 40px 0;
+    }
+    .pull-quote p {
+      font-family: var(--serif);
+      font-size: 22px !important;
+      font-style: italic;
+      color: var(--near-black) !important;
+      line-height: 1.5 !important;
+      margin-bottom: 0 !important;
+    }
+    .pull-quote cite {
+      display: block;
+      margin-top: 12px;
+      font-family: var(--sans);
+      font-style: normal;
+      font-size: 13px;
+      color: var(--mid-grey);
+      letter-spacing: 0.02em;
+    }
+
+    /* Author byline at end */
+    .article-byline {
+      margin-top: 64px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(26,26,30,0.1);
+    }
+    .byline-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .byline-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(190,130,35,0.1);
+      border: 1px solid rgba(190,130,35,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 20px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .byline-text h3 {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--near-black);
+      margin-bottom: 6px;
+    }
+    .byline-text p {
+      font-size: 14px !important;
+      color: var(--mid-grey) !important;
+      line-height: 1.6 !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* Back to blog CTA */
+    .article-next {
+      margin-top: 48px;
+      padding: 32px;
+      background: var(--white);
+      border: 1px solid rgba(26,26,30,0.07);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .article-next p {
+      font-size: 14px !important;
+      color: var(--mid-grey) !important;
+      margin-bottom: 0 !important;
+    }
+    .article-next strong { color: var(--near-black); }
+    .btn-back {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+    }
+    .btn-back:hover { gap: 10px; }
+
+    /* ─── FOOTER ─────────────────────────────────────────────────── */
+    .footer {
+      background: #111115;
+      padding: 56px 24px 32px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-brand h3 {
+      font-family: var(--serif);
+      font-size: 20px;
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+    .footer-brand h3 span { color: var(--gold); }
+    .footer-brand p {
+      font-size: 13px;
+      color: rgba(247,243,235,0.35);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(247,243,235,0.4);
+      margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul a {
+      font-size: 13px;
+      color: rgba(247,243,235,0.45);
+      transition: color 0.2s;
+    }
+    .footer-col ul a:hover { color: var(--cream); }
+    .footer-bottom {
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-copy { font-size: 12px; color: rgba(247,243,235,0.2); }
+    .footer-tagline {
+      font-family: var(--serif);
+      font-size: 12px;
+      font-style: italic;
+      color: rgba(247,243,235,0.25);
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .nav-links { display: none; }
+      .article-next { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 600px) {
+      .footer-top { grid-template-columns: 1fr; }
+      .prose p, .prose ul li { font-size: 16px; }
+      .pull-quote p { font-size: 19px !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── NAV ──────────────────────────────────────────────────────── -->
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-logo">Digital Venture <span>Studio</span></a>
+      <ul class="nav-links">
+        <li><a href="/#method">The Method</a></li>
+        <li><a href="/#products">Products</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/blog/" class="active">Writing</a></li>
+        <li><a href="/#contact" class="nav-cta">Work With DVS</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ─── ARTICLE HEADER ───────────────────────────────────────────── -->
+  <header class="article-header">
+    <div class="container">
+      <a href="/blog/" class="article-back">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+          <path d="M13 8H3M7 4l-4 4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        All writing
+      </a>
+      <div class="article-category">Go/No-Go Decision</div>
+      <h1>The catastrophe you're trying to avoid</h1>
+      <div class="article-meta">
+        <div class="article-author">
+          <div class="author-avatar">R</div>
+          <div class="author-info">
+            <span class="author-name">Rick Musial</span>
+            <span class="author-title">Founder &amp; Chairman, DVS</span>
+          </div>
+        </div>
+        <div class="meta-divider"></div>
+        <time class="meta-item" datetime="2026-05-06">6 May 2026</time>
+        <div class="meta-divider"></div>
+        <span class="meta-item">7 min read</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── ARTICLE BODY ─────────────────────────────────────────────── -->
+  <main class="article-body">
+    <div class="container">
+      <article class="prose" itemscope itemtype="https://schema.org/BlogPosting">
+
+        <meta itemprop="headline" content="The catastrophe you're trying to avoid" />
+        <meta itemprop="datePublished" content="2026-05-06" />
+        <meta itemprop="dateModified" content="2026-05-06" />
+        <meta itemprop="author" content="Rick Musial" />
+
+        <div itemprop="articleBody">
+
+        <p>I have been out of the day-to-day building game for fifteen years.</p>
+
+        <p>I am still going to tell you what I think you should do before you write a single line of code, because the structure of the question hasn't changed in those fifteen years. The catastrophes don't update. They have been the same five since the dotcom bust, and they will be the same five in 2040. Distance is not the disqualifier some people will tell you it is. Sometimes it is the opposite — the further out you stand, the more clearly the patterns hold their shape.</p>
+
+        <p>Here is the pattern that holds most clearly from this distance.</p>
+
+        <p>Most founders are optimisers. They want to find the best idea, the strongest market, the cleanest revenue model. They line their options up and try to pick the highest-scoring one.</p>
+
+        <p>This is the wrong frame.</p>
+
+        <p>The real value of asking the go/no-go question — honestly, before you build — is not that you might find a 9/10 idea. It is that you might avoid a 3/10 catastrophe. Twelve months of your life, twenty thousand dollars, the better part of your relationship with your own ambition — all of it spent on something the public record was telling you not to build, if you'd been willing to look.</p>
+
+        <div class="pull-quote">
+          <p>"If you can't find what makes a venture succeed, list everything that would make it fail — and avoid those."</p>
+          <cite>— after Rory Sutherland, <em>Alchemy</em></cite>
+        </div>
+
+        <hr />
+
+        <h2>The optimiser's trap.</h2>
+
+        <p>The trap goes like this. You have an idea. You ask yourself: how good is this? You score it on potential. You think about market size, revenue model, viral mechanics. You compare it to other ideas you've had. You look for the highest-scoring one and you commit.</p>
+
+        <p>The trap is not that this is wrong. It is that it is incomplete.</p>
+
+        <p>An idea can score 7/10 on potential and still be the wrong idea for <em>you</em>, in this exact moment, with the resources you actually have. An idea can be theoretically excellent and operationally suicidal. The optimiser's frame asks "is this the best idea?" The catastrophe-avoidance frame asks a harder question: <em>is this an idea that, if I commit, will not destroy the next 12 months of my life?</em></p>
+
+        <p>Most founders never ask the second question. They feel the pull of the first. They build. And the catastrophe — when it arrives — arrives quietly, by inches, over the course of a year.</p>
+
+        <hr />
+
+        <h2>What Rory Sutherland calls "always invert".</h2>
+
+        <p>In <a href="https://www.penguin.co.uk/books/111/1119183/alchemy/9780753556528.html" style="color:var(--gold);border-bottom:1px solid rgba(190,130,35,0.3);" target="_blank" rel="noopener"><em>Alchemy</em></a>, the British advertising executive and behavioural-economics writer <strong>Rory Sutherland</strong> describes a thinking habit borrowed from the mathematician Carl Jacobi: <em>invertere semper</em>. Always invert.</p>
+
+        <p>Jacobi's point — and Sutherland's, applied to business — is that some questions are easier to answer in their negative form than in their positive one. You ask "what makes a marriage succeed?" — the answer is hazy. You ask "what kills marriages?" — the answer is sharper. You ask "what makes a startup succeed?" — the founders who succeeded disagree on the answer. You ask "what kills startups?" — the founders who failed agree, almost word for word.</p>
+
+        <p>The go/no-go decision benefits enormously from this inversion. Asking "is this idea great?" is a near-impossible question to answer honestly — your enthusiasm is in the room. Asking "what catastrophes is this idea most likely to walk me into?" is much easier to answer. And the answer is often visible from the start, if you are willing to write it down.</p>
+
+        <hr />
+
+        <h2>The five quiet catastrophes.</h2>
+
+        <p>The patterns are documented in the public record any returning founder reads to catch up: post-mortem indexes, failed-startup wikis, the published anatomies of well-funded ventures that nevertheless came apart. Five catastrophes appear and reappear. They are quiet because none of them announces itself at the start. Each is a structural feature of the idea itself, hiding in plain sight, waiting for a year of build to reveal it.</p>
+
+        <ul>
+          <li><strong>The market is real but unreachable.</strong> The customer exists, but you have no plausible path to them at this scale, with these resources, in this timeframe. WeWork's commercial real-estate ambitions ran into a version of this — the thesis was real, the operational path to scale was not.</li>
+          <li><strong>The revenue model is wishful.</strong> You can describe how the business makes money, but each of the assumptions underneath has the word "if" in front of it. Quibi's premium-short-form-video model — $1.75B raised, eighteen months to closure — was a textbook revenue catastrophe: subscribers <em>and</em> advertisers, premium-priced, on a format people watched for free elsewhere.</li>
+          <li><strong>The viral mechanic is a hope, not a structure.</strong> You believe people will tell other people. There is no specific reason embedded in the product that makes them. Path, the social network of the early 2010s, was designed for closeness — the structural reason to invite anyone never existed in the product itself.</li>
+          <li><strong>The competitive position erodes the moment you launch.</strong> You are first to market, briefly, in a category where being first is not a defence. Clubhouse's audio-social moment closed the day Twitter Spaces shipped — first-mover advantage in a feature-shaped category is not a moat.</li>
+          <li><strong>The build is solo-feasible only if everything goes right.</strong> The plan works on paper. The plan does not work on a Tuesday in November when you are tired.</li>
+        </ul>
+
+        <p>None of these is fatal individually. Two of them, present together, is usually a no-go. The decision exists to surface them — before the build starts.</p>
+
+        <hr />
+
+        <h2>The gate that protects your time.</h2>
+
+        <p>What a go/no-go gate does, structurally, is force the question to be asked in writing — once, on purpose, before the build starts. Not in the founder's head, where the answer is filtered through enthusiasm. On paper, where the catastrophes have to be named.</p>
+
+        <p>A founder who runs the gate honestly and arrives at NO has not failed. They have just been given back twelve months. A founder who arrives at CONDITIONAL GO and addresses the named catastrophes before building has converted what would have been a failed venture into one with a fighting chance. A founder who arrives at GO has done the work that lets them build with a different quality of conviction — not because the gate removed the catastrophes, but because the gate confirmed they were not the kind that would walk them into one.</p>
+
+        <p>Sutherland writes that in business, opposites can both be true. A venture can be a great idea and a personal catastrophe. A venture can be a mediocre idea and a perfect fit. The gate's job is to surface which of these you are actually looking at — not by guessing, but by inverting.</p>
+
+        <div class="pull-quote">
+          <p>"You don't pay for the verdict to find a 9/10 idea. You pay for the verdict to not lose twelve months on a 3/10 catastrophe."</p>
+        </div>
+
+        <hr />
+
+        <h2>What changes when you invert.</h2>
+
+        <p>When the idea is run through this frame — explicitly, in writing, before the build starts — three things change in the work that follows.</p>
+
+        <p><strong>The idea gets sharper.</strong> Listing the catastrophes the idea is most likely to walk into surfaces the design choices that would prevent each one. The gate becomes a build brief. The catastrophe-avoidance logic transfers directly into the construction logic.</p>
+
+        <p><strong>The pace changes.</strong> A founder who has written down the five catastrophes does not stop building — but they build differently. They build with the catastrophes named, in their peripheral vision, every week. The build serves the question; the question does not stop the build. This is the structural difference between disciplined optimism and unexamined enthusiasm.</p>
+
+        <p><strong>The quitting becomes easier.</strong> Most ventures that fail, fail because the founder couldn't quit them in time. The harder version of quitting is quitting because the venture <em>cannot</em> succeed in the form the founder is building it. That decision is almost impossible without a list of catastrophes written down at the start. With a list, it becomes possible — sometimes within a few months instead of two years.</p>
+
+        <hr />
+
+        <h2>Why I built this gate.</h2>
+
+        <p>I built <a href="https://usetouchstone.ai" style="color:var(--gold);border-bottom:1px solid rgba(190,130,35,0.3);">Touchstone</a> because I wanted the gate to exist for founders coming up now — the gate I would have wanted before I built the ventures I built earlier in my career. The methodology in the gate is not new. The structure of asking it before the first line of code is what's missing in most founders' processes — and what I have spent the last fifteen years watching the public record document, idea by idea, post-mortem by post-mortem.</p>
+
+        <p>This is not a claim of special insight. It is a claim that distance, properly used, is its own form of evidence.</p>
+
+        <hr />
+
+        <h2>Conclusion.</h2>
+
+        <p>The go/no-go question, asked honestly, is not optimism's enemy. It is optimism's structural support. Without it, optimism builds on assumption. With it, optimism builds on evidence — including the evidence that says, sometimes, <em>not this one</em>.</p>
+
+        <p>Most founders ask "is this idea great?" The harder question — the one a mentor sitting across from you should ask, and the one I would ask myself if I were starting again tomorrow — is this: <em>what is the catastrophe you are most likely to walk into, and is that catastrophe worth the upside you are buying?</em></p>
+
+        <p>If the answer is yes — proceed, with the catastrophes named.</p>
+
+        <p>If the answer is no — the gate has just returned twelve months of your life to you.</p>
+
+        <p>Either way, you'll know.</p>
+
+        <p><em>What's the catastrophe your current idea is most likely to walk you into — and have you written it down?</em></p>
+
+        </div><!-- /articleBody -->
+
+        <!-- Author byline -->
+        <div class="article-byline">
+          <div class="byline-inner">
+            <div class="byline-avatar">R</div>
+            <div class="byline-text">
+              <h3>Rick Musial</h3>
+              <p>Founder &amp; Chairman of Digital Venture Studio. After fifteen years out of day-to-day building, Rick returned to codify the go/no-go gate he wished he'd had earlier in his career — for himself, and for the founders coming up now. <a href="https://usetouchstone.ai" style="color:var(--gold);border-bottom:1px solid rgba(190,130,35,0.25);">Touchstone</a> is the first of those tools.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Back to blog -->
+        <div class="article-next">
+          <p><strong>Want more like this?</strong> Rick writes about the go/no-go decision, founder counterintuitions, and the business of building ventures worth building.</p>
+          <a href="/blog/" class="btn-back">
+            All writing
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- ─── FOOTER ───────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Digital Venture <span>Studio</span></h3>
+          <p>From first thought to first customer — with a mentor who stays.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="https://usetouchstone.ai">Touchstone</a></li>
+            <li><a href="https://www.eulogizethis.com">Eulogize This</a></li>
+            <li><a href="/#products">Roadmap →</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/#services">Marketing</a></li>
+            <li><a href="/#services">Business Management</a></li>
+            <li><a href="/#services">After-Release Support</a></li>
+            <li><a href="/#services">External Review</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>DVS</h4>
+          <ul>
+            <li><a href="/#method">The Method</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#about">Founding Thesis</a></li>
+            <li><a href="/blog/">Writing</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2026 Digital Venture Studio. All rights reserved.
+          <span style="margin-left:20px;opacity:0.5;">·</span>
+          <a href="/privacy" style="margin-left:12px;opacity:0.55;font-size:12px;color:var(--cream);text-decoration:none;">Privacy Policy</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:20px;">
+          <a href="https://www.linkedin.com/company/digital-venture-studio" target="_blank" rel="noopener" aria-label="DVS on LinkedIn" style="color:rgba(247,243,235,0.45);transition:color 0.2s;" onmouseover="this.style.color='rgba(247,243,235,0.85)'" onmouseout="this.style.color='rgba(247,243,235,0.45)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <div class="footer-tagline" style="margin:0;">Built using the same methodology we sell.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
