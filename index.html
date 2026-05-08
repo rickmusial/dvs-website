@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Digital Venture Studio — From first thought to first customer</title>
-  <meta property="og:title" content="Digital Venture Studio — From first thought to first customer" />
+  <title>Digital Venture Studio — From idea to validated venture</title>
+  <meta property="og:title" content="Digital Venture Studio — From idea to validated venture" />
   <meta property="og:description" content="DVS gives businesses, government teams, and organisations the strategic capability that used to cost $50,000 in consulting fees. Powered by AI. Built on proof." />
   <meta property="og:image" content="https://digitalventurestudio.com/images/h1-open-graph.png" />
   <meta property="og:image:width" content="1200" />
@@ -12,9 +12,299 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://digitalventurestudio.com" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Digital Venture Studio — From first thought to first customer" />
+  <meta name="twitter:title" content="Digital Venture Studio — From idea to validated venture" />
   <meta name="twitter:description" content="DVS gives businesses, government teams, and organisations the strategic capability that used to cost $50,000 in consulting fees." />
   <meta name="twitter:image" content="https://digitalventurestudio.com/images/h1-open-graph.png" />
+
+  <!-- ─── STRUCTURED DATA (JSON-LD) ────────────────────────────────────
+       Added S117 (8 May 2026) per DVS-LRA-2026-001 Patel landing audit.
+       Modelled on Eulogize This (StructuredData.tsx) and The Assay
+       (S116 schema deploy, commit aaab2d4). This is the canonical
+       Organization + Services + FAQ + Breadcrumb + Person schema set
+       for digitalventurestudio.com — opts the site into AI citation
+       across ChatGPT, Perplexity, Claude, Gemini, and Common Crawl.
+  ─────────────────────────────────────────────────────────────────── -->
+
+  <!-- Organization: DVS as parent, with sub-organisations for products -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Digital Venture Studio",
+    "alternateName": "DVS",
+    "url": "https://digitalventurestudio.com",
+    "logo": "https://digitalventurestudio.com/images/h1-open-graph.png",
+    "description": "Digital Venture Studio gives businesses, government teams, and organisations the strategic capability that used to cost $50,000 in consulting fees. We validate ideas, produce complete venture specifications, and stay through the build.",
+    "slogan": "From first thought to first customer — with a mentor who stays.",
+    "foundingDate": "2026",
+    "founder": {
+      "@type": "Person",
+      "name": "Rick Musial",
+      "jobTitle": "Founder & Chairman",
+      "url": "https://digitalventurestudio.com",
+      "sameAs": ["https://www.linkedin.com/in/rick-musial-9b9857370"]
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7 Wandoo Street",
+      "addressLocality": "O'Connor",
+      "addressRegion": "ACT",
+      "postalCode": "2602",
+      "addressCountry": "AU"
+    },
+    "email": "rick@digitalventurestudio.com",
+    "areaServed": [
+      {"@type": "Country", "name": "Australia"},
+      {"@type": "Country", "name": "New Zealand"},
+      {"@type": "Country", "name": "United Kingdom"}
+    ],
+    "subOrganization": [
+      {
+        "@type": "Organization",
+        "name": "Touchstone",
+        "url": "https://usetouchstone.ai",
+        "description": "AI-powered venture validation. Founders submit an idea, run it through a structured six-dimension assessment, and receive a Go/No-Go verdict plus a complete document suite if it passes."
+      },
+      {
+        "@type": "Organization",
+        "name": "The Assay",
+        "url": "https://theassay.ai",
+        "description": "Independent product assessment for founders. Six-dimension review with composite Assay Score, delivered as a written report. From $99."
+      },
+      {
+        "@type": "Organization",
+        "name": "Eulogize This",
+        "url": "https://eulogizethis.com",
+        "description": "Humorous eulogies for anything — generated on demand."
+      }
+    ],
+    "sameAs": [
+      "https://usetouchstone.ai",
+      "https://theassay.ai",
+      "https://eulogizethis.com",
+      "https://www.linkedin.com/in/rick-musial-9b9857370"
+    ]
+  }
+  </script>
+
+  <!-- Person: Rick Musial — Founder & Chairman -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rick Musial",
+    "jobTitle": "Founder & Chairman",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Digital Venture Studio",
+      "url": "https://digitalventurestudio.com"
+    },
+    "url": "https://digitalventurestudio.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/rick-musial-9b9857370"
+    ],
+    "knowsAbout": [
+      "Venture validation",
+      "Founder go/no-go decision",
+      "Product methodology",
+      "Strategic AI adoption",
+      "Brand strategy",
+      "Business management",
+      "External review consulting"
+    ]
+  }
+  </script>
+
+  <!-- Service: Marketing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Marketing — DVS Studio",
+    "serviceType": "Marketing strategy and execution",
+    "provider": {
+      "@type": "Organization",
+      "name": "Digital Venture Studio",
+      "url": "https://digitalventurestudio.com"
+    },
+    "areaServed": "Worldwide",
+    "url": "https://digitalventurestudio.com/#services",
+    "description": "Go-to-market strategy, brand positioning, content marketing, and launch execution. DVS builds and runs your marketing function — from the positioning statement on your homepage to the weekly content cadence that grows your audience. For businesses and teams who want an expert hand, not another tool to manage.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Marketing capabilities",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brand strategy and positioning"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Go-to-market plan and channel prioritisation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Content strategy and production (long-form, social, email)"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Launch campaign planning and execution"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ongoing marketing management and reporting"}}
+      ]
+    }
+  }
+  </script>
+
+  <!-- Service: Business Management -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Business Management — DVS Studio",
+    "serviceType": "Fractional business management",
+    "provider": {
+      "@type": "Organization",
+      "name": "Digital Venture Studio",
+      "url": "https://digitalventurestudio.com"
+    },
+    "areaServed": "Worldwide",
+    "url": "https://digitalventurestudio.com/#services",
+    "description": "Strategic and operational management for ventures that need more than a founder. DVS acts as your fractional business management layer — covering operations, financial oversight, vendor relationships, and strategic planning. The capability of a management team, without the overhead of one.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Business management capabilities",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Operational setup and process design"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Financial oversight and reporting"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vendor and partner management"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Strategic planning and roadmap governance"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Board-ready reporting and investor communication"}}
+      ]
+    }
+  }
+  </script>
+
+  <!-- Service: After-Release Support -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "After-Release Support — DVS Studio",
+    "serviceType": "Post-launch product support and growth",
+    "provider": {
+      "@type": "Organization",
+      "name": "Digital Venture Studio",
+      "url": "https://digitalventurestudio.com"
+    },
+    "areaServed": "Worldwide",
+    "url": "https://digitalventurestudio.com/#services",
+    "description": "Launch is not the finish line. DVS stays with you through the critical post-release period — managing user feedback loops, iterating on what the data reveals, and accelerating growth once the product has found its footing. This is the phase where most ventures stall. DVS was built for it.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "After-release support capabilities",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Post-launch monitoring and issue management"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "User feedback analysis and prioritisation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Product iteration planning and delivery"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Growth acceleration sprints"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Performance optimisation and technical health"}}
+      ]
+    }
+  }
+  </script>
+
+  <!-- Service: External Review -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "External Review — DVS Studio",
+    "serviceType": "Independent strategic and product review",
+    "provider": {
+      "@type": "Organization",
+      "name": "Digital Venture Studio",
+      "url": "https://digitalventurestudio.com"
+    },
+    "areaServed": "Worldwide",
+    "url": "https://digitalventurestudio.com/#services",
+    "description": "An independent, expert second opinion — on your strategy, your product, your financials, or your team. DVS operates as an external review consultancy for businesses, government departments, and organisations who want rigorous challenge, not comfortable agreement. We apply the same methodology we use on our own ventures to yours.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "External review capabilities",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Strategy and positioning audits"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Product and technical due diligence"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Business model and financial model review"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Competitive landscape assessment"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Investment readiness review"}}
+      ]
+    }
+  }
+  </script>
+
+  <!-- FAQPage: pulled verbatim from the FAQ section on this page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does a DVS engagement look like from the outside?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It starts with a conversation — not a proposal. We confirm there's a genuine fit, then agree on scope. Every engagement runs through the DVS methodology: validate the idea, produce the complete specification suite, then build against it. You're never handed a document and left alone with it. We stay through every stage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DVS engagements follow a clear three-step path: a free discovery conversation to confirm fit — no proposal, no commitment. A paid scoping session ($1,500, credited in full against your engagement) to define exactly what will be built. Then a fixed-price Venture Build, starting from $15,000, scoped to what you actually need. The methodology displaces $50,000+ in strategic consulting capability. The first conversation costs nothing and commits you to nothing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take from first conversation to a validated specification?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Touchstone can take an idea through validation and produce a complete document suite in a single session. A full DVS Studio engagement — from scoping call to validated specification with PRD, Build Guide, Brand Guidelines, Business Case, and Marketing Plan — typically runs 2–4 weeks depending on complexity and availability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my idea fails the Go/No-Go assessment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "That's a success, not a failure. A kill decision at the validation stage costs days and a conversation fee. The same decision discovered after 12 months of building costs everything. If your idea doesn't pass, DVS tells you exactly why — and in most cases, identifies what would need to change for it to pass. Honest advice is the service."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can DVS work with teams and organisations, not just individual founders?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — and increasingly, that's where the methodology adds the most value. Government departments, SMBs, and corporate innovation units all face the same core problem: clarity before commitment. The DVS methodology scales from a single founder with a hunch to a team with a portfolio of initiatives."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between Touchstone and working with DVS Studio directly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Touchstone is self-service — you run your idea through the pipeline yourself and receive a document suite at the end. DVS Studio is a full engagement: we work alongside you, bring strategic judgement to every decision, and take responsibility for the output. Touchstone is the product. DVS Studio is the relationship."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList: homepage stub -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://digitalventurestudio.com"
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -1095,10 +1385,11 @@
     <div class="container" style="position:relative;z-index:1;">
       <div class="hero-left">
         <div class="hero-eyebrow">Digital Venture Studio</div>
-        <h1>From <em>first thought</em> to first customer — with a mentor who stays.</h1>
+        <h1>From <em>idea</em> to validated venture — with a mentor who stays.</h1>
         <p class="hero-subline">
-          The barrier to venture success is clarity, not capital. DVS gives businesses, government teams, and organisations
-          the strategic capability that used to cost $50,000 in consulting fees.
+          Most founders skip the one decision that protects everything else: <em>is this idea worth building?</em>
+          DVS answers that — and stays with you while you build. The strategic capability that used to cost $50,000
+          in consulting fees.
         </p>
         <div class="hero-actions">
           <a href="#contact" class="btn-primary">Work With DVS</a>

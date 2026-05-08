@@ -1,0 +1,39 @@
+# Digital Venture Studio — robots.txt
+# Updated 8 May 2026 — closes the third site in the S112 Patel landing audit
+# (DVS-LRA-2026-001). Modelled on Touchstone's S112 robots.ts pattern.
+#
+# Strategy: permissive base — every public page on digitalventurestudio.com is
+# part of the brand surface AI citation engines should be able to read. The
+# DVS site has no authenticated user surfaces, no admin routes, no API to
+# protect — the entire site is content meant to be cited.
+
+User-agent: *
+Allow: /
+
+# Explicit allow rules for major AI crawlers — opts DVS IN to AI search
+# citation across ChatGPT, Perplexity, Claude, Gemini, Common Crawl.
+# Per DVS Marketing Intelligence Feed MIF-003, brand-site citations are now
+# the majority of AI search citations (8% -> 56% from GPT-5.3 to GPT-5.4),
+# so making the site explicitly readable is now an AEO requirement, not a
+# nice-to-have.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemap reference
+Sitemap: https://digitalventurestudio.com/sitemap.xml
