@@ -1,0 +1,66 @@
+name: Publish scheduled posts
+
+# Auto-publishes approved, staged blog posts on their publish date, then fires
+# the LinkedIn teaser (after the site is live). Removes the need to publish from
+# a terminal. Setup + how-to: see scheduled/README.md.
+#
+# IMPORTANT: GitHub Actions cron is in UTC (NOT local time). Rick is AEST (UTC+10).
+#   Sun 22:15 UTC = Mon 08:15 AEST   |   Thu 22:15 UTC = Fri 08:15 AEST
+# So the Mon/Fri 08:15 local cadence is expressed as the day-before in UTC.
+
+on:
+  schedule:
+    - cron: '15 22 * * 0,4'   # Sun + Thu 22:15 UTC  →  Mon + Fri 08:15 AEST
+  workflow_dispatch: {}        # manual trigger — use this to TEST before relying on it
+
+permissions:
+  contents: write              # built-in GITHUB_TOKEN commits to THIS repo — no personal token needed
+
+concurrency:
+  group: publish-scheduled
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Publish any posts whose date is due
+        env:
+          PUBLISHED_OUT: ${{ runner.temp }}/published.json
+        run: |
+          node scripts/publish-scheduled.mjs
+          echo "PUBLISHED_OUT=${{ runner.temp }}/published.json" >> "$GITHUB_ENV"
+
+      - name: Commit & push if anything changed
+        id: push
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name  "dvs-bot"
+            git config user.email "bot@digitalventurestudio.com"
+            git add -A
+            git commit -m "auto-publish: scheduled blog post(s) [skip ci]"
+            git push
+            echo "published=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Nothing due today — no changes."
+            echo "published=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Website-first: only after the blog is committed/pushed (and Vercel has had
+      # time to deploy) do we fire the LinkedIn teaser, so it never points at a
+      # not-yet-live article.
+      - name: Wait for Vercel to deploy
+        if: steps.push.outputs.published == 'true'
+        run: sleep 90
+
+      - name: Fire LinkedIn teaser(s)
+        if: steps.push.outputs.published == 'true'
+        env:
+          ZAPIER_LINKEDIN_WEBHOOK: ${{ secrets.ZAPIER_LINKEDIN_WEBHOOK }}
+        run: node scripts/fire-linkedin.mjs
