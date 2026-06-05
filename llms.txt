@@ -1,0 +1,22 @@
+# Digital Venture Studio
+
+> Digital Venture Studio (DVS) helps solo founders and small teams make the decision most founders skip — whether an idea is worth building at all — and then build it. Writing by founder Rick Musial on the go/no-go decision, founder-market fit, venture validation, and the design choices that make tools worth trusting.
+
+## Core
+
+- [Digital Venture Studio — home](https://digitalventurestudio.com/): What DVS is, the method, products, and services.
+- [Writing (blog index)](https://digitalventurestudio.com/blog/): All essays on the go/no-go decision and founder counterintuitions.
+
+## Writing
+
+- [Scratch your own itch is dangerous advice](https://digitalventurestudio.com/blog/scratch-your-own-itch-is-dangerous-advice.html): Why "build something you need" is only half right, and the one question that separates an idiosyncratic itch (real for a market of one) from an early one (real but ahead of the market).
+- [Founder-market fit is two different things](https://digitalventurestudio.com/blog/founder-market-fit-is-two-different-things.html): Founder-market fit is founder advantage AND problem validity — most founders only check one, and the gap is where ventures quietly die.
+- [The founder-market fit problem nobody talks about](https://digitalventurestudio.com/blog/the-founder-market-fit-problem-nobody-talks-about.html): Validation tools score the idea; few ask whether you're built for what the market will cost you.
+- [When the X-ray is perfect every time, the only thing that matters is bedside manner](https://digitalventurestudio.com/blog/when-the-x-ray-is-perfect-every-time.html): On AI tools, accuracy, and why trust is the differentiator once accuracy is commoditised.
+- [The catastrophe you're trying to avoid](https://digitalventurestudio.com/blog/the-catastrophe-youre-trying-to-avoid.html): The real cost of skipping the go/no-go decision before you build.
+- [The question you should answer before you write a single line of code](https://digitalventurestudio.com/blog/the-question-you-should-answer-before-you-write-a-single-line-of-code.html): The go/no-go decision, framed for first-time founders.
+
+## Products
+
+- [Touchstone](https://usetouchstone.ai): A structured go/no-go validation platform for early-stage ventures.
+- [Eulogize This](https://www.eulogizethis.com): A product for capturing life story and legacy.
