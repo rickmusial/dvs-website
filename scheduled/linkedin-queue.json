@@ -1,5 +1,19 @@
 [
   {
+    "id": "admiration-cut-1-timing",
+    "date": "2026-06-24",
+    "visibility": "PUBLIC",
+    "status": "ready",
+    "text": "Admiration arrives at the worst possible time.\n\nYou get the most of it when you've done the least — the announcement, the pitch, the \"I'm building this.\" Applause for the idea.\n\nYou get the least of it when you're doing the most — head down, six weeks in, fixing the unglamorous thing nobody sees. Silence for the work.\n\nSo if admiration is your fuel, you run out exactly when you need it most. The tank is full at the start line and empty on the climb.\n\nConviction is the fuel that doesn't depend on an audience being in the room.\n\nWhat's powering you through the quiet part right now?"
+  },
+  {
+    "id": "admiration-cut-2-steers",
+    "date": "2026-06-25",
+    "visibility": "PUBLIC",
+    "status": "ready",
+    "text": "Admiration doesn't just run out. It points you the wrong way.\n\nIt's loudest for the performance of the idea — the launch post, the slick deck, the origin story — and quietest for the work that actually makes it real. The unglamorous bug fix. The tenth customer call. The pricing page rewrite.\n\nSo if you're running on admiration, you drift toward the things that get applause and away from the things that get built. You optimise for the audience, not the venture.\n\nThat's the quiet danger: not that the fuel runs dry, but that it steers.\n\nConviction steers by the problem instead — it asks \"did this move the work forward?\", not \"did this get a reaction?\"\n\nWhere have you caught yourself doing the thing that gets applause instead of the thing that moves the build?"
+  },
+  {
     "id": "EXAMPLE-template-never-posts",
     "date": "2099-01-01",
     "visibility": "PUBLIC",

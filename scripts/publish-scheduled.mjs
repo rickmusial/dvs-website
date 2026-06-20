@@ -21,7 +21,10 @@ const INDEX = path.join(BLOG_DIR, 'index.html');
 const PUBLISHED_OUT = process.env.PUBLISHED_OUT || path.join(ROOT, '.published.json');
 const SITE = 'https://digitalventurestudio.com';
 
-const todayUTC = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+// "Today" in the venue's local timezone (Australia/Sydney = AEST/AEDT, DST-safe),
+// NOT UTC — the cron fires at 08:15 AEST when the UTC date is still the day before,
+// so a UTC compare would publish AEST-dated posts a run late. en-CA → YYYY-MM-DD.
+const todayUTC = new Intl.DateTimeFormat('en-CA', { timeZone: 'Australia/Sydney' }).format(new Date());
 
 function readJSON(p) { return JSON.parse(fs.readFileSync(p, 'utf8')); }
 function displayDate(iso) {

@@ -40,7 +40,9 @@ try {
   process.exit(1);
 }
 
-const today = new Date().toISOString().slice(0, 10); // UTC YYYY-MM-DD
+// "Today" in Australia/Sydney (AEST/AEDT, DST-safe), NOT UTC — the cron fires at
+// 08:30 AEST when the UTC date is still the day before. en-CA → YYYY-MM-DD.
+const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Australia/Sydney' }).format(new Date());
 const due = entries.filter(e => e && e.status === 'ready' && typeof e.date === 'string' && e.date <= today);
 
 if (due.length === 0) {
