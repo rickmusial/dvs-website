@@ -1,0 +1,45 @@
+name: Post to LinkedIn (ad-hoc)
+
+# Fire a single, pre-written LinkedIn post on demand — no terminal posting, no
+# Zapier. Spec: DVS-LPS-2026-001 v2.0 §5. Text is passed base64-encoded to dodge
+# shell-quoting of apostrophes/quotes.
+#
+# Trigger: Actions → "Post to LinkedIn (ad-hoc)" → Run workflow, paste text_b64;
+# or `gh workflow run linkedin-post.yml -f text_b64=... ` (see scripts/post-adhoc.sh).
+#
+# Requires repo secrets: LINKEDIN_TOKEN, LINKEDIN_AUTHOR_URN (Rick sets these).
+# The job FAILS LOUDLY if the post doesn't return 201 + a share URN (P-066).
+
+on:
+  workflow_dispatch:
+    inputs:
+      text_b64:
+        description: 'Post body, base64-encoded (use scripts/post-adhoc.sh, or: base64 of the text)'
+        required: true
+        type: string
+      visibility:
+        description: 'Audience'
+        required: false
+        default: 'PUBLIC'
+        type: choice
+        options: [PUBLIC, CONNECTIONS]
+
+concurrency:
+  group: linkedin-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Post to LinkedIn
+        env:
+          LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+          TEXT_B64: ${{ inputs.text_b64 }}
+          VISIBILITY: ${{ inputs.visibility }}
+        run: node scripts/post-linkedin.mjs

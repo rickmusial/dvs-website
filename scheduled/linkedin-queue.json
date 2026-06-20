@@ -1,0 +1,9 @@
+[
+  {
+    "id": "EXAMPLE-template-never-posts",
+    "date": "2099-01-01",
+    "visibility": "PUBLIC",
+    "status": "held",
+    "text": "This is a template entry. Copy it, give it a real id + date, set status to \"ready\", and the daily scheduled workflow will post it at 08:30 AEST on/after that date. status \"held\" never posts."
+  }
+]

@@ -1,0 +1,52 @@
+name: Post to LinkedIn (scheduled queue)
+
+# The "I never have to remember" poster. Once a day it publishes any PRE-APPROVED
+# post in scheduled/linkedin-queue.json whose date is due, self-verifies, commits
+# the updated queue, and FAILS LOUDLY (GitHub emails Rick) if anything didn't land.
+# Spec: DVS-LPS-2026-001 v2.0 §5. Authorship stays human — this only ships queued,
+# already-approved text (MIF-067).
+#
+# GitHub Actions cron is UTC. Rick is AEST (UTC+10).
+#   30 22 * * *  (UTC)  =  08:30 AEST daily  — the morning slot.
+# An entry only posts on/after its `date`, so a daily check is safe: most days
+# nothing is due and the run is a no-op.
+
+on:
+  schedule:
+    - cron: '30 22 * * *'    # 22:30 UTC = 08:30 AEST, every day
+  workflow_dispatch: {}        # manual trigger — for testing / catch-up
+
+permissions:
+  contents: write              # commit the updated queue (status ready → posted)
+
+concurrency:
+  group: linkedin-scheduled
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Publish any queued post whose date is due
+        env:
+          LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+        run: node scripts/post-linkedin-queue.mjs
+
+      - name: Commit queue state if it changed
+        if: always()           # commit even if a later step failed, so 'posted'/'failed' status persists
+        run: |
+          if [[ -n "$(git status --porcelain scheduled/linkedin-queue.json)" ]]; then
+            git config user.name  "dvs-bot"
+            git config user.email "bot@digitalventurestudio.com"
+            git add scheduled/linkedin-queue.json
+            git commit -m "linkedin queue: update post status [skip ci]"
+            git push
+          else
+            echo "Queue unchanged."
+          fi
