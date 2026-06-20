@@ -1,4 +1,85 @@
 {
-  "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action.",
-  "queue": []
+  "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
+  "queue": [
+    {
+      "slug": "admiration-is-unstable-fuel",
+      "publishDate": "2026-06-22",
+      "category": "Founder Counterintuition",
+      "readTime": "4 min read",
+      "title": "Admiration is unstable fuel",
+      "description": "The founders who burn out aren't the ones nobody encouraged. They ran on admiration — and admiration is unstable fuel. Why conviction is the only thing that survives the silence.",
+      "featured": true,
+      "linkedinTeaser": "The founders who burn out usually aren't the ones nobody believed in. Plenty had the encouraging coffees, the \"you should absolutely build this,\" the post that did well. They didn't run out of support. They ran out of what support was standing in for.\n\nThey were running on admiration. And admiration is unstable fuel: it's external, it spikes when you pitch and goes quiet while you build, and it rewards the performance of the idea over the work of making it real.\n\nConviction is the stable kind. Admiration is what other people feel about your idea; conviction is what you'd do if they stopped.\n\nBe honest: if the applause stopped tomorrow, would you keep building?"
+    },
+    {
+      "slug": "who-would-miss-it",
+      "publishDate": "2026-06-26",
+      "category": "Founder Counterintuition",
+      "readTime": "4 min read",
+      "title": "The people who like your idea vs the people who'd miss it",
+      "description": "Likes are abundant and cheap. The signal that matters is rarer: who would actually feel the absence if your product vanished tomorrow? Build for the missers, not the likers.",
+      "featured": true,
+      "linkedinTeaser": "\"I love this\" feels like the market speaking. It isn't. It's a person being kind about an idea — which is a different thing from a person who'd be worse off without it.\n\nLiking is cheap; it costs the speaker nothing. Missing is rare — it means the thing earned a real place in someone's life. A crowd of likers tells you you're pleasant to hear about. A handful of people who'd miss you tells you that you matter.\n\nSo change the question. Not \"do people like this?\" but \"who would feel the absence?\"\n\nWho would genuinely miss your product if it vanished tomorrow?"
+    },
+    {
+      "slug": "conviction-isnt-certainty",
+      "publishDate": "2026-06-29",
+      "category": "Founder Counterintuition",
+      "readTime": "4 min read",
+      "title": "Conviction isn't certainty",
+      "description": "Conviction isn't the absence of doubt, and it isn't refusing to hear no. It's the reason that survives an honest no. How to tell conviction from its dangerous twin, stubbornness.",
+      "featured": true,
+      "linkedinTeaser": "Conviction has a dangerous twin, and most founders can't tell them apart from the inside.\n\nCertainty is a claim about the outcome — \"I'm right, this will work.\" Nobody early is entitled to that. Conviction is a commitment to the problem that doesn't require you to know how it ends, so your doubt isn't a verdict against the venture; it lives in the plan, not the mission.\n\nThe expensive confusion is the other one: conviction vs stubbornness. Both push through resistance. The difference is what they do with evidence — conviction updates the plan while holding the mission; stubbornness changes the evidence to protect the plan.\n\nThe test: name what would change your mind. If the answer is \"nothing,\" that's not conviction."
+    },
+    {
+      "slug": "when-the-admiration-stops",
+      "publishDate": "2026-07-03",
+      "category": "Founder Counterintuition",
+      "readTime": "4 min read",
+      "title": "What to do when the admiration stops",
+      "description": "Every founder hits the quiet stretch where the applause dries up and it's just you and the work. Conviction isn't a feeling you wait for — it's something you build. Here's how.",
+      "featured": true,
+      "linkedinTeaser": "Every founder hits the same stretch of road. The launch glow is gone, the post that did well was three weeks ago, nobody's asking how it's going. Just you, the half-built thing, and a quiet that feels like a verdict.\n\nIt usually isn't one. The applause was always going to thin out — that's a fact about the fuel, not the idea.\n\nSo replace what you lost with evidence you control: visible progress, real user behaviour, proximity to the problem. Conviction in the quiet isn't a feeling you wait to return — it's something you rebuild from the work, one honest rep at a time.\n\nWhat's the smallest rep you could do this week that would remind you why you started?"
+    },
+    {
+      "slug": "you-cant-be-your-own-second-opinion",
+      "publishDate": "2026-07-06",
+      "category": "Founder Counterintuition",
+      "readTime": "4 min read",
+      "title": "You can't be your own second opinion",
+      "description": "You can now run a full VC-grade idea validation for free — six phases, ending in a go/no-go. It still won't tell you the truth about your idea, for one structural reason: you're the one holding the prompt.",
+      "featured": true,
+      "linkedinTeaser": "You can now validate a startup idea for free. There are good guides for it — six phases, real structure, ending with \"act as a critical-but-fair VC and give me a go/no-go.\" The method is free. The AI running it is free. And it still won't tell you the truth about your idea.\n\nBecause you're the one holding the prompt.\n\nYou write the prompt, so you choose the framing. You pick the inputs, so you choose the evidence. And a model trained to be helpful grades the idea of the person it's trying to help. The question never leaves the hands of the one person who already wants a particular answer.\n\nThe six phases are free. The AI is free. What's scarce is independence — a grader who isn't you, and a no that can actually reach you.\n\nWho gives you a real read on your idea — someone who didn't already know what you hoped the answer would be?"
+    },
+    {
+      "slug": "encouragement-is-not-a-second-opinion",
+      "publishDate": "2026-07-10",
+      "category": "Founder Counterintuition",
+      "readTime": "4 min read",
+      "title": "Encouragement is not a second opinion",
+      "description": "The people who care about you — and the helpful AI — are compromised graders too. They optimise for your morale, not your clarity. What a real second opinion actually requires.",
+      "featured": true,
+      "linkedinTeaser": "You finally took the idea out of your own head and asked around. People were encouraging. So you've got outside validation now — right? Not yet.\n\nThe people who love you can't be your second opinion either. They have a stake in your hope: they'd rather keep you encouraged than be the one who deflated you. \"I love it, you should build this\" is real affection — but it measures how much they like you, not whether the idea works.\n\nA real second opinion needs two things almost no one offers together: no stake in your hope, and the willingness to actually say no.\n\nWho in your circle has nothing to gain from your yes — and isn't afraid of your no?"
+    },
+    {
+      "slug": "the-feedback-you-can-survive",
+      "publishDate": "2026-07-13",
+      "category": "Founder Counterintuition",
+      "readTime": "4 min read",
+      "title": "The feedback you can survive",
+      "description": "Asking for feedback can be a sophisticated form of avoidance. Founders unconsciously pick the people, questions, and framing that can't return a no — and call it research.",
+      "featured": true,
+      "linkedinTeaser": "You did the work — talked to ten people, took notes. And somehow every conversation left the idea exactly as intact as it started. That's not luck. You chose feedback you could survive.\n\nWhen you're attached to an idea, you ask the people most likely to be kind, the questions least likely to find the soft spot, in a framing that already assumes you're right. It feels like research. It's built so it can't return a no.\n\nThe tell: if your research never changes your mind, you're not testing — you're collecting reassurance.\n\nWhat's the one question about your idea you've been avoiding?"
+    },
+    {
+      "slug": "go-looking-for-the-no",
+      "publishDate": "2026-07-17",
+      "category": "Founder Counterintuition",
+      "readTime": "4 min read",
+      "title": "Go looking for the no",
+      "description": "If you can't validate yourself, encouragement isn't a verdict, and you quietly pick the feedback you can survive — the move that's left is the uncomfortable one: go looking for the no.",
+      "featured": true,
+      "linkedinTeaser": "Most founders seek validation and merely tolerate criticism. Flip it: go looking for the no.\n\nIf your idea has a fatal flaw, it exists right now whether you've found it or not. You can pay to discover it today — one hard question, a little discomfort — or in twelve months, after the build and the launch. Same flaw, very different invoice.\n\nA no isn't a verdict on you. It tells you which part is wrong — market, timing, price — early, while changing course is cheap. A no in July is often what makes a yes in October possible.\n\nThe mirror always says go. The door might say no. Walk up to it hoping it tells you the truth."
+    }
+  ]
 }

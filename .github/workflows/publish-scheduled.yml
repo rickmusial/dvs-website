@@ -59,8 +59,9 @@ jobs:
         if: steps.push.outputs.published == 'true'
         run: sleep 90
 
-      - name: Fire LinkedIn teaser(s)
+      - name: Fire LinkedIn teaser(s) — direct API (no Zapier)
         if: steps.push.outputs.published == 'true'
         env:
-          ZAPIER_LINKEDIN_WEBHOOK: ${{ secrets.ZAPIER_LINKEDIN_WEBHOOK }}
-        run: node scripts/fire-linkedin.mjs
+          LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+        run: node scripts/fire-linkedin-direct.mjs

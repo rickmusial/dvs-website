@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The feedback your idea can survive — Digital Venture Studio</title>
+  <meta name="description" content="Asking for feedback can be a sophisticated form of avoidance. Founders unconsciously pick the people, questions, and framing that can't return a no — and call it research." />
+  <meta property="og:title" content="The feedback your idea can survive" />
+  <meta property="og:description" content="Asking for feedback can be a sophisticated form of avoidance. Founders unconsciously pick the people, questions, and framing that can't return a no — and call it research." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://digitalventurestudio.com/blog/the-feedback-you-can-survive.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The feedback your idea can survive" />
+  <meta name="twitter:description" content="Asking for feedback can be a sophisticated form of avoidance. Founders unconsciously pick the people, questions, and framing that can't return a no — and call it research." />
+  <meta property="og:image" content="https://digitalventurestudio.com/images/h1-open-graph.png" />
+  <meta name="twitter:image" content="https://digitalventurestudio.com/images/h1-open-graph.png" />
+  <link rel="canonical" href="https://digitalventurestudio.com/blog/the-feedback-you-can-survive.html" />
+
+  <!-- BlogPosting structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "The feedback your idea can survive",
+    "description": "Asking for feedback can be a sophisticated form of avoidance. Founders unconsciously pick the people, questions, and framing that can't return a no — and call it research.",
+    "datePublished": "2026-07-13",
+    "dateModified": "2026-07-13",
+    "author": {
+      "@type": "Person",
+      "name": "Rick Musial",
+      "jobTitle": "Founder & Chairman",
+      "url": "https://digitalventurestudio.com",
+      "sameAs": ["https://www.linkedin.com/in/rick-musial-9b9857370"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Digital Venture Studio",
+      "url": "https://digitalventurestudio.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://digitalventurestudio.com/images/h1-open-graph.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://digitalventurestudio.com/blog/the-feedback-you-can-survive.html"
+    },
+    "keywords": ["customer research", "startup feedback", "confirmation bias", "founder avoidance", "asking the right questions", "validation vs reassurance", "the mom test", "willingness to pay", "founder counterintuition", "disconfirming evidence"],
+    "articleSection": "Founder Counterintuition",
+    "wordCount": 690
+  }
+  </script>
+
+  <!-- FAQPage structured data — AEO signal for AI search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can asking for feedback actually be a form of avoidance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. When you're attached to an idea, you tend to choose the people most likely to be kind, the questions least likely to expose the weak point, and a framing that already assumes the idea is good. The result feels like diligent research but is engineered so it can't return a no. It's the same closed loop as grading your own work, just dressed up as openness to feedback."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I know if my customer research is real or just reassurance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Look at whether it ever changes your mind. If every conversation confirms what you already believed and nothing surprised you, that's not testing — it's selection. Real research produces at least some findings you didn't want. A process that only ever returns agreement isn't measuring the idea; it's collecting reassurance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What questions should founders ask that they tend to avoid?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The ones whose worst answer would hurt: Would you pay for this today, and how much? What would stop you from using it? Who is already solving this for you, and why would you switch? How are you handling this right now, and is it actually a problem worth money? These expose the weak points, which is exactly why founders steer around them — and exactly why they're worth asking."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── DESIGN TOKENS ──────────────────────────────────────────── */
+    :root {
+      --near-black:  #1A1A1E;
+      --gold:        #BE8223;
+      --gold-light:  #D4A053;
+      --gold-pale:   #F0E0C0;
+      --cream:       #F7F3EB;
+      --cream-dark:  #EDE8DC;
+      --white:       #FFFFFF;
+      --mid-grey:    #6B6B72;
+      --border:      rgba(190,130,35,0.2);
+
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans:  'Inter', system-ui, sans-serif;
+
+      --max-w: 1120px;
+      --prose-w: 680px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--near-black);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+    /* ─── NAVIGATION ─────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--near-black);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      height: 64px;
+      display: flex;
+      align-items: center;
+    }
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--cream);
+      letter-spacing: 0.02em;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(247,243,235,0.65);
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--cream); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--near-black) !important;
+      font-weight: 600 !important;
+      padding: 9px 20px;
+      border-radius: 4px;
+      font-size: 13px !important;
+      letter-spacing: 0.01em !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; }
+
+    /* ─── ARTICLE HEADER ─────────────────────────────────────────── */
+    .article-header {
+      background: var(--near-black);
+      padding: 120px 24px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.3;
+    }
+    .article-header::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -120px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(190,130,35,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .article-header .container {
+      position: relative;
+      z-index: 1;
+      max-width: var(--prose-w);
+    }
+    .article-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(247,243,235,0.45);
+      margin-bottom: 32px;
+      transition: color 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .article-back:hover { color: rgba(247,243,235,0.8); }
+    .article-category {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(190,130,35,0.12);
+      padding: 5px 12px;
+      border-radius: 3px;
+      margin-bottom: 24px;
+    }
+    .article-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 500;
+      color: var(--cream);
+      line-height: 1.2;
+      margin-bottom: 28px;
+      letter-spacing: -0.01em;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .article-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .author-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(190,130,35,0.2);
+      border: 1px solid rgba(190,130,35,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 14px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .author-info { display: flex; flex-direction: column; gap: 2px; }
+    .author-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(247,243,235,0.8);
+    }
+    .author-title {
+      font-size: 11px;
+      color: rgba(247,243,235,0.4);
+    }
+    .meta-divider {
+      width: 1px;
+      height: 28px;
+      background: rgba(255,255,255,0.1);
+    }
+    .meta-item {
+      font-size: 12px;
+      color: rgba(247,243,235,0.4);
+    }
+
+    /* ─── ARTICLE BODY ───────────────────────────────────────────── */
+    .article-body {
+      padding: 72px 24px 96px;
+    }
+    .article-body .container {
+      max-width: var(--prose-w);
+    }
+    .prose p {
+      font-size: 17px;
+      line-height: 1.75;
+      color: #2A2A2E;
+      margin-bottom: 28px;
+    }
+    .prose h2 {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--near-black);
+      margin-top: 52px;
+      margin-bottom: 20px;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+    .prose h2:first-child { margin-top: 0; }
+    .prose strong { font-weight: 600; color: var(--near-black); }
+    .prose em { font-style: italic; }
+    .prose ul {
+      list-style: none;
+      margin: 0 0 28px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .prose ul li {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #2A2A2E;
+      padding-left: 20px;
+      position: relative;
+    }
+    .prose ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .prose hr {
+      border: none;
+      border-top: 1px solid rgba(26,26,30,0.1);
+      margin: 48px 0;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 3px solid var(--gold);
+      padding: 4px 0 4px 28px;
+      margin: 40px 0;
+    }
+    .pull-quote p {
+      font-family: var(--serif);
+      font-size: 22px !important;
+      font-style: italic;
+      color: var(--near-black) !important;
+      line-height: 1.5 !important;
+      margin-bottom: 0 !important;
+    }
+    .pull-quote cite {
+      display: block;
+      margin-top: 12px;
+      font-family: var(--sans);
+      font-style: normal;
+      font-size: 13px;
+      color: var(--mid-grey);
+      letter-spacing: 0.02em;
+    }
+
+    /* Author byline at end */
+    .article-byline {
+      margin-top: 64px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(26,26,30,0.1);
+    }
+    .byline-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .byline-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(190,130,35,0.1);
+      border: 1px solid rgba(190,130,35,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 20px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .byline-text h3 {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--near-black);
+      margin-bottom: 6px;
+    }
+    .byline-text p {
+      font-size: 14px !important;
+      color: var(--mid-grey) !important;
+      line-height: 1.6 !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* Back to blog CTA */
+    .article-next {
+      margin-top: 48px;
+      padding: 32px;
+      background: var(--white);
+      border: 1px solid rgba(26,26,30,0.07);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .article-next p {
+      font-size: 14px !important;
+      color: var(--mid-grey) !important;
+      margin-bottom: 0 !important;
+    }
+    .article-next strong { color: var(--near-black); }
+    .btn-back {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+    }
+    .btn-back:hover { gap: 10px; }
+
+    /* ─── FOOTER ─────────────────────────────────────────────────── */
+    .footer {
+      background: #111115;
+      padding: 56px 24px 32px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-brand h3 {
+      font-family: var(--serif);
+      font-size: 20px;
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+    .footer-brand h3 span { color: var(--gold); }
+    .footer-brand p {
+      font-size: 13px;
+      color: rgba(247,243,235,0.35);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(247,243,235,0.4);
+      margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul a {
+      font-size: 13px;
+      color: rgba(247,243,235,0.45);
+      transition: color 0.2s;
+    }
+    .footer-col ul a:hover { color: var(--cream); }
+    .footer-bottom {
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-copy { font-size: 12px; color: rgba(247,243,235,0.2); }
+    .footer-tagline {
+      font-family: var(--serif);
+      font-size: 12px;
+      font-style: italic;
+      color: rgba(247,243,235,0.25);
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .nav-links { display: none; }
+      .article-next { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 600px) {
+      .footer-top { grid-template-columns: 1fr; }
+      .prose p, .prose ul li { font-size: 16px; }
+      .pull-quote p { font-size: 19px !important; }
+    }
+  </style>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+  <!-- ─── NAV ──────────────────────────────────────────────────────── -->
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-logo">Digital Venture <span>Studio</span></a>
+      <ul class="nav-links">
+        <li><a href="/#method">The Method</a></li>
+        <li><a href="/#products">Products</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/blog/" class="active">Writing</a></li>
+        <li><a href="/#contact" class="nav-cta">Work With DVS</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ─── ARTICLE HEADER ───────────────────────────────────────────── -->
+  <header class="article-header">
+    <div class="container">
+      <a href="/blog/" class="article-back">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+          <path d="M13 8H3M7 4l-4 4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        All writing
+      </a>
+      <div class="article-category">Founder Counterintuition</div>
+      <h1>The feedback your idea can survive.</h1>
+      <div class="article-meta">
+        <div class="article-author">
+          <div class="author-avatar">R</div>
+          <div class="author-info">
+            <span class="author-name">Rick Musial</span>
+            <span class="author-title">Founder &amp; Chairman, DVS</span>
+          </div>
+        </div>
+        <div class="meta-divider"></div>
+        <time class="meta-item" datetime="2026-07-13">13 July 2026</time>
+        <div class="meta-divider"></div>
+        <span class="meta-item">4 min read</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── ARTICLE BODY ─────────────────────────────────────────────── -->
+  <main class="article-body">
+    <div class="container">
+      <article class="prose" itemscope itemtype="https://schema.org/BlogPosting">
+
+        <meta itemprop="headline" content="The feedback your idea can survive" />
+        <meta itemprop="datePublished" content="2026-07-13" />
+        <meta itemprop="dateModified" content="2026-07-13" />
+        <meta itemprop="author" content="Rick Musial" />
+
+        <div itemprop="articleBody">
+
+        <p>You did the work. You didn't just sit in your own head or ask your mum — you went out and talked to 10 people about the idea. You took notes. And somehow, every single conversation left the idea exactly as intact as it started. No wounds. No rethink. Just a stack of nods.</p>
+
+        <p>That's not luck, and it's not proof you're right. You chose feedback your idea could survive.</p>
+
+        <h2>How the selection happens</h2>
+
+        <p>When you're attached to an idea, you don't go hunting for the test most likely to kill it. You do the opposite, usually without noticing. You ask the people most likely to be kind. You ask the questions least likely to land on the soft spot. And you frame the whole thing in a way that already assumes the idea is good — "how would you use this?" instead of "would you use this — and if the problem's real, why haven't you already solved it?"</p>
+
+        <p>Each of those choices is small and reasonable on its own. Together, they build a process that <em>cannot</em> return a no. It's the same closed loop as <a href="/blog/encouragement-is-not-a-second-opinion.html" style="color:var(--gold);border-bottom:1px solid rgba(190,130,35,0.3);">grading your own work</a> — only now it's wearing the costume of openness. You can point at your notes. You did customer research. You just quietly designed it so the customer couldn't disappoint you.</p>
+
+        <figure style="margin:44px 0;">
+          <svg viewBox="0 0 940 520" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;height:auto;display:block;font-family:'Inter',system-ui,sans-serif;border:1px solid rgba(26,26,30,0.08);border-radius:10px;">
+            <title>You select the feedback you can survive — a filter that strains out every no and lets only yes through</title>
+            <desc>All the feedback you could hear (a mix of yeses and nos) meets a filter built from kind people, soft questions, and leading framing. The nos are caught; only yeses pass through to what you hear.</desc>
+            <defs>
+              <marker id="fb-grey" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6B6B72"/></marker>
+            </defs>
+            <rect x="0" y="0" width="940" height="520" rx="10" fill="#F7F3EB"/>
+            <text x="40" y="48" font-size="13" font-weight="700" letter-spacing="2.5" fill="#BE8223">THE FEEDBACK YOU CAN SURVIVE</text>
+            <text x="40" y="71" font-size="13.5" fill="#6B6B72">Ask the kind people the soft questions, and the answer can only be yes.</text>
+            <text x="60" y="120" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6B6B72">WHAT THEY COULD TELL YOU</text>
+            <g font-size="13" font-weight="600">
+              <rect x="70" y="150" width="92" height="30" rx="15" fill="#FFFFFF" stroke="#6B6B72" stroke-width="1.1"/><text x="116" y="170" text-anchor="middle" fill="#6B6B72">I'd use it</text>
+              <rect x="86" y="250" width="84" height="30" rx="15" fill="#FFFFFF" stroke="#6B6B72" stroke-width="1.1"/><text x="128" y="270" text-anchor="middle" fill="#6B6B72">love it</text>
+              <rect x="70" y="345" width="96" height="30" rx="15" fill="#FFFFFF" stroke="#6B6B72" stroke-width="1.1"/><text x="118" y="365" text-anchor="middle" fill="#6B6B72">nice idea</text>
+            </g>
+            <g font-size="13" font-weight="700">
+              <rect x="356" y="170" width="60" height="30" rx="15" fill="#BE8223"/><text x="386" y="190" text-anchor="middle" fill="#FFFFFF">NO</text>
+              <rect x="312" y="296" width="104" height="30" rx="15" fill="#BE8223"/><text x="364" y="316" text-anchor="middle" fill="#FFFFFF">won't pay</text>
+              <rect x="360" y="344" width="56" height="30" rx="15" fill="#BE8223"/><text x="388" y="364" text-anchor="middle" fill="#FFFFFF">no</text>
+            </g>
+            <rect x="430" y="150" width="44" height="232" rx="8" fill="#EDE8DC" stroke="#1A1A1E" stroke-width="1.5"/>
+            <rect x="448" y="168" width="8" height="20" rx="4" fill="#F7F3EB"/>
+            <rect x="448" y="256" width="8" height="20" rx="4" fill="#F7F3EB"/>
+            <rect x="448" y="348" width="8" height="20" rx="4" fill="#F7F3EB"/>
+            <text x="452" y="406" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1" fill="#1A1A1E">YOUR SELECTION</text>
+            <text x="452" y="424" text-anchor="middle" font-size="11" fill="#6B6B72">kind people · soft questions · leading framing</text>
+            <path d="M360,266 L640,266" fill="none" stroke="#6B6B72" stroke-width="1.6" marker-end="url(#fb-grey)" stroke-dasharray="2 6"/>
+            <text x="650" y="120" font-size="11" font-weight="700" letter-spacing="1.2" fill="#6B6B72">WHAT YOU HEAR</text>
+            <g font-size="13" font-weight="600">
+              <rect x="650" y="180" width="70" height="30" rx="15" fill="#FFFFFF" stroke="#6B6B72" stroke-width="1.1"/><text x="685" y="200" text-anchor="middle" fill="#6B6B72">yes</text>
+              <rect x="752" y="222" width="66" height="30" rx="15" fill="#FFFFFF" stroke="#6B6B72" stroke-width="1.1"/><text x="785" y="242" text-anchor="middle" fill="#6B6B72">go</text>
+              <rect x="654" y="262" width="96" height="30" rx="15" fill="#FFFFFF" stroke="#6B6B72" stroke-width="1.1"/><text x="702" y="282" text-anchor="middle" fill="#6B6B72">I'd use it</text>
+              <rect x="760" y="300" width="70" height="30" rx="15" fill="#FFFFFF" stroke="#6B6B72" stroke-width="1.1"/><text x="795" y="320" text-anchor="middle" fill="#6B6B72">go</text>
+            </g>
+            <line x1="40" y1="452" x2="900" y2="452" stroke="#1A1A1E" stroke-opacity="0.12" stroke-width="1"/>
+            <text x="470" y="490" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-style="italic" font-size="16" fill="#1A1A1E">If your research never changes your mind, you're not testing — you're collecting reassurance.</text>
+          </svg>
+          <figcaption style="font-size:13px;color:var(--mid-grey);text-align:center;margin-top:14px;font-style:italic;">Ask kind people soft questions and the filter only passes yes — the no never reaches you.</figcaption>
+        </figure>
+
+        <h2>The tell</h2>
+
+        <p>Here's how you catch it: if every conversation confirmed you, you weren't testing anything. You were selecting. A real test has the capacity to surprise you, which means a real research process produces at least some findings you didn't want. If yours never changes your mind, it isn't measuring the idea — it's just collecting reassurance and filing it under 'evidence'.</p>
+
+        <div class="pull-quote">
+          <p>"If your research never changes your mind, you're not doing research. You're collecting reassurance."</p>
+        </div>
+
+        <h2>The questions you're steering around</h2>
+
+        <p>You already know which questions you're avoiding, because they're the ones whose worst answer would actually hurt:</p>
+
+        <ul>
+          <li>Would you pay for this today — and how much?</li>
+          <li>What would stop you from using it?</li>
+          <li>Who's already solving this for you, and why would you switch?</li>
+          <li>How are you handling this right now — and is it actually a problem worth money, or just a mild annoyance?</li>
+        </ul>
+
+        <p>These are the questions that can hurt, which is exactly why they're the ones worth asking. The soft question protects the idea. The sharp one tests it. And you can feel, before you even ask, which is which — the flinch is the signal.</p>
+
+        <p>So the discipline isn't "get more feedback." You can get a hundred more nods and learn nothing. It's to deliberately seek the feedback you'd least like to hear, from the person most likely to give it to you straight, and to ask the one question whose worst answer scares you. The founders who actually learn something aren't the ones who asked the most people. They're the ones who asked the question they were afraid of.</p>
+
+        </div><!-- /articleBody -->
+
+        <!-- Author byline -->
+        <div class="article-byline">
+          <div class="byline-inner">
+            <div class="byline-avatar">R</div>
+            <div class="byline-text">
+              <h3>Rick Musial</h3>
+              <p>Founder &amp; Chairman of Digital Venture Studio. Builder of <a href="https://usetouchstone.ai" style="color:var(--gold);border-bottom:1px solid rgba(190,130,35,0.25);">Touchstone</a> — a go/no-go validation platform for early-stage ventures. This piece is part of an ongoing series on the decisions most founders skip and the design choices that make tools worth using.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Back to blog -->
+        <div class="article-next">
+          <p><strong>Want more like this?</strong> Rick writes about the go/no-go decision, founder counterintuitions, and the business of building ventures worth building.</p>
+          <a href="/blog/" class="btn-back">
+            All writing
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- ─── FOOTER ───────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Digital Venture <span>Studio</span></h3>
+          <p>From first thought to first customer — with a mentor who stays.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="https://usetouchstone.ai">Touchstone</a></li>
+            <li><a href="https://www.eulogizethis.com">Eulogize This</a></li>
+            <li><a href="/#products">Roadmap →</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/#services">Marketing</a></li>
+            <li><a href="/#services">Business Management</a></li>
+            <li><a href="/#services">After-Release Support</a></li>
+            <li><a href="/#services">External Review</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>DVS</h4>
+          <ul>
+            <li><a href="/#method">The Method</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#about">Founding Thesis</a></li>
+            <li><a href="/blog/">Writing</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2026 Digital Venture Studio. All rights reserved.
+          <span style="margin-left:20px;opacity:0.5;">·</span>
+          <a href="/privacy" style="margin-left:12px;opacity:0.55;font-size:12px;color:var(--cream);text-decoration:none;">Privacy Policy</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:20px;">
+          <a href="https://www.linkedin.com/in/rick-musial-9b9857370" target="_blank" rel="noopener" aria-label="DVS on LinkedIn" style="color:rgba(247,243,235,0.45);transition:color 0.2s;" onmouseover="this.style.color='rgba(247,243,235,0.85)'" onmouseout="this.style.color='rgba(247,243,235,0.45)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <div class="footer-tagline" style="margin:0;">Built using the same methodology we sell.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
