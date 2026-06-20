@@ -1,0 +1,64 @@
+<svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif" role="img">
+  <title>You can't be your own second opinion — a mirror only echoes GO; an open door can say NO</title>
+  <desc>Top: you send your framing into a mirror and your own GO loops back (self-validation). Bottom: you ask someone who isn't you, and a verdict that can be NO comes back (an independent verdict).</desc>
+  <defs>
+    <marker id="sq-grey" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#6B6B72"/></marker>
+    <marker id="sq-gold" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#BE8223"/></marker>
+  </defs>
+
+  <rect x="0" y="0" width="1080" height="1080" fill="#F7F3EB"/>
+
+  <text x="540" y="92" text-anchor="middle" font-size="30" font-weight="700" letter-spacing="3" fill="#BE8223">YOU CAN'T BE YOUR OWN SECOND OPINION</text>
+  <text x="540" y="132" text-anchor="middle" font-size="21" fill="#6B6B72">One of these can only echo. The other can tell you no.</text>
+  <line x1="90" y1="166" x2="990" y2="166" stroke="#BE8223" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <!-- ===== MIRROR (top, greyscale = hollow) ===== -->
+  <text x="90" y="244" font-family="Georgia, serif" font-size="44" fill="#1A1A1E">The mirror</text>
+  <text x="90" y="278" font-size="18" font-weight="600" letter-spacing="2" fill="#6B6B72">SELF-VALIDATION · YOU HOLD THE PROMPT</text>
+
+  <g fill="#1A1A1E"><circle cx="262" cy="424" r="32"/><path d="M194,560 C194,472 330,472 330,560 Z"/></g>
+  <text x="262" y="602" text-anchor="middle" font-size="20" font-weight="600" fill="#1A1A1E">You</text>
+
+  <rect x="606" y="350" width="156" height="232" rx="78" fill="#EDE8DC" stroke="#6B6B72" stroke-width="5.5"/>
+  <g fill="#1A1A1E" opacity="0.3"><circle cx="684" cy="436" r="29"/><path d="M616,572 C616,492 752,492 752,572 Z"/></g>
+  <text x="684" y="330" text-anchor="middle" font-size="17" letter-spacing="2" fill="#6B6B72">YOUR REFLECTION</text>
+
+  <path d="M332,408 C428,376 528,376 604,406" fill="none" stroke="#6B6B72" stroke-width="2.4" marker-end="url(#sq-grey)"/>
+  <text x="468" y="360" text-anchor="middle" font-size="17" fill="#6B6B72">your framing · your inputs</text>
+  <path d="M604,524 C528,562 428,562 340,532" fill="none" stroke="#6B6B72" stroke-width="2.4" marker-end="url(#sq-grey)"/>
+  <text x="548" y="470" text-anchor="middle" font-size="34" font-weight="700" fill="#6B6B72" opacity="0.85">GO</text>
+  <text x="460" y="464" text-anchor="middle" font-size="26" font-weight="700" fill="#6B6B72" opacity="0.5">GO</text>
+  <text x="392" y="460" text-anchor="middle" font-size="20" font-weight="700" fill="#6B6B72" opacity="0.3">GO</text>
+
+  <line x1="90" y1="636" x2="990" y2="636" stroke="#1A1A1E" stroke-opacity="0.12" stroke-width="1.5"/>
+
+  <!-- ===== OPEN DOOR (bottom, gold = the verdict that matters) ===== -->
+  <text x="90" y="710" font-family="Georgia, serif" font-size="44" fill="#1A1A1E">The open door</text>
+  <text x="90" y="744" font-size="18" font-weight="600" letter-spacing="2" fill="#6B6B72">AN INDEPENDENT VERDICT</text>
+
+  <g fill="#1A1A1E"><circle cx="262" cy="856" r="32"/><path d="M194,992 C194,904 330,904 330,992 Z"/></g>
+  <text x="262" y="1034" text-anchor="middle" font-size="20" font-weight="600" fill="#1A1A1E">You</text>
+
+  <!-- doorway -->
+  <rect x="618" y="788" width="166" height="186" rx="4" fill="#FFFFFF" stroke="#1A1A1E" stroke-width="2.4"/>
+  <path d="M784,792 L824,772 L824,974 L784,978 Z" fill="#EDE8DC" stroke="#1A1A1E" stroke-width="2.4"/>
+  <circle cx="793" cy="882" r="4" fill="#1A1A1E"/>
+  <line x1="618" y1="974" x2="784" y2="974" stroke="#1A1A1E" stroke-width="2.4"/>
+  <g fill="#BE8223"><circle cx="700" cy="852" r="29"/><path d="M642,974 C642,920 758,920 758,974 Z"/></g>
+  <text x="701" y="1000" text-anchor="middle" font-size="15" letter-spacing="1.5" fill="#6B6B72">SOMEONE WHO ISN'T YOU</text>
+
+  <!-- outbound: you -> grader (the question) -->
+  <path d="M334,838 L614,812" fill="none" stroke="#6B6B72" stroke-width="2.2" marker-end="url(#sq-grey)"/>
+  <text x="470" y="792" text-anchor="middle" font-size="16" fill="#6B6B72">the question</text>
+  <!-- return: grader -> you (the verdict, can be NO) -->
+  <path d="M614,900 L342,874" fill="none" stroke="#BE8223" stroke-width="2.8" marker-end="url(#sq-gold)"/>
+  <text x="476" y="934" text-anchor="middle" font-size="16" fill="#BE8223">the verdict comes back</text>
+  <!-- verdict options at the grader -->
+  <rect x="500" y="822" width="80" height="40" rx="20" fill="#FFFFFF" stroke="#6B6B72" stroke-width="1.6"/>
+  <text x="540" y="849" text-anchor="middle" font-size="20" font-weight="600" fill="#6B6B72">GO</text>
+  <rect x="498" y="866" width="90" height="46" rx="23" fill="#BE8223"/>
+  <text x="543" y="897" text-anchor="middle" font-size="23" font-weight="700" fill="#FFFFFF">NO</text>
+
+  <!-- pull line -->
+  <text x="540" y="1062" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="23" fill="#1A1A1E">A verdict that can't disappoint you isn't a verdict — it's a mirror with a confident voice.</text>
+</svg>

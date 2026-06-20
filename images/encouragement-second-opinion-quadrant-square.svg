@@ -1,0 +1,40 @@
+<svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif" role="img">
+  <title>Encouragement is not a second opinion — only someone with no stake who will say no is a real second opinion</title>
+  <desc>A 2x2 by stake in your hope and willingness to say no. Friends, an axe to grind, and polite strangers each fail a test; only no-stake-and-will-say-no is a real second opinion.</desc>
+  <rect x="0" y="0" width="1080" height="1080" fill="#F7F3EB"/>
+  <text x="540" y="92" text-anchor="middle" font-size="30" font-weight="700" letter-spacing="3" fill="#BE8223">ENCOURAGEMENT IS NOT A SECOND OPINION</text>
+  <text x="540" y="132" text-anchor="middle" font-size="21" fill="#6B6B72">Most people who react to your idea fail one of these two tests.</text>
+  <line x1="90" y1="168" x2="990" y2="168" stroke="#BE8223" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <text x="610" y="230" text-anchor="middle" font-size="16" font-weight="700" letter-spacing="2" fill="#6B6B72">WILLING TO SAY NO?</text>
+  <text x="415" y="266" text-anchor="middle" font-size="18" font-weight="600" fill="#6B6B72">Avoids the no</text>
+  <text x="805" y="266" text-anchor="middle" font-size="18" font-weight="600" fill="#6B6B72">Will say no</text>
+  <text x="64" y="600" font-size="16" font-weight="700" letter-spacing="2" fill="#6B6B72" transform="rotate(-90 64 600)" text-anchor="middle">STAKE IN YOUR HOPE?</text>
+  <text x="170" y="452" text-anchor="middle" font-size="18" font-weight="600" fill="#6B6B72">Has a stake</text>
+  <text x="170" y="742" text-anchor="middle" font-size="18" font-weight="600" fill="#6B6B72">No stake</text>
+
+  <rect x="232" y="290" width="360" height="270" rx="10" fill="#FFFFFF" stroke="#6B6B72" stroke-opacity="0.4" stroke-width="1.4"/>
+  <text x="256" y="352" font-family="Georgia, serif" font-size="27" fill="#1A1A1E">Friends &amp; family</text>
+  <text x="256" y="394" font-size="17" fill="#6B6B72">They want you happy —</text>
+  <text x="256" y="420" font-size="17" fill="#6B6B72">so it's always "go."</text>
+
+  <rect x="612" y="290" width="360" height="270" rx="10" fill="#FFFFFF" stroke="#6B6B72" stroke-opacity="0.4" stroke-width="1.4"/>
+  <text x="636" y="352" font-family="Georgia, serif" font-size="27" fill="#1A1A1E">An axe to grind</text>
+  <text x="636" y="394" font-size="17" fill="#6B6B72">Says no — but for their</text>
+  <text x="636" y="420" font-size="17" fill="#6B6B72">reasons, not yours.</text>
+
+  <rect x="232" y="580" width="360" height="270" rx="10" fill="#FFFFFF" stroke="#6B6B72" stroke-opacity="0.4" stroke-width="1.4"/>
+  <text x="256" y="642" font-family="Georgia, serif" font-size="27" fill="#1A1A1E">Polite strangers</text>
+  <text x="256" y="684" font-size="17" fill="#6B6B72">"Sounds interesting."</text>
+  <text x="256" y="710" font-size="17" fill="#6B6B72">Costs them nothing.</text>
+
+  <rect x="612" y="580" width="360" height="270" rx="10" fill="#FBF3E2" stroke="#BE8223" stroke-width="3"/>
+  <text x="636" y="642" font-family="Georgia, serif" font-size="27" fill="#1A1A1E">A real second opinion</text>
+  <text x="636" y="684" font-size="17" fill="#1A1A1E">No stake in your hope —</text>
+  <text x="636" y="710" font-size="17" fill="#1A1A1E">and willing to say no.</text>
+  <rect x="852" y="804" width="86" height="32" rx="16" fill="#BE8223"/>
+  <text x="895" y="826" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">RARE</text>
+
+  <text x="540" y="1010" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="23" fill="#1A1A1E">Encouragement tells you people like you.</text>
+  <text x="540" y="1044" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="23" fill="#1A1A1E">A verdict tells you whether you're right.</text>
+</svg>
