@@ -2,16 +2,6 @@
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
   "queue": [
     {
-      "slug": "admiration-is-unstable-fuel",
-      "publishDate": "2026-06-22",
-      "category": "Founder Counterintuition",
-      "readTime": "4 min read",
-      "title": "Admiration is unstable fuel",
-      "description": "The founders who burn out aren't the ones nobody encouraged. They ran on admiration — and admiration is unstable fuel. Why conviction is the only thing that survives the silence.",
-      "featured": true,
-      "linkedinTeaser": "The founders who burn out usually aren't the ones nobody believed in. Plenty had the encouraging coffees, the \"you should absolutely build this,\" the post that did well. They didn't run out of support. They ran out of what support was standing in for.\n\nThey were running on admiration. And admiration is unstable fuel: it's external, it spikes when you pitch and goes quiet while you build, and it rewards the performance of the idea over the work of making it real.\n\nConviction is the stable kind. Admiration is what other people feel about your idea; conviction is what you'd do if they stopped.\n\nBe honest: if the applause stopped tomorrow, would you keep building?"
-    },
-    {
       "slug": "who-would-miss-it",
       "publishDate": "2026-06-26",
       "category": "Founder Counterintuition",
