@@ -2,16 +2,6 @@
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
   "queue": [
     {
-      "slug": "who-would-miss-it",
-      "publishDate": "2026-06-26",
-      "category": "Founder Counterintuition",
-      "readTime": "4 min read",
-      "title": "The people who like your idea vs the people who'd miss it",
-      "description": "Likes are abundant and cheap. The signal that matters is rarer: who would actually feel the absence if your product vanished tomorrow? Build for the missers, not the likers.",
-      "featured": true,
-      "linkedinTeaser": "\"I love this\" feels like the market speaking. It isn't. It's a person being kind about an idea — which is a different thing from a person who'd be worse off without it.\n\nLiking is cheap; it costs the speaker nothing. Missing is rare — it means the thing earned a real place in someone's life. A crowd of likers tells you you're pleasant to hear about. A handful of people who'd miss you tells you that you matter.\n\nSo change the question. Not \"do people like this?\" but \"who would feel the absence?\"\n\nWho would genuinely miss your product if it vanished tomorrow?"
-    },
-    {
       "slug": "conviction-isnt-certainty",
       "publishDate": "2026-06-29",
       "category": "Founder Counterintuition",
