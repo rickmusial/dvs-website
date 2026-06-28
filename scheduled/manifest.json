@@ -2,16 +2,6 @@
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
   "queue": [
     {
-      "slug": "conviction-isnt-certainty",
-      "publishDate": "2026-06-29",
-      "category": "Founder Counterintuition",
-      "readTime": "4 min read",
-      "title": "Conviction isn't certainty",
-      "description": "Conviction isn't the absence of doubt, and it isn't refusing to hear no. It's the reason that survives an honest no. How to tell conviction from its dangerous twin, stubbornness.",
-      "featured": true,
-      "linkedinTeaser": "Conviction has a dangerous twin, and most founders can't tell them apart from the inside.\n\nCertainty is a claim about the outcome — \"I'm right, this will work.\" Nobody early is entitled to that. Conviction is a commitment to the problem that doesn't require you to know how it ends, so your doubt isn't a verdict against the venture; it lives in the plan, not the mission.\n\nThe expensive confusion is the other one: conviction vs stubbornness. Both push through resistance. The difference is what they do with evidence — conviction updates the plan while holding the mission; stubbornness changes the evidence to protect the plan.\n\nThe test: name what would change your mind. If the answer is \"nothing,\" that's not conviction."
-    },
-    {
       "slug": "when-the-admiration-stops",
       "publishDate": "2026-07-03",
       "category": "Founder Counterintuition",
