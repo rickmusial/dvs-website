@@ -18,6 +18,14 @@
     "postedAt": "2026-06-24T23:44:03.302Z"
   },
   {
+    "id": "TEST-first-comment-dry-run-S169",
+    "date": "2026-07-02",
+    "visibility": "PUBLIC",
+    "status": "ready",
+    "text": "Testing an update to how we publish. This post will be removed in a few minutes.",
+    "firstComment": "Test comment — https://digitalventurestudio.com"
+  },
+  {
     "id": "EXAMPLE-template-never-posts",
     "date": "2099-01-01",
     "visibility": "PUBLIC",
