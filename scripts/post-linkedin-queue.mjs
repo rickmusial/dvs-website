@@ -6,16 +6,26 @@
 //
 // Queue file: scheduled/linkedin-queue.json — an array of entries:
 //   {
-//     "id": "go-looking-for-the-no",     // unique, human-readable
-//     "date": "2026-06-21",              // UTC date on/after which it may post (YYYY-MM-DD)
-//     "visibility": "PUBLIC",            // PUBLIC | CONNECTIONS
-//     "status": "ready",                 // ready | held | posted | failed
-//     "text": "..."                      // the full, pre-approved post body
+//     "id": "go-looking-for-the-no",   // unique, human-readable
+//     "date": "2026-06-21",            // date on/after which it may post (AEST, YYYY-MM-DD)
+//     "visibility": "PUBLIC",          // PUBLIC | CONNECTIONS
+//     "status": "ready",               // ready | held | posted | failed
+//     "text": "...",                   // the full, pre-approved post body
+//     "firstComment": "..."            // OPTIONAL (S168): pre-approved first-comment text
+//                                      //   (e.g. the blog/Touchstone link). Posted as a
+//                                      //   comment on the share after it goes live. Omit
+//                                      //   for pure text-only cuts (the best-reaching format).
 //   }
-// Only entries with status "ready" AND date <= today (UTC) are posted. After a
-// successful post the entry becomes { status:"posted", urn, postedAt }. A failure
-// becomes { status:"failed", lastError } and is NEVER auto-retried (no double-post
-// risk) — Rick re-arms it by setting status back to "ready". "held" is never posted.
+// Only entries with status "ready" AND date <= today (AEST) are posted. After a
+// successful post the entry becomes { status:"posted", urn, postedAt } (+ commentUrn
+// if a first comment was posted). A SHARE failure becomes { status:"failed", lastError }
+// and is NEVER auto-retried (no double-post risk) — Rick re-arms it by setting status
+// back to "ready". "held" is never posted.
+//
+// FIRST-COMMENT semantics (S168): the SHARE is authoritative. If the share posts but
+// its first comment fails, the entry stays "posted" (never re-armed → no double-post),
+// records commentError, and the run still FAILS LOUDLY so Rick is emailed to add that
+// one comment by hand. The share is never re-sent.
 //
 // AUTHORSHIP STAYS HUMAN: entries are written/approved ahead of time by Rick (or
 // the agent in-session, Reader-Tested). This engine only ships what's queued.
@@ -46,23 +56,37 @@ const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Australia/Sydney' })
 const due = entries.filter(e => e && e.status === 'ready' && typeof e.date === 'string' && e.date <= today);
 
 if (due.length === 0) {
-  console.log(`Nothing due today (${today} UTC). ${entries.filter(e => e?.status === 'ready').length} future "ready" item(s) waiting.`);
+  console.log(`Nothing due today (${today} AEST). ${entries.filter(e => e?.status === 'ready').length} future "ready" item(s) waiting.`);
   process.exit(0);
 }
 
 const summary = [];
-let failures = 0;
+let failures = 0;          // SHARE failures (entry marked "failed", re-arm to retry)
+let commentFailures = 0;   // comment-only failures (share is up; add comment by hand)
 
 for (const e of due) {
   try {
-    const { urn } = await postToLinkedIn({ text: e.text, visibility: (e.visibility || 'PUBLIC').toUpperCase() });
+    const { urn, commentUrn, commentError } = await postToLinkedIn({
+      text: e.text,
+      visibility: (e.visibility || 'PUBLIC').toUpperCase(),
+      firstComment: e.firstComment || '',
+    });
     e.status = 'posted';
     e.urn = urn;
     e.postedAt = new Date().toISOString();
     delete e.lastError;
     const url = `https://www.linkedin.com/feed/update/${urn}/`;
-    console.log(`POSTED [${e.id}] → ${urn}`);
-    summary.push(`- ✅ \`${e.id}\` → ${url}`);
+    if (commentUrn) { e.commentUrn = commentUrn; delete e.commentError; }
+    if (commentError) {
+      // Share is live; only the comment failed. Do NOT re-arm — record + count it.
+      e.commentError = commentError;
+      commentFailures++;
+      console.error(`⚠️ POSTED [${e.id}] → ${urn} — but first comment FAILED: ${commentError}`);
+      summary.push(`- ⚠️ \`${e.id}\` → ${url} (share LIVE; first comment FAILED — add manually: ${commentError})`);
+    } else {
+      console.log(`POSTED [${e.id}] → ${urn}${commentUrn ? ' (+ first comment)' : ''}`);
+      summary.push(`- ✅ \`${e.id}\` → ${url}${commentUrn ? ' (+ 💬 first comment)' : ''}`);
+    }
   } catch (err) {
     failures++;
     e.status = 'failed';
@@ -77,13 +101,20 @@ fs.writeFileSync(QUEUE, JSON.stringify(entries, null, 2) + '\n');
 
 if (process.env.GITHUB_STEP_SUMMARY) {
   fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,
-    `### LinkedIn scheduled run (${today} UTC)\n\n${summary.join('\n')}\n`);
+    `### LinkedIn scheduled run (${today} AEST)\n\n${summary.join('\n')}\n`);
 }
 
-// Fail loudly if anything didn't land — GitHub emails Rick. A post must never
-// fail silently (the entire reason for this build).
-if (failures > 0) {
-  console.error(`${failures} post(s) FAILED — see above. Re-arm by setting status back to "ready" after fixing.`);
+// Fail loudly if anything didn't fully land — GitHub emails Rick. A post must never
+// fail silently (the entire reason for this build). Share failures AND comment
+// failures both make the run red; the message distinguishes them so Rick knows
+// whether to re-arm (share) or just add a comment by hand (comment).
+if (failures > 0 || commentFailures > 0) {
+  if (failures > 0) {
+    console.error(`${failures} SHARE(s) FAILED — re-arm by setting status back to "ready" after fixing.`);
+  }
+  if (commentFailures > 0) {
+    console.error(`${commentFailures} first comment(s) FAILED — the shares are LIVE (do NOT re-post); add those comments manually.`);
+  }
   process.exit(1);
 }
 console.log(`Done — ${due.length} post(s) published.`);
