@@ -21,9 +21,12 @@
     "id": "TEST-first-comment-dry-run-S169",
     "date": "2026-07-02",
     "visibility": "PUBLIC",
-    "status": "ready",
+    "status": "posted",
     "text": "Testing an update to how we publish. This post will be removed in a few minutes.",
-    "firstComment": "Test comment — https://digitalventurestudio.com"
+    "firstComment": "Test comment — https://digitalventurestudio.com",
+    "urn": "urn:li:share:7478399072555499520",
+    "postedAt": "2026-07-02T10:48:01.600Z",
+    "commentUrn": "7478399075155902464"
   },
   {
     "id": "EXAMPLE-template-never-posts",
