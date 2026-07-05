@@ -2,16 +2,6 @@
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
   "queue": [
     {
-      "slug": "you-cant-be-your-own-second-opinion",
-      "publishDate": "2026-07-06",
-      "category": "Founder Counterintuition",
-      "readTime": "4 min read",
-      "title": "You can't be your own second opinion",
-      "description": "You can now run a full VC-grade idea validation for free — six phases, ending in a go/no-go. It still won't tell you the truth about your idea, for one structural reason: you're the one holding the prompt.",
-      "featured": true,
-      "linkedinTeaser": "You can now validate a startup idea for free. There are good guides for it — six phases, real structure, ending with \"act as a critical-but-fair VC and give me a go/no-go.\" The method is free. The AI running it is free. And it still won't tell you the truth about your idea.\n\nBecause you're the one holding the prompt.\n\nYou write the prompt, so you choose the framing. You pick the inputs, so you choose the evidence. And a model trained to be helpful grades the idea of the person it's trying to help. The question never leaves the hands of the one person who already wants a particular answer.\n\nThe six phases are free. The AI is free. What's scarce is independence — a grader who isn't you, and a no that can actually reach you.\n\nWho gives you a real read on your idea — someone who didn't already know what you hoped the answer would be?"
-    },
-    {
       "slug": "encouragement-is-not-a-second-opinion",
       "publishDate": "2026-07-10",
       "category": "Founder Counterintuition",
