@@ -2,16 +2,6 @@
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
   "queue": [
     {
-      "slug": "encouragement-is-not-a-second-opinion",
-      "publishDate": "2026-07-10",
-      "category": "Founder Counterintuition",
-      "readTime": "4 min read",
-      "title": "Encouragement is not a second opinion",
-      "description": "The people who care about you — and the helpful AI — are compromised graders too. They optimise for your morale, not your clarity. What a real second opinion actually requires.",
-      "featured": true,
-      "linkedinTeaser": "You finally took the idea out of your own head and asked around. People were encouraging. So you've got outside validation now — right? Not yet.\n\nThe people who love you can't be your second opinion either. They have a stake in your hope: they'd rather keep you encouraged than be the one who deflated you. \"I love it, you should build this\" is real affection — but it measures how much they like you, not whether the idea works.\n\nA real second opinion needs two things almost no one offers together: no stake in your hope, and the willingness to actually say no.\n\nWho in your circle has nothing to gain from your yes — and isn't afraid of your no?"
-    },
-    {
       "slug": "the-feedback-you-can-survive",
       "publishDate": "2026-07-13",
       "category": "Founder Counterintuition",
