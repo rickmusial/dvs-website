@@ -2,16 +2,6 @@
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
   "queue": [
     {
-      "slug": "the-feedback-you-can-survive",
-      "publishDate": "2026-07-13",
-      "category": "Founder Counterintuition",
-      "readTime": "4 min read",
-      "title": "The feedback you can survive",
-      "description": "Asking for feedback can be a sophisticated form of avoidance. Founders unconsciously pick the people, questions, and framing that can't return a no — and call it research.",
-      "featured": true,
-      "linkedinTeaser": "You did the work — talked to ten people, took notes. And somehow every conversation left the idea exactly as intact as it started. That's not luck. You chose feedback you could survive.\n\nWhen you're attached to an idea, you ask the people most likely to be kind, the questions least likely to find the soft spot, in a framing that already assumes you're right. It feels like research. It's built so it can't return a no.\n\nThe tell: if your research never changes your mind, you're not testing — you're collecting reassurance.\n\nWhat's the one question about your idea you've been avoiding?"
-    },
-    {
       "slug": "go-looking-for-the-no",
       "publishDate": "2026-07-17",
       "category": "Founder Counterintuition",
