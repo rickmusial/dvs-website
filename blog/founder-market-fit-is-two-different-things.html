@@ -181,6 +181,24 @@
       transition: background 0.2s !important;
     }
     .nav-cta:hover { background: var(--gold-light) !important; }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 42px; height: 42px;
+      margin: -8px -8px -8px 0;
+      background: none; border: none;
+      cursor: pointer; padding: 8px;
+    }
+    .nav-toggle span {
+      display: block; height: 2px; width: 24px;
+      background: var(--cream); border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav.open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav.open .nav-toggle span:nth-child(2) { opacity: 0; }
+    .nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
     /* ─── ARTICLE HEADER ─────────────────────────────────────────── */
     .article-header {
@@ -491,7 +509,24 @@
     /* ─── RESPONSIVE ─────────────────────────────────────────────── */
     @media (max-width: 900px) {
       .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
-      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        position: fixed;
+        top: 64px; left: 0; right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--near-black);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        padding: 8px 24px 20px;
+        max-height: calc(100vh - 64px);
+        overflow-y: auto;
+        display: none;
+      }
+      .nav.open .nav-links { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: block; width: 100%; padding: 15px 0; font-size: 16px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+      .nav-links a.nav-cta { margin-top: 14px; text-align: center; border-bottom: none; }
       .article-next { flex-direction: column; align-items: flex-start; }
     }
     @media (max-width: 600px) {
@@ -516,6 +551,9 @@
         <li><a href="/blog/" class="active">Writing</a></li>
         <li><a href="/#contact" class="nav-cta">Work With DVS</a></li>
       </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -692,5 +730,23 @@
     </div>
   </footer>
 
+  <script>
+    (function () {
+      var nav = document.querySelector('.nav');
+      var toggle = document.querySelector('.nav-toggle');
+      if (nav && toggle) {
+        toggle.addEventListener('click', function () {
+          var open = nav.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        nav.querySelectorAll('.nav-links a').forEach(function (a) {
+          a.addEventListener('click', function () {
+            nav.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
