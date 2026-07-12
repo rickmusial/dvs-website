@@ -2,36 +2,6 @@
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
   "queue": [
     {
-      "slug": "when-the-admiration-stops",
-      "publishDate": "2026-07-03",
-      "category": "Founder Counterintuition",
-      "readTime": "4 min read",
-      "title": "What to do when the admiration stops",
-      "description": "Every founder hits the quiet stretch where the applause dries up and it's just you and the work. Conviction isn't a feeling you wait for — it's something you build. Here's how.",
-      "featured": true,
-      "linkedinTeaser": "Every founder hits the same stretch of road. The launch glow is gone, the post that did well was three weeks ago, nobody's asking how it's going. Just you, the half-built thing, and a quiet that feels like a verdict.\n\nIt usually isn't one. The applause was always going to thin out — that's a fact about the fuel, not the idea.\n\nSo replace what you lost with evidence you control: visible progress, real user behaviour, proximity to the problem. Conviction in the quiet isn't a feeling you wait to return — it's something you rebuild from the work, one honest rep at a time.\n\nWhat's the smallest rep you could do this week that would remind you why you started?"
-    },
-    {
-      "slug": "you-cant-be-your-own-second-opinion",
-      "publishDate": "2026-07-06",
-      "category": "Founder Counterintuition",
-      "readTime": "4 min read",
-      "title": "You can't be your own second opinion",
-      "description": "You can now run a full VC-grade idea validation for free — six phases, ending in a go/no-go. It still won't tell you the truth about your idea, for one structural reason: you're the one holding the prompt.",
-      "featured": true,
-      "linkedinTeaser": "You can now validate a startup idea for free. There are good guides for it — six phases, real structure, ending with \"act as a critical-but-fair VC and give me a go/no-go.\" The method is free. The AI running it is free. And it still won't tell you the truth about your idea.\n\nBecause you're the one holding the prompt.\n\nYou write the prompt, so you choose the framing. You pick the inputs, so you choose the evidence. And a model trained to be helpful grades the idea of the person it's trying to help. The question never leaves the hands of the one person who already wants a particular answer.\n\nThe six phases are free. The AI is free. What's scarce is independence — a grader who isn't you, and a no that can actually reach you.\n\nWho gives you a real read on your idea — someone who didn't already know what you hoped the answer would be?"
-    },
-    {
-      "slug": "encouragement-is-not-a-second-opinion",
-      "publishDate": "2026-07-10",
-      "category": "Founder Counterintuition",
-      "readTime": "4 min read",
-      "title": "Encouragement is not a second opinion",
-      "description": "The people who care about you — and the helpful AI — are compromised graders too. They optimise for your morale, not your clarity. What a real second opinion actually requires.",
-      "featured": true,
-      "linkedinTeaser": "You finally took the idea out of your own head and asked around. People were encouraging. So you've got outside validation now — right? Not yet.\n\nThe people who love you can't be your second opinion either. They have a stake in your hope: they'd rather keep you encouraged than be the one who deflated you. \"I love it, you should build this\" is real affection — but it measures how much they like you, not whether the idea works.\n\nA real second opinion needs two things almost no one offers together: no stake in your hope, and the willingness to actually say no.\n\nWho in your circle has nothing to gain from your yes — and isn't afraid of your no?"
-    },
-    {
       "slug": "the-feedback-you-can-survive",
       "publishDate": "2026-07-13",
       "category": "Founder Counterintuition",
