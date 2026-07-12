@@ -9,6 +9,27 @@ approved ahead of time. Nothing is generated. The automation handles the
 
 ---
 
+## Weekly content cadence (Rick, confirmed S178)
+
+This queue holds **cuts only**, and cuts go out on **Sun / Wed / Thu**. The other
+days are different content on different mechanisms — do **not** put them in this queue:
+
+| Day | Post | Mechanism |
+|-----|------|-----------|
+| **Sun** | cut | **this queue** (auto 08:30 AEST) |
+| **Mon** | new DVS blog post + LinkedIn teaser | `publish-scheduled` workflow (auto) |
+| **Tue** | LinkedIn Article (long-form) | **manual** (or ad-hoc) |
+| **Wed** | cut #1 | **this queue** |
+| **Thu** | cut #2 | **this queue** |
+| **Fri** | new DVS blog post + LinkedIn teaser | `publish-scheduled` workflow (auto) |
+| **Sat** | LinkedIn Article (long-form) | **manual** |
+
+So when seeding the queue: date cuts only on **Sundays, Wednesdays, Thursdays**.
+Wed + Thu are typically a **pair** (cut #1 / cut #2 of one theme); Sun is a standalone
+cut. Keep **at least ~2 weeks (6+) of cuts** queued so the runway alarm stays quiet.
+
+---
+
 ## Two ways to post
 
 ### 1. Scheduled (the "I never have to remember" path)
@@ -42,8 +63,15 @@ Actions → "Post to LinkedIn (ad-hoc)" → Run workflow.
 ## It can't fail silently
 Every post must return **HTTP 201 + a share URN**. If it doesn't, the workflow
 **fails** and GitHub emails you — that's the whole point of this build (the old
-Zapier auto-posters failed silently for weeks). The daily
-`linkedin-post-analytics-daily` task is the independent +24h on-destination check (P-066).
+Zapier auto-posters failed silently for weeks).
+
+**Empty/low-queue alarm (added S178):** the runway guard in `post-linkedin-queue.mjs`
+now also **fails loudly** when the queue is **empty** or **running low (≤3 `ready`
+cuts left)** — so you're emailed to top up *before* a silent gap ever happens. Tune
+the threshold with the `LINKEDIN_LOW_RUNWAY` env var (default 3).
+
+The daily `linkedin-post-analytics-daily` task is the independent +24h on-destination
+check (P-066).
 
 ## One-time setup (Rick — credentials)
 Repo secrets, set under Settings → Secrets and variables → Actions:
