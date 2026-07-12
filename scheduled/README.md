@@ -21,6 +21,25 @@ Auto-publishes approved blog posts on their date and fires the LinkedIn teaser
 Result: keep a buffer of approved posts staged; the cadence runs itself. Your
 only recurring input is the writing.
 
+## Nav requirement — the mobile hamburger (added S178)
+
+Every post's `<nav>` **must** include the mobile hamburger menu, or the post ships
+with **no navigation on phones**. The bug (fixed S178): `.nav-links` is `display:none`
+below 900px, so without a hamburger there's nothing to tap. "Same as every live post"
+(step 1) now includes this fix — so the safe path is to **start a new post by copying
+an existing `blog/*.html`** (they were all fixed S178) and swapping in the article body.
+The nav then comes correct for free.
+
+If you build the HTML from scratch instead, it must have all three pieces (present in
+every current post):
+
+1. **`.nav-toggle` CSS** in the `<style>` block, just after `.nav-cta:hover`.
+2. The **mobile `.nav-links` rules** inside `@media (max-width: 900px)` — the fixed
+   dropdown + `.nav.open .nav-links { display: flex }` — *replacing* the old
+   `.nav-links { display: none; }`.
+3. The **`<button class="nav-toggle">`** inside `<nav>`, plus the toggle `<script>`
+   before `</body>`.
+
 ## manifest.json entry schema
 
 ```json

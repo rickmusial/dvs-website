@@ -55,8 +55,31 @@ try {
 const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Australia/Sydney' }).format(new Date());
 const due = entries.filter(e => e && e.status === 'ready' && typeof e.date === 'string' && e.date <= today);
 
+// ── Foolproof runway alarm (added S178) ──────────────────────────────────────
+// The one failure mode the poster couldn't see was an EMPTY queue: with nothing
+// "ready", it exited 0 (clean no-op) and a silent gap only showed up on LinkedIn
+// after the fact. This guard FAILS LOUDLY (non-zero exit → GitHub emails Rick) when
+// the queue is empty or running low, so you're warned to top up BEFORE a gap happens.
+const LOW_RUNWAY = Number(process.env.LINKEDIN_LOW_RUNWAY || 3);
+function runwayGuard(readyCount, context) {
+  if (readyCount === 0) {
+    console.error(`❌ LinkedIn queue is EMPTY — 0 posts queued (${context}). No post can go ` +
+      `out until you add entries to scheduled/linkedin-queue.json ("status":"ready" + a "date"). ` +
+      `Failing loudly so you're emailed now, not surprised on LinkedIn later.`);
+    process.exit(1);
+  }
+  if (readyCount <= LOW_RUNWAY) {
+    console.error(`⚠️ LinkedIn queue RUNNING LOW — only ${readyCount} "ready" post(s) left ` +
+      `(${context}; threshold ${LOW_RUNWAY}). Top up scheduled/linkedin-queue.json soon so the ` +
+      `daily slot never runs dry. (Any post due today still went out — this is a heads-up.)`);
+    process.exit(1);
+  }
+}
+
 if (due.length === 0) {
-  console.log(`Nothing due today (${today} AEST). ${entries.filter(e => e?.status === 'ready').length} future "ready" item(s) waiting.`);
+  const ready = entries.filter(e => e?.status === 'ready').length;
+  console.log(`Nothing due today (${today} AEST). ${ready} future "ready" item(s) waiting.`);
+  runwayGuard(ready, 'nothing due today');
   process.exit(0);
 }
 
@@ -117,4 +140,6 @@ if (failures > 0 || commentFailures > 0) {
   }
   process.exit(1);
 }
-console.log(`Done — ${due.length} post(s) published.`);
+const readyRemaining = entries.filter(e => e?.status === 'ready').length;
+console.log(`Done — ${due.length} post(s) published. ${readyRemaining} "ready" item(s) left.`);
+runwayGuard(readyRemaining, `after publishing ${due.length}`);
