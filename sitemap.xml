@@ -6,7 +6,7 @@
   Lists every public page on digitalventurestudio.com so AI crawlers and
   search engines have a complete pre-built map of the site.
 -->
-<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://digitalventurestudio.com/</loc>
