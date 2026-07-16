@@ -1,15 +1,4 @@
 {
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
-  "queue": [
-    {
-      "slug": "go-looking-for-the-no",
-      "publishDate": "2026-07-17",
-      "category": "Founder Counterintuition",
-      "readTime": "4 min read",
-      "title": "Go looking for the no",
-      "description": "If you can't validate yourself, encouragement isn't a verdict, and you quietly pick the feedback you can survive — the move that's left is the uncomfortable one: go looking for the no.",
-      "featured": true,
-      "linkedinTeaser": "Most founders seek validation and merely tolerate criticism. Flip it: go looking for the no.\n\nIf your idea has a fatal flaw, it exists right now whether you've found it or not. You can pay to discover it today — one hard question, a little discomfort — or in twelve months, after the build and the launch. Same flaw, very different invoice.\n\nA no isn't a verdict on you. It tells you which part is wrong — market, timing, price — early, while changing course is cheap. A no in July is often what makes a yes in October possible.\n\nThe mirror always says go. The door might say no. Walk up to it hoping it tells you the truth."
-    }
-  ]
+  "queue": []
 }
