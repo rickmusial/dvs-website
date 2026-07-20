@@ -1,4 +1,15 @@
 {
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
-  "queue": []
+  "queue": [
+    {
+      "slug": "the-best-product-doesnt-win",
+      "publishDate": "2026-07-20",
+      "category": "Founder Counterintuition",
+      "readTime": "4 min read",
+      "title": "The best product doesn't win",
+      "description": "You assume the better product wins. It doesn't — the most trusted one does. And trust is built the one way founders are most tempted to skip: being willing to say no.",
+      "featured": true,
+      "linkedinTeaser": "Founder gut-check: the best product doesn't win — the most trusted one does.\n\nPeople don't adopt the better tool. They adopt the one they believe — and you earn belief by being willing to tell the truth, even when it costs you the sale. I've bet my whole company on it.\n\nTurns out the biggest firms in the world just said the same thing out loud: adoption moves at the speed of trust, not technology.\n\nWhen someone last told you a straight \"no\" — did it cost you, or save you?"
+    }
+  ]
 }
