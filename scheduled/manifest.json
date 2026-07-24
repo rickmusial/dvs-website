@@ -1,15 +1,4 @@
 {
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
-  "queue": [
-    {
-      "slug": "the-build-or-dont-decision",
-      "publishDate": "2026-07-24",
-      "category": "Founder Counterintuition",
-      "readTime": "4 min read",
-      "title": "The build-or-don't decision",
-      "description": "Most founders don't decide not to build — they just keep researching. The three things the decision actually needs, and why \"ship something small and see\" answers a different question.",
-      "linkedinTeaser": "Founders: if you're \"still researching\" an idea you've already decided to build, you're not researching. You're delaying.\n\nThe build-or-don't decision needs three things: who pays (a person, not \"the market\"), what they'd stop doing to pay you instead, and the number that would make you walk away — decided before you're months and savings deep.\n\n\"Just ship something small and see\" answers a different question — what to build, not whether to. If you'd have built it regardless of the answer, the market didn't decide. You did, before you started.\n\nWhat's the number that would make you walk away from what you're building right now — and did you decide it before you started, or are you still deciding it?",
-      "featured": true
-    }
-  ]
+  "queue": []
 }
