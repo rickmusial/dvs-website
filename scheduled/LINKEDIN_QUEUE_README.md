@@ -3,9 +3,23 @@
 Direct LinkedIn posting via the DVS-owned OAuth app (no Zapier, no terminal, no
 "remember to post"). Spec: `Documents/DVS_Publishing_Architecture_Reconciliation_S156.md` (DVS-LPS-2026-001 v2.0 §5).
 
-**Authorship stays human.** These tools only ship text that was written and
-approved ahead of time. Nothing is generated. The automation handles the
-*remembering* and the *pushing* — not the writing.
+**Authorship stays human — approval lives on the source post (amended S193, Rick's ruling).**
+These tools only ship text whose *argument, voice and claims* were written and approved
+by Rick. For a **cut**, that approval attaches to the **published blog post it is cut
+from**: the post is the gate, and a cut inherits its approval. Cuts may therefore be
+**generated from an approved, published post and queued `ready` without separate
+per-cut review** — and may **never** exist ahead of the post they derive from.
+
+*Superseded wording (pre-S193): "Nothing is generated."* That line predated the
+post-is-the-gate rule and, read literally, forbade the cut pipeline it was meant to
+protect. What it was actually guarding against — machine-authored claims going out in
+Rick's name with no human behind them — still holds, and is now guarded at the source
+post instead of at the cut.
+
+**Still required for every cut:** derived from a **published** post (verify on the
+destination, not the repo — the publish workflow can run late); run against
+`Documents/DVS_Writing_Rules.md` (v1.6+) before queueing; no new claims, sources or
+numbers that are not in the source post.
 
 ---
 
