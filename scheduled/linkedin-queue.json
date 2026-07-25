@@ -85,20 +85,25 @@
     "date": "2026-07-26",
     "visibility": "PUBLIC",
     "status": "ready",
-    "text": "Ask yourself what result would make you stop.\n\nNot slow down. Stop.\n\nIf there's no number, no answer, no single piece of evidence that would actually kill the idea for you, you're not evaluating it. You're building a case for a verdict you already reached.\n\nFounders spend four months validating an idea they were always going to build regardless of what the validation said. That research wasn't a decision-making tool. It was a delay with better PR.\n\nSo: what would make you stop?"
+    "text": "Ask yourself what result would make you stop.\n\nNot slow down. Stop.\n\nIf there's no number, no answer, no single piece of evidence that would actually kill the idea for you, you're not evaluating it. You're building a case for a verdict you already reached.\n\nFounders spend four months validating an idea they were always going to build regardless of what the validation said. That research wasn't a decision-making tool. It was a delay with better PR.\n\nSo: what would make you stop?",
+    "sightedBy": "Rick Musial",
+    "sightedAt": "2026-07-25 (S193, in session)",
+    "note": "Sighted by Rick under Writing Rules v1.7 provenance gate. Approved to post."
   },
   {
     "id": "build-or-dont-cut-2-three-things",
     "date": "2026-07-29",
     "visibility": "PUBLIC",
-    "status": "ready",
-    "text": "The build-or-don't decision needs three things. Most founders skip straight past all of them.\n\nWho pays — a person you could put a name to, not \"the market\".\n\nWhat they'd stop doing, or stop paying for, to pay you instead.\n\nThe number that makes you walk away, decided before you're three months and a chunk of your savings into finding out.\n\nSkip any of the three and you haven't made the decision. You've deferred it to a future version of yourself who'll have a lot more sunk into being right.\n\nWhich of the three can you answer right now, without hedging?"
+    "status": "held",
+    "text": "The build-or-don't decision needs three things. Most founders skip straight past all of them.\n\nWho pays — a person you could put a name to, not \"the market\".\n\nWhat they'd stop doing, or stop paying for, to pay you instead.\n\nThe number that makes you walk away, decided before you're three months and a chunk of your savings into finding out.\n\nSkip any of the three and you haven't made the decision. You've deferred it to a future version of yourself who'll have a lot more sunk into being right.\n\nWhich of the three can you answer right now, without hedging?",
+    "note": "HELD S193 — not yet sighted. Writing Rules v1.7 requires a named human to sight a derivative before it ships; leaving it \"ready\" would publish it by default. Set status back to \"ready\" once Rick has read it."
   },
   {
     "id": "build-or-dont-cut-3-theatre",
     "date": "2026-07-30",
     "visibility": "PUBLIC",
-    "status": "ready",
-    "text": "\"Just ship something small and let the market tell you.\"\n\nFair — for working out the shape of the product. It's the wrong tool for deciding whether to build at all.\n\n\"What should we build\" and \"should we build\" aren't the same question, and the second is the one people dodge by rushing to the first.\n\nBuilding something small still costs you months. It isn't free just because it's fast. And if you'd have built it regardless of what it told you, the market didn't decide anything. You did, before you started, and the build was theatre.\n\nWhat would the small thing have to show you before you'd actually stop?"
+    "status": "held",
+    "text": "\"Just ship something small and let the market tell you.\"\n\nFair — for working out the shape of the product. It's the wrong tool for deciding whether to build at all.\n\n\"What should we build\" and \"should we build\" aren't the same question, and the second is the one people dodge by rushing to the first.\n\nBuilding something small still costs you months. It isn't free just because it's fast. And if you'd have built it regardless of what it told you, the market didn't decide anything. You did, before you started, and the build was theatre.\n\nWhat would the small thing have to show you before you'd actually stop?",
+    "note": "HELD S193 — not yet sighted. Writing Rules v1.7 requires a named human to sight a derivative before it ships; leaving it \"ready\" would publish it by default. Set status back to \"ready\" once Rick has read it."
   }
 ]

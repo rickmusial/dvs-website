@@ -7,8 +7,15 @@ Direct LinkedIn posting via the DVS-owned OAuth app (no Zapier, no terminal, no
 These tools only ship text whose *argument, voice and claims* were written and approved
 by Rick. For a **cut**, that approval attaches to the **published blog post it is cut
 from**: the post is the gate, and a cut inherits its approval. Cuts may therefore be
-**generated from an approved, published post and queued `ready` without separate
-per-cut review** — and may **never** exist ahead of the post they derive from.
+**generated from an approved, published post** — and may **never** exist ahead of the post
+they derive from.
+
+**AMENDED later the same session (S193):** a generated cut must be **sighted by a named
+human before it ships**. Sighting takes seconds and is not an editorial pass — it is the
+requirement that a human has seen what goes out in their name. **An unsighted cut is set
+`held`, never left `ready`**, because `ready` publishes by default if nobody acts, and that
+default is the failure mode. Record `sightedBy` and `sightedAt` on the entry. Governing rule:
+`Documents/DVS_Writing_Rules.md` v1.7, the third gate (provenance).
 
 *Superseded wording (pre-S193): "Nothing is generated."* That line predated the
 post-is-the-gate rule and, read literally, forbade the cut pipeline it was meant to
