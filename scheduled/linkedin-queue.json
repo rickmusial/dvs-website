@@ -60,7 +60,7 @@
     "status": "posted",
     "text": "Founder gut-check: are you building a project – or a business?\n\nA project asks \"can I build this?\" A business asks \"will someone pay for this, again and again?\"\n\nThey feel the same in the early days. Same excitement, same late nights, same demo that makes people nod.\n\nBut a project is finished when it works. A business is only starting when it works – because now it has to be found, sold, supported, and paid for by strangers who don't care how clever it is.\n\nMost things that die weren't bad projects. They were projects that never became businesses.\n\nWhich one are you actually building right now?",
     "urn": "urn:li:share:7483301942857965568",
-    "postedAt": "2026-07-15T23:30:16.898Z"
+    "postedAt": "2026-07-15T23:30:16.868Z"
   },
   {
     "id": "go-looking-for-the-no",
@@ -96,16 +96,20 @@
     "id": "build-or-dont-cut-2-three-things",
     "date": "2026-07-29",
     "visibility": "PUBLIC",
-    "status": "held",
+    "status": "posted",
     "text": "The build-or-don't decision needs three things. Most founders skip straight past all of them.\n\nWho pays – a person you could put a name to, not \"the market\".\n\nWhat they'd stop doing, or stop paying for, to pay you instead.\n\nThe number that makes you walk away, decided before you're three months and a chunk of your savings into finding out.\n\nSkip any of the three and you haven't made the decision. You've deferred it to a future version of yourself who'll have a lot more sunk into being right.\n\nWhich of the three can you answer right now, without hedging?",
-    "note": "HELD S193 — not yet sighted. Writing Rules v1.7 requires a named human to sight a derivative before it ships; leaving it \"ready\" would publish it by default. Set status back to \"ready\" once Rick has read it."
+    "sightedBy": "Rick Musial",
+    "sightedAt": "2026-07-29 (S197, approved for immediate ad-hoc post)",
+    "note": "Posted ad-hoc via post-adhoc.sh on 2026-07-29 (S197), GitHub Actions run 30426592589. URN to be added once run completes.",
+    "postedAt": "2026-07-29"
   },
   {
     "id": "build-or-dont-cut-3-theatre",
     "date": "2026-07-30",
     "visibility": "PUBLIC",
-    "status": "held",
+    "status": "ready",
     "text": "\"Just ship something small and let the market tell you.\"\n\nFair – for working out the shape of the product. It's the wrong tool for deciding whether to build at all.\n\n\"What should we build\" and \"should we build\" aren't the same question, and the second is the one people dodge by rushing to the first.\n\nBuilding something small still costs you months. It isn't free just because it's fast. And if you'd have built it regardless of what it told you, the market didn't decide anything. You did, before you started, and the build was theatre.\n\nWhat would the small thing have to show you before you'd actually stop?",
-    "note": "HELD S193 — not yet sighted. Writing Rules v1.7 requires a named human to sight a derivative before it ships; leaving it \"ready\" would publish it by default. Set status back to \"ready\" once Rick has read it."
+    "sightedBy": "Rick Musial",
+    "sightedAt": "2026-07-29 (S197, approved)"
   }
 ]
