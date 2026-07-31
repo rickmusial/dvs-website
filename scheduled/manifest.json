@@ -1,15 +1,4 @@
 {
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
-  "queue": [
-    {
-      "slug": "the-day-your-co-founder-stopped-being-independent",
-      "publishDate": "2026-07-31",
-      "category": "Founder Counterintuition",
-      "readTime": "4 min read",
-      "title": "The day your co-founder stopped being independent",
-      "description": "Before you sign, a co-founder who knows your market is the cleanest outside read you'll get on your idea. The day you split the equity, that independence quietly expires - and almost nobody notices it go.",
-      "linkedinTeaser": "If you've got a co-founder, there was a day they stopped being able to give you a straight answer about the venture. You probably can't date it. They hadn't changed - they'd just got bound to the answer.\n\nBefore you sign, a co-founder who knows your market is one of the cleanest independent reads you'll ever get on the idea. The day the equity splits, that independence quietly expires: they now own a share of the answer being yes. Two people who need the same answer talk each other round and call it a test. There's a second voice in the room, and it sounds exactly like independence.\n\nThe one question only that window can answer - what would have to be true for this not to work, and do you think it's true? - has to be asked before the ink.\n\nWhen did you last get a genuinely independent read on your idea?",
-      "featured": true
-    }
-  ]
+  "queue": []
 }
