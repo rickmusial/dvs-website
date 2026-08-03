@@ -56,11 +56,11 @@ jobs:
       # time to deploy) do we fire the LinkedIn teaser, so it never points at a
       # not-yet-live article.
       - name: Wait for Vercel to deploy
-        if: steps.push.outputs.published == 'true'
+        if: false
         run: sleep 90
 
       - name: Fire LinkedIn teaser(s) — direct API (no Zapier)
-        if: steps.push.outputs.published == 'true'
+        if: false
         env:
           LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
           LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
