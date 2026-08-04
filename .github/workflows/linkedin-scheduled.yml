@@ -36,6 +36,7 @@ jobs:
         env:
           LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
           LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+          LINKEDIN_LOW_RUNWAY: '1'   # S201: recalibrated for the 4/week cadence (2 cuts/week, S200) — alarm only when the queue is down to its last ready cut
         run: node scripts/post-linkedin-queue.mjs
 
       - name: Commit queue state if it changed
