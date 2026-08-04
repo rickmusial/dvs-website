@@ -1,4 +1,25 @@
 {
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
-  "queue": []
+  "queue": [
+    {
+      "slug": "you-believe-the-evidence-and-still-cant-stop",
+      "publishDate": "2026-08-08",
+      "category": "Founder Counterintuition",
+      "readTime": "4 min read",
+      "title": "You believe the evidence and still can't stop",
+      "description": "Stubbornness refuses the evidence. Sunk cost accepts it completely and still can't stop – the third reason founders keep going, and the honest way out.",
+      "linkedinTeaser": "(recorded only — teaser step disabled per the S200 4/week cadence)",
+      "featured": true
+    },
+    {
+      "slug": "what-your-first-sale-actually-proves",
+      "publishDate": "2026-08-11",
+      "category": "Founder Counterintuition",
+      "readTime": "4 min read",
+      "title": "What your first sale actually proves",
+      "description": "One real sale beats a thousand signups – and it's still the most over-read data point in a venture. Provenance decides what it predicts.",
+      "linkedinTeaser": "(recorded only — teaser step disabled per the S200 4/week cadence)",
+      "featured": true
+    }
+  ]
 }
