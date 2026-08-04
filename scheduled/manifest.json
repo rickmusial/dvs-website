@@ -1,15 +1,4 @@
 {
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
-  "queue": [
-    {
-      "slug": "your-runway-is-grading-your-idea",
-      "publishDate": "2026-08-04",
-      "category": "Founder Counterintuition",
-      "readTime": "4 min read",
-      "title": "Your runway is grading your idea",
-      "description": "The evidence bar for your idea moves at the speed of your bank balance – and it moves in both directions.",
-      "linkedinTeaser": "Ten signups at eighteen months of runway is a start. Ten signups at four months suddenly looks like traction. Same ten people – your bank balance is grading your evidence. (Note: teaser step is disabled per the S200 4/week cadence; recorded for the log only.)",
-      "featured": true
-    }
-  ]
+  "queue": []
 }
