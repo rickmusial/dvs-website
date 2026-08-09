@@ -2,16 +2,6 @@
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
   "queue": [
     {
-      "slug": "what-your-first-sale-actually-proves",
-      "publishDate": "2026-08-10",
-      "category": "Founder Counterintuition",
-      "readTime": "4 min read",
-      "title": "What your first sale actually proves",
-      "description": "One real sale beats a thousand signups – and it's still the most over-read data point in a venture. Provenance decides what it predicts.",
-      "linkedinTeaser": "(recorded only — teaser step disabled per the S200 4/week cadence)",
-      "featured": true
-    },
-    {
       "slug": "the-second-gate-opens-after-they-pay",
       "publishDate": "2026-08-14",
       "category": "Founder Counterintuition",
