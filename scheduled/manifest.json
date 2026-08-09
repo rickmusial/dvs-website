@@ -10,6 +10,26 @@
       "description": "One real sale beats a thousand signups – and it's still the most over-read data point in a venture. Provenance decides what it predicts.",
       "linkedinTeaser": "(recorded only — teaser step disabled per the S200 4/week cadence)",
       "featured": true
+    },
+    {
+      "slug": "the-second-gate-opens-after-they-pay",
+      "publishDate": "2026-08-14",
+      "category": "Founder Counterintuition",
+      "readTime": "4 min read",
+      "title": "The second gate opens after they pay",
+      "description": "Every honest founder post stops at the moment someone pays. The venture doesn't. There's a second gate past the first sale - quieter, recurring - and it's the one that decides whether you have a business.",
+      "linkedinTeaser": "(recorded only — teaser step disabled per the S200 4/week cadence)",
+      "featured": false
+    },
+    {
+      "slug": "carrying-a-no-you-went-looking-for",
+      "publishDate": "2026-08-17",
+      "category": "Founder Counterintuition",
+      "readTime": "3 min read",
+      "title": "Carrying a no you went looking for",
+      "description": "You did the hard thing and went looking for the no. This is about the part nobody warns you about - the few days you carry it before you act, when the people you'd normally tell are the ones who can't hold it.",
+      "linkedinTeaser": "(recorded only — teaser step disabled per the S200 4/week cadence)",
+      "featured": false
     }
   ]
 }
