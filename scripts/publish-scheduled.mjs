@@ -18,6 +18,7 @@ const MANIFEST = path.join(SCHEDULED_DIR, 'manifest.json');
 const BLOG_DIR = path.join(ROOT, 'blog');
 const SITEMAP = path.join(ROOT, 'sitemap.xml');
 const INDEX = path.join(BLOG_DIR, 'index.html');
+const LLMS = path.join(ROOT, 'llms.txt');
 const PUBLISHED_OUT = process.env.PUBLISHED_OUT || path.join(ROOT, '.published.json');
 const SITE = 'https://digitalventurestudio.com';
 
@@ -118,6 +119,17 @@ for (const entry of due) {
   if (!index.includes(gridAnchor)) throw new Error('blog/index.html anchor not found (<div class="post-grid">). Aborting to avoid corruption.');
   index = index.replace(gridAnchor, gridAnchor + '\n' + card);
   fs.writeFileSync(INDEX, index);
+
+  // 3b) llms.txt: add the post to the ## Writing list so AI crawlers (ClaudeBot /
+  //     GPTBot / PerplexityBot) discover it too — uses the title/description already
+  //     in the manifest. Fail-loud on a missing anchor, like the sitemap/index steps.
+  let llms = fs.readFileSync(LLMS, 'utf8');
+  const llmsAnchor = '\n\n## Products';
+  if (!llms.includes(llmsAnchor)) throw new Error('llms.txt anchor not found (blank line before ## Products). Aborting to avoid corruption.');
+  if (!llms.includes(`](${url})`)) {
+    llms = llms.replace(llmsAnchor, `\n- [${entry.title}](${url}): ${entry.description}` + llmsAnchor);
+    fs.writeFileSync(LLMS, llms);
+  }
 
   published.push({ url, title: entry.title, teaser: entry.linkedinTeaser || '' });
   console.log(`Published: ${slug} -> ${url}`);
