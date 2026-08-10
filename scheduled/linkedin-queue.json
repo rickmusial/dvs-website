@@ -140,9 +140,12 @@
     "id": "echo-mirror-confident-voice",
     "date": "2026-08-11",
     "visibility": "PUBLIC",
-    "status": "ready",
+    "status": "posted",
     "text": "If you're validating your idea with an AI tool right now, read this before you trust the answer.\n\nIt feels objective — it runs a real process and hands you a verdict. But you wrote the prompt. You chose the inputs. You curated the evidence it judged. So a model built to be helpful reflects your own optimism in more confident language, and it feels like validation.\n\nIt's an echo.\n\nA verdict that structurally cannot disappoint you isn't a verdict. It's a mirror with a confident voice.",
-    "firstComment": "The full piece: https://digitalventurestudio.com/blog/you-cant-be-your-own-second-opinion.html"
+    "firstComment": "The full piece: https://digitalventurestudio.com/blog/you-cant-be-your-own-second-opinion.html",
+    "urn": "urn:li:share:7492718215303888896",
+    "postedAt": "2026-08-10T23:07:11.308Z",
+    "commentUrn": "7492718217531150336"
   },
   {
     "id": "hunt-for-the-no",
