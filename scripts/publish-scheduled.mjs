@@ -52,10 +52,20 @@ for (const entry of due) {
   const src = path.join(SCHEDULED_DIR, `${slug}.html`);
   const dest = path.join(BLOG_DIR, `${slug}.html`);
   if (!fs.existsSync(src)) throw new Error(`Staged file missing: scheduled/${slug}.html`);
-  const url = `${SITE}/blog/${slug}.html`;
+  const url = `${SITE}/blog/${slug}`;
 
   // 1) Move the post into the live blog folder.
   fs.renameSync(src, dest);
+
+  // 1b) Self-heal the post's own URL self-references (canonical / og:url / JSON-LD
+  //     @id / internal links) to clean URLs. cleanUrls:true serves /blog/<slug> and
+  //     308-redirects the .html form, so a canonical pointing at .html makes Google
+  //     mark the page "Page with redirect" and skip indexing it (fixed site-wide S208).
+  {
+    let post = fs.readFileSync(dest, 'utf8');
+    post = post.split(`/blog/${slug}.html`).join(`/blog/${slug}`);
+    fs.writeFileSync(dest, post);
+  }
 
   // 2) Sitemap: insert a <url> block before the first /legal/ entry (blog posts precede legal).
   let sitemap = fs.readFileSync(SITEMAP, 'utf8');
@@ -80,7 +90,7 @@ for (const entry of due) {
               <span class="post-read-time">${entry.readTime}</span>
             </div>
             <h2 itemprop="headline">
-              <a href="/blog/${slug}.html">
+              <a href="/blog/${slug}">
                 ${entry.title}
               </a>
             </h2>
@@ -89,7 +99,7 @@ for (const entry of due) {
             </p>
           </div>
           <div class="post-card-footer">
-            <a href="/blog/${slug}.html" class="post-link">
+            <a href="/blog/${slug}" class="post-link">
               Read the article
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
