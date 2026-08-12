@@ -151,9 +151,12 @@
     "id": "hunt-for-the-no",
     "date": "2026-08-13",
     "visibility": "PUBLIC",
-    "status": "ready",
+    "status": "posted",
     "text": "Most founders hunt for a yes. The dangerous ones hunt for the no.\n\nIf your idea has a fatal flaw, that flaw exists right now, whether you've found it or not. You can pay to discover it today — one hard question over a coffee — or in twelve months, after the build and the savings: same flaw, wildly different invoice.\n\nA yes that could never have been a no isn't worth having.",
-    "firstComment": "The full piece: https://digitalventurestudio.com/blog/go-looking-for-the-no.html"
+    "firstComment": "The full piece: https://digitalventurestudio.com/blog/go-looking-for-the-no.html",
+    "urn": "urn:li:share:7493444011207176193",
+    "postedAt": "2026-08-12T23:11:14.461Z",
+    "commentUrn": "7493444013526523904"
   },
   {
     "id": "who-would-feel-its-absence",
