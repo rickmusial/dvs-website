@@ -173,9 +173,12 @@
     "id": "research-or-reassurance",
     "date": "2026-08-16",
     "visibility": "PUBLIC",
-    "status": "ready",
+    "status": "posted",
     "text": "Founder gut-check: when did your research last actually change your mind?\n\nYou did the work — you didn't just sit in your head; you talked to ten people, you took notes. And somehow every conversation confirmed what you already hoped. That's the tell.\n\nIf your research never changes your mind, you're not doing research. You're collecting reassurance.",
-    "firstComment": "The full piece: https://digitalventurestudio.com/blog/the-feedback-you-can-survive.html"
+    "firstComment": "The full piece: https://digitalventurestudio.com/blog/the-feedback-you-can-survive.html",
+    "urn": "urn:li:share:7494525575718555648",
+    "postedAt": "2026-08-15T22:48:59.486Z",
+    "commentUrn": "7494525577996021760"
   },
   {
     "id": "admiration-vs-conviction",
