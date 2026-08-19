@@ -195,8 +195,9 @@
     "id": "convicted-or-stubborn",
     "date": "2026-08-20",
     "visibility": "PUBLIC",
-    "status": "ready",
+    "status": "failed",
     "text": "\"Am I convicted, or just stubborn?\" — the founder question nobody can answer for you.\n\nFrom the outside they're identical: both push through resistance, both ignore the doubters. The difference is what they do with evidence — conviction can take a credible \"no\" and change course without losing the reason it started; stubbornness rewrites the evidence to protect the plan.\n\nConviction can change its plan without losing its reason. Stubbornness changes the evidence to protect the plan.",
-    "firstComment": "The full piece: https://digitalventurestudio.com/blog/conviction-isnt-certainty.html"
+    "firstComment": "The full piece: https://digitalventurestudio.com/blog/conviction-isnt-certainty.html",
+    "lastError": "LinkedIn POST failed: HTTP 401 — {\"status\":401,\"serviceErrorCode\":65602,\"code\":\"EXPIRED_ACCESS_TOKEN\",\"message\":\"The token used in the request has expired\"}"
   }
 ]
