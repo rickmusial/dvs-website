@@ -1,15 +1,4 @@
 {
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
-  "queue": [
-    {
-      "slug": "you-dont-have-a-distribution-problem-yet",
-      "publishDate": "2026-08-21",
-      "category": "Founder Counterintuition",
-      "readTime": "4 min read",
-      "title": "You don't have a distribution problem yet",
-      "description": "A founder asked how to distribute a product with no audience - then admitted he was starting to wonder what the point of building it was. Those are two different questions, and the second one is the real one.",
-      "linkedinTeaser": "(recorded only - teaser step disabled per the S200 4/week cadence)",
-      "featured": true
-    }
-  ]
+  "queue": []
 }
