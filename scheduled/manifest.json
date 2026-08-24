@@ -1,4 +1,15 @@
 {
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
-  "queue": []
+  "queue": [
+    {
+      "slug": "a-healthy-platform-is-the-dangerous-one",
+      "publishDate": "2026-08-24",
+      "category": "Founder Counterintuition",
+      "readTime": "4 min read",
+      "title": "A healthy platform is the dangerous one",
+      "description": "Checkout X died overnight at around €600k a month in recurring revenue. Shopify was in perfect health at the time – and that is the part founders get wrong about platform risk.",
+      "linkedinTeaser": "(recorded only - teaser step disabled per the S200 4/week cadence)",
+      "featured": true
+    }
+  ]
 }
