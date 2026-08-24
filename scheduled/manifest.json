@@ -1,4 +1,25 @@
 {
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. After publish, the post's linkedinTeaser is fired to LinkedIn via the direct poster (scripts/fire-linkedin-direct.mjs).",
-  "queue": []
+  "queue": [
+    {
+      "slug": "marketing-has-no-definition-of-done",
+      "publishDate": "2026-08-28",
+      "category": "Founder Counterintuition",
+      "readTime": "5 min read",
+      "title": "Marketing has no definition of done",
+      "description": "A founder shipped features on schedule for months and did no marketing at all. He wasn't short of time. He was short of a ticket.",
+      "linkedinTeaser": "(recorded only - teaser step disabled per the S200 4/week cadence)",
+      "featured": false
+    },
+    {
+      "slug": "your-best-reader-will-never-use-your-vocabulary",
+      "publishDate": "2026-08-31",
+      "category": "Founder Counterintuition",
+      "readTime": "4 min read",
+      "title": "Your best reader will never use your vocabulary",
+      "description": "One reader answered six of my posts in two weeks and never once used a word I'd written. He understood all six. That gap is worth more than any survey.",
+      "linkedinTeaser": "(recorded only - teaser step disabled per the S200 4/week cadence)",
+      "featured": false
+    }
+  ]
 }
