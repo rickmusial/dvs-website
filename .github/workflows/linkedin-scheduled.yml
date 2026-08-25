@@ -32,9 +32,27 @@ jobs:
         with:
           node-version: '20'
 
+      # DVS-SHC-2026-001 Layer 1 (S224). Mints a short-lived access token from the
+      # stored refresh token and exports it via GITHUB_ENV, overriding the secret
+      # for this job only. Fail-soft: with no refresh secrets configured it exits 0
+      # and the run proceeds on LINKEDIN_TOKEN exactly as before.
+      # ⚑ This step is the SINGLE WRITER of LINKEDIN_TOKEN for the job. It exports
+      # either the freshly minted token or the existing secret passed through
+      # unchanged. The poster step below therefore declares NO LINKEDIN_TOKEN of its
+      # own — a competing step-level declaration would risk silently discarding the
+      # minted value, and GitHub's docs do not settle that precedence.
+      - name: Mint a fresh LinkedIn access token
+        env:
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_REFRESH_TOKEN: ${{ secrets.LINKEDIN_REFRESH_TOKEN }}
+          LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}   # fallback, passed through when minting is off or fails
+        run: node scripts/linkedin-mint-token.mjs
+
       - name: Publish any queued post whose date is due
         env:
-          LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
+          # LINKEDIN_TOKEN intentionally NOT declared here — it arrives from the mint
+          # step via GITHUB_ENV. Do not re-add it. See DVS-SHC-2026-001.
           LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
           LINKEDIN_LOW_RUNWAY: '1'   # S201: recalibrated for the 4/week cadence (2 cuts/week, S200) — alarm only when the queue is down to its last ready cut
         run: node scripts/post-linkedin-queue.mjs

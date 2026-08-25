@@ -53,6 +53,36 @@ try {
 // "Today" in Australia/Sydney (AEST/AEDT, DST-safe), NOT UTC — the cron fires at
 // 08:30 AEST when the UTC date is still the day before. en-CA → YYYY-MM-DD.
 const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Australia/Sydney' }).format(new Date());
+
+// ── Credential-failure auto-recovery (DVS-SHC-2026-001 Layer 2, added S224) ──
+// The standing rule is that a SHARE failure is NEVER auto-retried — correct,
+// because a double post is unrecoverable. But that blanket rule treats a content
+// failure and a CREDENTIAL failure as the same animal, and they are not.
+// On 20 Aug 2026 a post failed HTTP 401 EXPIRED_ACCESS_TOKEN, was never retried,
+// and sat dead for five days while the queue ran dry.
+//
+// So the rule is NARROWED, not removed: re-arm ONLY when the failure was a 401 /
+// expired token AND this run has just minted a fresh credential (Layer 1 sets
+// LINKEDIN_TOKEN_FRESHLY_MINTED=1). The old token could not have posted it, so
+// there is no double-post risk. EVERY other failure stays manual, forever.
+const freshlyMinted = process.env.LINKEDIN_TOKEN_FRESHLY_MINTED === '1';
+const CREDENTIAL_FAILURE = /\b401\b|EXPIRED_ACCESS_TOKEN|REVOKED_ACCESS_TOKEN/i;
+let reArmed = 0;
+if (freshlyMinted) {
+  for (const e of entries) {
+    if (e?.status === 'failed' && CREDENTIAL_FAILURE.test(String(e.lastError || ''))) {
+      console.log(`Re-arming ${e.id} — previous failure was a credential error and a fresh token was minted this run.`);
+      e.status = 'ready';
+      delete e.lastError;
+      reArmed++;
+    }
+  }
+  if (reArmed) {
+    fs.writeFileSync(QUEUE, JSON.stringify(entries, null, 2) + '\n');
+    console.log(`${reArmed} entr${reArmed === 1 ? 'y' : 'ies'} re-armed after token refresh.`);
+  }
+}
+
 const due = entries.filter(e => e && e.status === 'ready' && typeof e.date === 'string' && e.date <= today);
 
 // ── Foolproof runway alarm (added S178) ──────────────────────────────────────

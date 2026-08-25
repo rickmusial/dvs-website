@@ -59,9 +59,22 @@ jobs:
         if: false
         run: sleep 90
 
+      # DVS-SHC-2026-001 Layer 1 (S224). Mints a short-lived access token from the
+      # stored refresh token and exports it via GITHUB_ENV, overriding the secret
+      # for this job only. Fail-soft: with no refresh secrets configured it exits 0
+      # and the run proceeds on LINKEDIN_TOKEN exactly as before.
+      # ⚑ SINGLE WRITER of LINKEDIN_TOKEN for this job — see linkedin-scheduled.yml.
+      - name: Mint a fresh LinkedIn access token
+        env:
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_REFRESH_TOKEN: ${{ secrets.LINKEDIN_REFRESH_TOKEN }}
+          LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}   # fallback, passed through when minting is off or fails
+        run: node scripts/linkedin-mint-token.mjs
+
       - name: Fire LinkedIn teaser(s) — direct API (no Zapier)
         if: false
         env:
-          LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
+          # LINKEDIN_TOKEN intentionally NOT declared here — arrives via GITHUB_ENV.
           LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
         run: node scripts/fire-linkedin-direct.mjs
