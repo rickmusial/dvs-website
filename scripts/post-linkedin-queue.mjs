@@ -91,19 +91,50 @@ const due = entries.filter(e => e && e.status === 'ready' && typeof e.date === '
 // after the fact. This guard FAILS LOUDLY (non-zero exit → GitHub emails Rick) when
 // the queue is empty or running low, so you're warned to top up BEFORE a gap happens.
 const LOW_RUNWAY = Number(process.env.LINKEDIN_LOW_RUNWAY || 3);
-function runwayGuard(readyCount, context) {
-  if (readyCount === 0) {
-    console.error(`❌ LinkedIn queue is EMPTY — 0 posts queued (${context}). No post can go ` +
-      `out until you add entries to scheduled/linkedin-queue.json ("status":"ready" + a "date"). ` +
-      `Failing loudly so you're emailed now, not surprised on LinkedIn later.`);
-    process.exit(1);
+
+// ⚑ EXIT CODES ARE THE SIGNAL (S224, DCR-215). Until today an empty queue and a dead
+// credential both exited 1 and produced an IDENTICAL failure email. Eight of those
+// arrived in a row: one was a real 401, seven were "the queue is empty" — and the
+// noise buried the incident for a week. Worse, run #69 published a post successfully
+// and STILL went red, because the runway guard fired afterwards; nothing in the
+// failure said a post had gone out.
+//
+//   exit 1 = INCIDENT      — something failed to publish. Act now.
+//   exit 2 = HOUSEKEEPING  — nothing broke. The queue needs topping up.
+//   exit 0 = all good.
+//
+// GitHub prints "Process completed with exit code N" in the annotation and the email,
+// so the two are now distinguishable at a glance without opening the log.
+function stepSummary(md) {
+  if (process.env.GITHUB_STEP_SUMMARY) {
+    fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, md + '\n');
   }
-  if (readyCount <= LOW_RUNWAY) {
-    console.error(`⚠️ LinkedIn queue RUNNING LOW — only ${readyCount} "ready" post(s) left ` +
-      `(${context}; threshold ${LOW_RUNWAY}). Top up scheduled/linkedin-queue.json soon so the ` +
-      `daily slot never runs dry. (Any post due today still went out — this is a heads-up.)`);
-    process.exit(1);
-  }
+}
+
+function runwayGuard(readyCount, context, publishedCount = 0) {
+  if (readyCount > LOW_RUNWAY) return;
+
+  // The single most important line: did anything actually go out this run?
+  const outcome = publishedCount > 0
+    ? `**✅ ${publishedCount} post(s) published successfully this run.** Nothing failed.`
+    : '**No post was due, and nothing failed.**';
+
+  const empty = readyCount === 0;
+  const headline = empty
+    ? '📭 HOUSEKEEPING — the LinkedIn queue is EMPTY'
+    : `📭 HOUSEKEEPING — the LinkedIn queue is running LOW (${readyCount} left)`;
+
+  console.log(`::warning title=LinkedIn queue needs topping up::${headline} — no post failed (${context}).`);
+  console.error(`${headline} (${context}). ${publishedCount > 0 ? `${publishedCount} post(s) DID publish this run. ` : ''}` +
+    `Nothing is broken — add entries to scheduled/linkedin-queue.json ("status":"ready" + a "date") ` +
+    `so the next cut slot is covered. Exiting 2 (housekeeping), not 1 (incident).`);
+
+  stepSummary(`### ${headline}\n\n${outcome}\n\n` +
+    `Ready entries remaining: **${readyCount}** (alarm threshold ${LOW_RUNWAY}). ` +
+    `Cut slots under the S200 cadence are **Sunday and Thursday**.\n\n` +
+    `_Exit code 2 = housekeeping. An exit code of 1 would mean a post actually failed._\n`);
+
+  process.exit(2);
 }
 
 if (due.length === 0) {
@@ -162,14 +193,20 @@ if (process.env.GITHUB_STEP_SUMMARY) {
 // failures both make the run red; the message distinguishes them so Rick knows
 // whether to re-arm (share) or just add a comment by hand (comment).
 if (failures > 0 || commentFailures > 0) {
+  // exit 1 = INCIDENT. Reserved for a post that did not land. Never used for an empty queue.
+  console.log(`::error title=LinkedIn post FAILED::⛔ INCIDENT — ${failures} share(s) and ${commentFailures} comment(s) failed to publish.`);
   if (failures > 0) {
-    console.error(`${failures} SHARE(s) FAILED — re-arm by setting status back to "ready" after fixing.`);
+    console.error(`⛔ INCIDENT: ${failures} SHARE(s) FAILED — re-arm by setting status back to "ready" after fixing.`);
   }
   if (commentFailures > 0) {
-    console.error(`${commentFailures} first comment(s) FAILED — the shares are LIVE (do NOT re-post); add those comments manually.`);
+    console.error(`⛔ INCIDENT: ${commentFailures} first comment(s) FAILED — the shares are LIVE (do NOT re-post); add those comments manually.`);
   }
+  stepSummary(`### ⛔ INCIDENT — a post did not land\n\n` +
+    `Shares failed: **${failures}** · first comments failed: **${commentFailures}**. ` +
+    `A 401 here means \`LINKEDIN_TOKEN\` has expired — re-mint it and update the repository secret.\n\n` +
+    `_Exit code 1 = incident. An exit code of 2 would mean the queue merely needs topping up._\n`);
   process.exit(1);
 }
 const readyRemaining = entries.filter(e => e?.status === 'ready').length;
 console.log(`Done — ${due.length} post(s) published. ${readyRemaining} "ready" item(s) left.`);
-runwayGuard(readyRemaining, `after publishing ${due.length}`);
+runwayGuard(readyRemaining, `after publishing ${due.length}`, due.length);
