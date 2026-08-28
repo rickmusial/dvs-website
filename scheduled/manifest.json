@@ -14,21 +14,41 @@
     {
       "slug": "everyone-likes-it-and-nobody-is-buying",
       "publishDate": "2026-09-04",
-      "category": "Founder Counterintuition",
+      "category": "Go/No-Go Decision",
       "readTime": "4 min read",
       "title": "Everyone likes it and nobody is buying",
-      "description": "Thirty-one posts, nine upgrade clicks, zero paying customers. My own numbers, and the two questions I should have asked before I called it a demand problem.",
-      "linkedinTeaser": "Founders: if everyone loves your idea and nobody buys it, here are my own numbers first - thirty-one posts, nine upgrade clicks, zero paying customers - and the two questions I should have asked before calling it a demand problem.",
+      "description": "Thirty-one posts, twenty-three verdicts, zero paying customers. My own numbers, and the two questions I should have asked before I called it a demand problem.",
+      "linkedinTeaser": "Founders: if everyone loves your idea and nobody buys it, here are my own numbers first - fifty-two projects, twenty-three verdicts, eleven people, six who ever looked at the price, nobody paying - and the two questions I should have asked before calling it a demand problem.",
       "featured": true
     },
     {
       "slug": "a-plan-i-could-never-have-run",
       "publishDate": "2026-09-07",
-      "category": "Founder Counterintuition",
+      "category": "Behind the Build",
       "readTime": "4 min read",
       "title": "I wrote a plan I could never have run",
       "description": "A complete, 122-line production spec, six weeks old, zero output. The problem wasn't discipline. Every hard input in it was assigned to the one person who is hardest to schedule.",
       "linkedinTeaser": "Founders: the plan you wrote months ago and never started probably isn't a discipline problem. Mine is six weeks old, 122 lines, complete - and every hard input in it is assigned to me.",
+      "featured": true
+    },
+    {
+      "slug": "sixty-nine-users-one-i-can-email",
+      "publishDate": "2026-09-11",
+      "category": "Behind the Build",
+      "readTime": "4 min read",
+      "title": "Sixty-nine users. One I am allowed to email.",
+      "description": "I checked the consent flag on my own database this week. Sixty-eight of sixty-nine had said no. Users are not an audience, and the gap between them is where most founders keep their optimism.",
+      "linkedinTeaser": "Founders: I ran the consent query on my own database this week - sixty-nine users, one of them contactable. Users are not an audience, and the gap between them is where most of us keep our optimism.",
+      "featured": true
+    },
+    {
+      "slug": "i-do-not-have-a-network",
+      "publishDate": "2026-09-14",
+      "category": "Behind the Build",
+      "readTime": "4 min read",
+      "title": "I do not have a network",
+      "description": "Four months of a weekly outreach target, never once met. Not discipline. The plan assumed a network I have never had, and nobody checked whether the input existed.",
+      "linkedinTeaser": "Founders: I set a target of two qualified contacts a week in July. Four months on the count is zero - not because of discipline, but because the plan drew on a network I have never had.",
       "featured": true
     }
   ]
