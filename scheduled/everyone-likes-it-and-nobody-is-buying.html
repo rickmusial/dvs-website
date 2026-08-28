@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everyone likes it and nobody is buying – Digital Venture Studio</title>
+  <meta name="description" content="Thirty-one posts, nine upgrade clicks, zero paying customers. My own numbers, and the two questions I should have asked before I called it a demand problem." />
+  <meta property="og:title" content="Everyone likes it and nobody is buying" />
+  <meta property="og:description" content="Thirty-one posts, nine upgrade clicks, zero paying customers. My own numbers, and the two questions I should have asked before I called it a demand problem." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://digitalventurestudio.com/blog/everyone-likes-it-and-nobody-is-buying" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Everyone likes it and nobody is buying" />
+  <meta name="twitter:description" content="Thirty-one posts, nine upgrade clicks, zero paying customers. My own numbers, and the two questions I should have asked before I called it a demand problem." />
+  <meta property="og:image" content="https://digitalventurestudio.com/images/h1-open-graph.png" />
+  <meta name="twitter:image" content="https://digitalventurestudio.com/images/h1-open-graph.png" />
+  <link rel="canonical" href="https://digitalventurestudio.com/blog/everyone-likes-it-and-nobody-is-buying" />
+
+  <!-- BlogPosting structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Everyone likes it and nobody is buying",
+  "description": "Thirty-one posts, nine upgrade clicks, zero paying customers. My own numbers, and the two questions I should have asked before I called it a demand problem.",
+  "datePublished": "2026-09-04",
+  "dateModified": "2026-09-04",
+  "author": {
+    "@type": "Person",
+    "name": "Rick Musial",
+    "jobTitle": "Founder & Chairman",
+    "url": "https://digitalventurestudio.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/rick-musial-9b9857370"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Digital Venture Studio",
+    "url": "https://digitalventurestudio.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://digitalventurestudio.com/images/h1-open-graph.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://digitalventurestudio.com/blog/everyone-likes-it-and-nobody-is-buying"
+  },
+  "keywords": [
+    "everyone likes my idea nobody is buying",
+    "nice to have vs must have",
+    "founder validation",
+    "willingness to pay",
+    "attribution",
+    "switching pain",
+    "founder counterintuition",
+    "zero paying customers",
+    "demand test",
+    "verdict on the experiment"
+  ],
+  "articleSection": "Founder Counterintuition",
+  "wordCount": 720
+}
+  </script>
+
+  <!-- FAQPage structured data – AEO signal for AI search engines -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does everyone like my startup idea but nobody buys it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Liking is free and buying is not, so the two measure different things. The usual cause is that the problem is real but optional - a nice-to-have rather than a mission-critical workflow - or that nothing joins the place people say yes to the place they would have to pay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I tell a nice-to-have from a must-have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ask what the person does today instead of using your product. An expensive, annoying workaround they already maintain means switching pain and a real chance. Living with the problem means the enthusiasm may have been accurate: the thing is useful, but optional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is low conversion always a demand problem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A missing measurement looks identical to a demand verdict from the outside. Check first whether anyone has ever travelled from your content to your checkout in one traceable session. If that path was never instrumented, zero customers is a verdict on the experiment rather than on demand."
+      }
+    }
+  ]
+}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  
+  <style>
+    /* ─── DESIGN TOKENS ──────────────────────────────────────────── */
+    :root {
+      --near-black:  #1A1A1E;
+      --gold:        #BE8223;
+      --gold-light:  #D4A053;
+      --gold-pale:   #F0E0C0;
+      --cream:       #F7F3EB;
+      --cream-dark:  #EDE8DC;
+      --white:       #FFFFFF;
+      --mid-grey:    #6B6B72;
+      --border:      rgba(190,130,35,0.2);
+
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans:  'Inter', system-ui, sans-serif;
+
+      --max-w: 1120px;
+      --prose-w: 680px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--near-black);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+    /* ─── NAVIGATION ─────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--near-black);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      height: 64px;
+      display: flex;
+      align-items: center;
+    }
+    .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--cream);
+      letter-spacing: 0.02em;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(247,243,235,0.65);
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--cream); }
+    .nav-links a.active { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--near-black) !important;
+      font-weight: 600 !important;
+      padding: 9px 20px;
+      border-radius: 4px;
+      font-size: 13px !important;
+      letter-spacing: 0.01em !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 42px; height: 42px;
+      margin: -8px -8px -8px 0;
+      background: none; border: none;
+      cursor: pointer; padding: 8px;
+    }
+    .nav-toggle span {
+      display: block; height: 2px; width: 24px;
+      background: var(--cream); border-radius: 2px;
+      transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav.open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav.open .nav-toggle span:nth-child(2) { opacity: 0; }
+    .nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ─── ARTICLE HEADER ─────────────────────────────────────────── */
+    .article-header {
+      background: var(--near-black);
+      padding: 120px 24px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.3;
+    }
+    .article-header::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -120px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(190,130,35,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .article-header .container {
+      position: relative;
+      z-index: 1;
+      max-width: var(--prose-w);
+    }
+    .article-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(247,243,235,0.45);
+      margin-bottom: 32px;
+      transition: color 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .article-back:hover { color: rgba(247,243,235,0.8); }
+    .article-category {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(190,130,35,0.12);
+      padding: 5px 12px;
+      border-radius: 3px;
+      margin-bottom: 24px;
+    }
+    .article-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 500;
+      color: var(--cream);
+      line-height: 1.2;
+      margin-bottom: 28px;
+      letter-spacing: -0.01em;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .article-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .author-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(190,130,35,0.2);
+      border: 1px solid rgba(190,130,35,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 14px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .author-info { display: flex; flex-direction: column; gap: 2px; }
+    .author-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(247,243,235,0.8);
+    }
+    .author-title {
+      font-size: 11px;
+      color: rgba(247,243,235,0.4);
+    }
+    .meta-divider {
+      width: 1px;
+      height: 28px;
+      background: rgba(255,255,255,0.1);
+    }
+    .meta-item {
+      font-size: 12px;
+      color: rgba(247,243,235,0.4);
+    }
+
+    /* ─── ARTICLE BODY ───────────────────────────────────────────── */
+    .article-body {
+      padding: 72px 24px 96px;
+    }
+    .article-body .container {
+      max-width: var(--prose-w);
+    }
+    .prose p {
+      font-size: 17px;
+      line-height: 1.75;
+      color: #2A2A2E;
+      margin-bottom: 28px;
+    }
+    .prose h2 {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--near-black);
+      margin-top: 52px;
+      margin-bottom: 20px;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+    .prose h2:first-child { margin-top: 0; }
+    .prose strong { font-weight: 600; color: var(--near-black); }
+    .prose em { font-style: italic; }
+    .prose ul {
+      list-style: none;
+      margin: 0 0 28px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .prose ul li {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #2A2A2E;
+      padding-left: 20px;
+      position: relative;
+    }
+    .prose ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .prose hr {
+      border: none;
+      border-top: 1px solid rgba(26,26,30,0.1);
+      margin: 48px 0;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 3px solid var(--gold);
+      padding: 4px 0 4px 28px;
+      margin: 40px 0;
+    }
+    .pull-quote p {
+      font-family: var(--serif);
+      font-size: 22px !important;
+      font-style: italic;
+      color: var(--near-black) !important;
+      line-height: 1.5 !important;
+      margin-bottom: 0 !important;
+    }
+    .pull-quote cite {
+      display: block;
+      margin-top: 12px;
+      font-family: var(--sans);
+      font-style: normal;
+      font-size: 13px;
+      color: var(--mid-grey);
+      letter-spacing: 0.02em;
+    }
+
+    /* Author byline at end */
+    .article-byline {
+      margin-top: 64px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(26,26,30,0.1);
+    }
+    .byline-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .byline-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(190,130,35,0.1);
+      border: 1px solid rgba(190,130,35,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 20px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .byline-text h3 {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--near-black);
+      margin-bottom: 6px;
+    }
+    .byline-text p {
+      font-size: 14px !important;
+      color: var(--mid-grey) !important;
+      line-height: 1.6 !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* Back to blog CTA */
+    .article-next {
+      margin-top: 48px;
+      padding: 32px;
+      background: var(--white);
+      border: 1px solid rgba(26,26,30,0.07);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .article-next p {
+      font-size: 14px !important;
+      color: var(--mid-grey) !important;
+      margin-bottom: 0 !important;
+    }
+    .article-next strong { color: var(--near-black); }
+    .btn-back {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+    }
+    .btn-back:hover { gap: 10px; }
+
+    /* ─── FOOTER ─────────────────────────────────────────────────── */
+    .footer {
+      background: #111115;
+      padding: 56px 24px 32px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-brand h3 {
+      font-family: var(--serif);
+      font-size: 20px;
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+    .footer-brand h3 span { color: var(--gold); }
+    .footer-brand p {
+      font-size: 13px;
+      color: rgba(247,243,235,0.35);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(247,243,235,0.4);
+      margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul a {
+      font-size: 13px;
+      color: rgba(247,243,235,0.45);
+      transition: color 0.2s;
+    }
+    .footer-col ul a:hover { color: var(--cream); }
+    .footer-bottom {
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-copy { font-size: 12px; color: rgba(247,243,235,0.2); }
+    .footer-tagline {
+      font-family: var(--serif);
+      font-size: 12px;
+      font-style: italic;
+      color: rgba(247,243,235,0.25);
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        position: fixed;
+        top: 64px; left: 0; right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--near-black);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        padding: 8px 24px 20px;
+        max-height: calc(100vh - 64px);
+        overflow-y: auto;
+        display: none;
+      }
+      .nav.open .nav-links { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: block; width: 100%; padding: 15px 0; font-size: 16px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+      .nav-links a.nav-cta { margin-top: 14px; text-align: center; border-bottom: none; }
+      .article-next { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 600px) {
+      .footer-top { grid-template-columns: 1fr; }
+      .prose p, .prose ul li { font-size: 16px; }
+      .pull-quote p { font-size: 19px !important; }
+    }
+
+    /* Newsletter CTA (The Weekly No-Go) */
+    .newsletter-cta {
+      margin-top: 48px;
+      padding: 40px 32px;
+      background: var(--gold-pale);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      text-align: center;
+    }
+    .newsletter-cta h3 {
+      font-family: var(--serif);
+      font-size: 24px;
+      color: var(--near-black);
+      margin: 0 0 10px;
+    }
+    .newsletter-cta p {
+      font-size: 14px !important;
+      color: var(--mid-grey) !important;
+      margin: 0 auto 22px !important;
+      max-width: 460px;
+      line-height: 1.6 !important;
+    }
+    .newsletter-cta-form {
+      max-width: 420px;
+      margin: 0 auto;
+    }
+  </style>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-logo">Digital Venture <span>Studio</span></a>
+      <ul class="nav-links">
+        <li><a href="/#method">The Method</a></li>
+        <li><a href="/#products">Products</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/blog/" class="active">Writing</a></li>
+        <li><a href="/#contact" class="nav-cta">Work With DVS</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── ARTICLE HEADER ───────────────────────────────────────────── -->
+  <header class="article-header">
+    <div class="container">
+      <a href="/blog/" class="article-back">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+          <path d="M13 8H3M7 4l-4 4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        All writing
+      </a>
+      <div class="article-category">Founder Counterintuition</div>
+      <h1>Everyone likes it and nobody is buying</h1>
+      <div class="article-meta">
+        <div class="article-author">
+          <div class="author-avatar">R</div>
+          <div class="author-info">
+            <span class="author-name">Rick Musial</span>
+            <span class="author-title">Founder &amp; Chairman, DVS</span>
+          </div>
+        </div>
+        <div class="meta-divider"></div>
+        <time class="meta-item" datetime="2026-09-04">4 September 2026</time>
+        <div class="meta-divider"></div>
+        <span class="meta-item">4 min read</span>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ─── ARTICLE BODY ─────────────────────────────────────────────── -->
+  <main class="article-body">
+    <div class="container">
+      <article class="prose" itemscope itemtype="https://schema.org/BlogPosting">
+
+        <meta itemprop="headline" content="Everyone likes it and nobody is buying" />
+        <meta itemprop="datePublished" content="2026-09-04" />
+        <meta itemprop="dateModified" content="2026-09-04" />
+        <meta itemprop="author" content="Rick Musial" />
+
+        <div itemprop="articleBody">
+<p>If you&rsquo;re a founder whose idea everyone likes and nobody buys, I&rsquo;ll put my own
+        numbers up before I offer you a diagnosis. Most people writing about this problem don&rsquo;t
+        publish theirs.</p>
+
+        <p>I run a studio that builds a go/no-go tool for founders. I&rsquo;ve published thirty-one
+        posts on this blog. In the month I last measured properly, sixty-nine people arrived,
+        fifty-two started, twenty-three finished a verdict, nine clicked through to upgrade, and
+        nobody paid. Across all thirty-one posts, I cannot attribute a single paying customer.</p>
+
+        <p>I&rsquo;m not confessing and I&rsquo;m not fishing. A zero is the only number that makes
+        this diagnosis honest, and I happen to have one.</p>
+
+        <div class="pull-quote">Nine people clicked upgrade. Nobody bought. The gap between those two
+        numbers is the entire subject.</div>
+
+        <h2>&ldquo;I love this&rdquo; is a reaction, not a purchase</h2>
+
+        <p>Liking costs nothing. When someone tells you your idea is great, you&rsquo;ve learned that
+        it&rsquo;s legible and pleasant &ndash; worth knowing, but not the thing you were
+        testing.</p>
+
+        <p>Buying costs money, attention, and the risk of looking foolish to a colleague who asks why
+        you bought it. Those are different acts. They measure different things.</p>
+
+        <p>So the first honest question is what the person was doing about this before you turned up,
+        and how much it cost them.</p>
+
+        <h2>The nice-to-have test</h2>
+
+        <p>Ali Hussain, who co-founded Tabs and was chief legal officer at Latch, uses a filter I
+        keep coming back to: build for mission-critical workflows, not nice-to-haves.</p>
+
+        <p>I had to sit with that one, because the honest application points straight at my own
+        product. A founder deciding whether to build something has a real problem. Whether it&rsquo;s
+        a problem they will pay to fix <em>this week</em>, while their runway burns on something
+        else, is a separate question. I hadn&rsquo;t been asking it.</p>
+
+        <p>Run it on yourself. What does your person do today instead of using your thing?</p>
+
+        <p>If the answer is a spreadsheet they&rsquo;ve maintained for two years and quietly resent,
+        you have switching pain and a chance.</p>
+
+        <p>If the answer is that they live with it, then everyone liking your idea is precisely the
+        response a nice-to-have earns. Enthusiasm is the correct reaction to something pleasant and
+        optional.</p>
+
+        <h2>Was the channel ever attached to anything?</h2>
+
+        <p>The part that changed how I read my own numbers came from checking a connection I had
+        assumed existed.</p>
+
+        <p>I&rsquo;d been treating thirty-one posts and no customers as a conversion problem: traffic
+        arrives, offer fails.</p>
+
+        <p>Then I looked at whether the traffic and the offer had ever been joined at all.</p>
+
+        <p>They hadn&rsquo;t.</p>
+
+        <p>The posts went out, the verdict tool sat on a different surface, and nothing in between
+        recorded whether one led to the other. I built an audience asset and never attached it to a
+        purchase.</p>
+
+        <div class="pull-quote">Traffic that was never attached to revenue is a disclosure, not a
+        loss.</div>
+
+        <p>A founder telling me everyone likes it and nobody buys usually has that same shape
+        somewhere. There&rsquo;s a place people say yes, a place people would have to pay, and no
+        instrumented path joining the two.</p>
+
+        <p>A missing measurement looks identical to a demand verdict from the outside. Until you fix
+        the measurement, you cannot tell which one you have.</p>
+
+        <h2>What I&rsquo;d check this week</h2>
+
+        <p>Three questions, and the order matters.</p>
+
+        <p>First: has anyone ever gone from your content to your checkout in one traceable session?
+        If you can&rsquo;t answer that, the problem in front of you is instrumentation, and the fix
+        may be an afternoon rather than a pivot.</p>
+
+        <p>Second: of the people who liked it, how many were already doing something expensive or
+        annoying about the problem before you appeared? Count them. A small number means the liking
+        may have been accurate: the thing is useful, but optional.</p>
+
+        <p>Third: ask the next five people who say they love it what they would stop doing to make
+        room for it. The answers are uncomfortable and they arrive fast.</p>
+
+        <p>My own numbers were enough to make me stop asking why nobody was buying.</p>
+
+        <p>I had two questions to answer first: was I solving something important enough to pay for,
+        and had I ever built a measurable path from the people I was reaching to the thing I was
+        selling?</p>
+
+        <p>Until I could answer those, zero customers wasn&rsquo;t a verdict on demand.</p>
+
+        <p>It was a verdict on the experiment.</p>
+
+        <div class="article-byline">
+          <div class="byline-inner">
+            <div class="byline-avatar">R</div>
+            <div class="byline-text">
+              <h3>Rick Musial</h3>
+              <p>Founder &amp; Chairman of Digital Venture Studio. Builder of <a href="https://usetouchstone.ai" style="color:var(--gold);border-bottom:1px solid rgba(190,130,35,0.25);">Touchstone</a> &ndash; a go/no-go validation platform for early-stage ventures. Written after running the attachment test on his own blog and not liking the answer. Related: <a href="/blog/enthusiasm-is-not-validation" style="color:var(--gold);border-bottom:1px solid rgba(190,130,35,0.25);">enthusiasm is not validation</a> and <a href="/blog/will-anyone-actually-pay" style="color:var(--gold);border-bottom:1px solid rgba(190,130,35,0.25);">will anyone actually pay</a>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Newsletter CTA (The Weekly No-Go) -->
+        <div class="newsletter-cta">
+          <h3>Get the next honest verdict in your inbox.</h3>
+          <p>The Weekly No-Go &ndash; one founder idea, one week, one honest read on why it doesn't hold up. No spam, unsubscribe any time.</p>
+          <div class="newsletter-cta-form">
+            <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="5e5f21a8-c959-4594-a305-0415fd1d61da"></script>
+          </div>
+        </div>
+
+        <!-- Back to blog -->
+        <div class="article-next">
+          <p><strong>Want more like this?</strong> Rick writes about the go/no-go decision, founder counterintuitions, and the business of building ventures worth building.</p>
+          <a href="/blog/" class="btn-back">
+            All writing
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Digital Venture <span>Studio</span></h3>
+          <p>From first thought to first customer – with a mentor who stays.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="https://usetouchstone.ai">Touchstone</a></li>
+            <li><a href="https://www.eulogizethis.com">Eulogize This</a></li>
+            <li><a href="/#products">Roadmap →</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/#services">Marketing</a></li>
+            <li><a href="/#services">Business Management</a></li>
+            <li><a href="/#services">After-Release Support</a></li>
+            <li><a href="/#services">External Review</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>DVS</h4>
+          <ul>
+            <li><a href="/#method">The Method</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#about">Founding Thesis</a></li>
+            <li><a href="/blog/">Writing</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2026 Digital Venture Studio. All rights reserved.
+          <span style="margin-left:20px;opacity:0.5;">·</span>
+          <a href="/privacy" style="margin-left:12px;opacity:0.55;font-size:12px;color:var(--cream);text-decoration:none;">Privacy Policy</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:20px;">
+          <a href="https://www.linkedin.com/in/rick-musial-9b9857370" target="_blank" rel="noopener" aria-label="DVS on LinkedIn" style="color:rgba(247,243,235,0.45);transition:color 0.2s;" onmouseover="this.style.color='rgba(247,243,235,0.85)'" onmouseout="this.style.color='rgba(247,243,235,0.45)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <div class="footer-tagline" style="margin:0;">Built using the same methodology we sell.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var nav = document.querySelector('.nav');
+      var toggle = document.querySelector('.nav-toggle');
+      if (nav && toggle) {
+        toggle.addEventListener('click', function () {
+          var open = nav.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        nav.querySelectorAll('.nav-links a').forEach(function (a) {
+          a.addEventListener('click', function () {
+            nav.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
