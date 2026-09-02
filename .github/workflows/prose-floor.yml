@@ -25,7 +25,14 @@ on:
     types: [completed]
   push:
     branches: [main]
-    paths: ['**.html', '.vale/**']
+    # ⛔ NO `paths:` FILTER, DELIBERATELY (S233). The first version filtered on
+    # ['**.html', '.vale/**']. The push that ADDED this file touched twelve files under
+    # .vale/ — a match on its face — and the workflow did not run: GitHub registered it
+    # (state: active, named correctly) with run_count 0. The cause was not established,
+    # and an unexplained condition on a gate is a gate that will silently not fire, which
+    # is the exact class this workflow exists to catch. Removed rather than theorised.
+    # The job is ~30 seconds; running it on every push to main is cheaper than a filter
+    # nobody can prove works.
   workflow_dispatch: {}
 
 jobs:
