@@ -1,0 +1,6 @@
+extends: existence
+message: "Hollow affirmation or hedge: '%s'. Cut it. (Gate §2)"
+level: error
+ignorecase: true
+raw:
+  - "(it'?s|it is) worth noting|(it'?s|it is) important to (remember|note)|i hope this helps|great question|let'?s explore|certainly!"

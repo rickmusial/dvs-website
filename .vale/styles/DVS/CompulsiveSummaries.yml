@@ -1,0 +1,7 @@
+extends: existence
+message: "Compulsive summary: '%s'. Trust the reader. (Gate §2)"
+level: error
+ignorecase: true
+scope: sentence
+raw:
+  - '^(Overall|In conclusion|In summary|Furthermore|Moreover)\b'

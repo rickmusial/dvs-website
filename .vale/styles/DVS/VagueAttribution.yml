@@ -1,0 +1,6 @@
+extends: existence
+message: "Vague attribution: '%s'. Attribute specifically or own the judgment. (Gate §5)"
+level: error
+ignorecase: true
+raw:
+  - 'some (critics|say|argue|believe)|many believe|experts (say|argue|agree)|it is widely (regarded|believed|considered)'

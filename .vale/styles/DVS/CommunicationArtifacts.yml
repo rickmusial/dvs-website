@@ -1,0 +1,6 @@
+extends: existence
+message: "Communication artifact: '%s'. Never in founder-facing output. (Gate §5)"
+level: error
+ignorecase: true
+raw:
+  - 'as of my last (update|knowledge)|\[insert [^\]]+\]|let me know if'

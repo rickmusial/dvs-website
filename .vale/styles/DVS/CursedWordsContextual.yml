@@ -1,0 +1,10 @@
+extends: existence
+message: "'%s' is banned as a reflexive tell, not as a word. Deliberate use may be right. (Gate §1; S206 review correction)"
+level: warning
+ignorecase: true
+tokens:
+  - landscape
+  - navigat(e|es|ing|ed)
+  - leverag(e|es|ing|ed)
+  - unlock(s|ed|ing)?
+  - nuanced

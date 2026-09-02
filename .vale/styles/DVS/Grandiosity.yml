@@ -1,0 +1,6 @@
+extends: existence
+message: "Grandiosity: '%s'. Delete on sight. (Gate §2)"
+level: error
+ignorecase: true
+raw:
+  - 'stands? as a testament|plays? a vital role|is a cornerstone|marks? a turning point|underscores its importance|has broader implications'

@@ -1,0 +1,26 @@
+extends: existence
+message: "Em dash as a parenthetical break. DVS uses a spaced en dash. (Gate §3, since S193)"
+level: error
+# ⚑ THE FLOOR BANS THE EM DASH AS A PARENTHETICAL OR INTERRUPTIVE BREAK — not the
+# character itself. The original rule was a bare existence check on '—', and when
+# HTML was finally brought into scope (S233) it produced SEVEN errors of which
+# seven were correct as written. A gate nobody can pass is worse than no gate (P-083).
+#
+# Two refinements, each stating a real distinction rather than papering over noise:
+#
+# 1. `\w\s*—` — a parenthetical break always INTERRUPTS something, so a word
+#    character must precede it. An em dash that OPENS a line or an element is never
+#    a parenthetical break: it is an attribution ("— Andrew S., reader",
+#    "<cite>— after Rory Sutherland</cite>", "— Rick Musial, Founder") or a
+#    decorative bullet glyph (<span>—</span>, CSS content:"—").
+#    COST: an em dash opening a genuine sentence fragment now passes.
+#
+# 2. `scope: ~blockquote` — a quotation from an external source is reproduced
+#    EXACTLY, spelling and punctuation included (Writing Rules v2.1, S223, Rick's
+#    ruling: "we shouldn't fix up quotes that come from external sources"). The
+#    linter cannot tell an external quotation from our own pull-quote, so it defers
+#    on the whole scope rather than pressure anyone to edit someone else's words.
+#    COST: an em dash in one of OUR OWN blockquoted pull-quotes now passes.
+scope: ~blockquote
+raw:
+  - '\w\s*—'

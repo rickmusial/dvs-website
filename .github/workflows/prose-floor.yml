@@ -1,0 +1,80 @@
+name: Prose floor (Vale)
+
+# The CI half of Rick's S233 ruling 3. The close gate checks prose when a SESSION is
+# running; this checks it when one is not.
+#
+# ⛔ WHY `workflow_run` AND NOT `push` — this is the whole point of the file.
+# "Publish scheduled posts" writes blog HTML on the Mon/Fri cron and commits it with
+# `[skip ci]`, using the built-in GITHUB_TOKEN. BOTH of those suppress workflows on the
+# resulting push: `[skip ci]` by instruction, and a GITHUB_TOKEN push by GitHub's
+# loop-prevention rule. ⚑ A push-triggered job would therefore NEVER fire on
+# auto-published content — precisely the content this exists to check — and would look
+# healthy while checking nothing. `workflow_run` fires on the publisher COMPLETING, so
+# neither suppression applies.
+#
+# ⚖ IT CANNOT BLOCK A PUBLISH, BY CONSTRUCTION — it runs after. That was the reasoning
+# behind putting the floor at the close and not the publish path (S233 ruling 3): at
+# publish time the actor is a cron job that cannot fix prose, and a halted scheduled
+# publish is an absence nobody notices. So this job FAILS LOUDLY on an error (GitHub
+# emails Rick) while being structurally incapable of stopping the site from updating.
+# Loud, not blocking — rather than "non-blocking" in the sense of staying quiet.
+
+on:
+  workflow_run:
+    workflows: ["Publish scheduled posts"]
+    types: [completed]
+  push:
+    branches: [main]
+    paths: ['**.html', '.vale/**']
+  workflow_dispatch: {}
+
+jobs:
+  floor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Discovered, not hardcoded: upstream's asset naming is theirs to change, and a
+      # pinned filename is a claim about someone else's repo that rots silently.
+      # Discovered, not hardcoded: upstream's asset naming is theirs to change, and a
+      # pinned filename is a claim about someone else's repo that rots silently.
+      - name: Install Vale
+        run: |
+          set -euo pipefail
+          curl -fsSL https://api.github.com/repos/errata-ai/vale/releases/latest -o rel.json
+          url="$(python3 -c "
+          import json,re
+          d=json.load(open('rel.json'))
+          ok=lambda n: re.search(r'(Linux|linux)',n) and re.search(r'(x86_64|amd64|64-bit)',n) \
+                       and n.endswith('.tar.gz') and not re.search(r'arm|aarch',n,re.I)
+          c=[a['browser_download_url'] for a in d.get('assets',[]) if ok(a['name'])]
+          print(c[0] if c else '')
+          ")"
+          if [ -z "$url" ]; then
+            echo "::error::no Linux x86_64 asset matched - upstream naming may have changed"
+            python3 -c "import json;[print(a['name']) for a in json.load(open('rel.json'))['assets']]"
+            exit 1
+          fi
+          echo "asset: $(basename "$url")"
+          curl -fsSL "$url" -o vale.tgz && tar -xzf vale.tgz vale
+          ./vale --version
+
+      - name: Run the floor over every HTML surface
+        run: |
+          set -uo pipefail
+          shopt -s nullglob
+          files=(blog/*.html scheduled/*.html *.html)
+          echo "surfaces: ${#files[@]}"
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "::error::0 surfaces found — this job examined nothing, which is not a clean result"
+            exit 1
+          fi
+          ./vale --config=.vale/vale.ini --no-exit "${files[@]}" | tee vale.out
+          ./vale --config=.vale/vale.ini --no-exit --output=JSON "${files[@]}" > vale.json
+          errs="$(python3 -c "import json;d=json.load(open('vale.json'));print(sum(1 for a in d.values() for x in a if x['Severity']=='error'))")"
+          echo "errors: $errs"
+          if [ "$errs" -gt 0 ]; then
+            echo "::error::$errs error(s) against the DVS writing floor. The site is already live; fix and push."
+            exit 1
+          fi
+          echo "floor clean across ${#files[@]} surface(s)."

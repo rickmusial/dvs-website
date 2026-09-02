@@ -1,0 +1,23 @@
+extends: existence
+message: "Cursed word: '%s'. Use the plain word. (Gate §1)"
+level: error
+ignorecase: true
+tokens:
+  - delve
+  - intricate
+  - tapestry
+  - pivotal
+  - underscore(s|d)?
+  - foster(s|ed|ing)?
+  - testament
+  - enhance(s|d|ment)?
+  - crucial
+  - realm
+  - robust
+  - seamless(ly)?
+  - harness(es|ed|ing)?
+  - elevate(s|d)?
+  - embark(s|ed|ing)?
+  - vibrant
+  - multifaceted
+  - holistic

@@ -1,0 +1,8 @@
+extends: substitution
+message: "Dodging 'is': use '%s' instead of '%s'. (Gate §5)"
+level: warning
+ignorecase: true
+swap:
+  serves as: is
+  functions as: is
+  acts as: is

@@ -1,0 +1,6 @@
+extends: existence
+message: "Orphaned demonstrative: '%s'. Attach the noun, unless the sentence before pins it. (Gate §2)"
+level: warning
+scope: sentence
+raw:
+  - '^(This|That|These|Those|It) (is|are|was|were) '

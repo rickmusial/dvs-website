@@ -1,0 +1,6 @@
+extends: existence
+message: "Negative parallelism: '%s'. State the thing directly. (Gate §2)"
+level: error
+ignorecase: true
+raw:
+  - "(it'?s|it is|this is|that'?s) not [^.,;]{2,45}, (it'?s|it is|but) "
