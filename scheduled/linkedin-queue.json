@@ -228,9 +228,12 @@
     "id": "project-not-a-business",
     "date": "2026-09-03",
     "visibility": "PUBLIC",
-    "status": "ready",
+    "status": "posted",
     "text": "Some of the best things founders build are projects, not businesses.\n\nThe trouble isn't building a project. It's pouring three years of business effort into one without noticing. A project is something worth doing. A business is something other people keep paying for. They overlap — and an idea can be a genuinely good project and a hopeless business at the same time.\n\nFounders defend the quality of the thing they made as if that settles the question. It doesn't. The work can be excellent and the business can still not exist.\n\nQuality was never the question. Whether anyone keeps paying is.",
-    "firstComment": "The full piece: https://digitalventurestudio.com/blog/project-not-a-business.html"
+    "firstComment": "The full piece: https://digitalventurestudio.com/blog/project-not-a-business.html",
+    "urn": "urn:li:share:7501074380278362112",
+    "postedAt": "2026-09-03T00:31:36.513Z",
+    "commentUrn": "7501074383785005056"
   },
   {
     "id": "will-anyone-actually-pay",
