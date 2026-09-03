@@ -240,7 +240,7 @@
     "date": "2026-09-06",
     "visibility": "PUBLIC",
     "status": "ready",
-    "text": "Ask a founder whether anyone will pay for their idea. Almost all of them say yes.\n\nAsk them who, and the room gets quiet.\n\nThat gap is the whole problem. \"Will anyone pay\" isn't a yes-or-no question — it's a question about a specific person, in a specific moment, reaching for their wallet for a specific reason. Most founders answer an easier one instead: would this help someone?\n\nThat one is almost always true. It's a low bar that feels like a high one, because you're the one who thought of it.\n\n\"Would this help someone\" and \"will this person pay\" are different questions. Only one of them has a bank statement attached.",
+    "text": "Ask a founder whether anyone will pay for their idea. Almost all of them say yes.\n\nAsk them who, and the room gets quiet.\n\nThat gap is the whole problem. \"Will anyone pay\" isn't a yes-or-no question – it's a question about a specific person, in a specific moment, reaching for their wallet for a specific reason. Most founders answer an easier one instead: would this help someone?\n\nThat one is almost always true. It's a low bar that feels like a high one, because they are the one who thought of it.\n\n\"Would this help someone\" and \"will this person pay\" are different questions. Only one of them has a bank statement attached, and the founder is the last person in the room who can tell them apart.",
     "firstComment": "The full piece: https://digitalventurestudio.com/blog/will-anyone-actually-pay.html"
   },
   {
@@ -248,7 +248,7 @@
     "date": "2026-09-10",
     "visibility": "PUBLIC",
     "status": "ready",
-    "text": "Most founders don't decide not to build. They just keep researching.\n\nA few more conversations. Another pass at the deck for a product that doesn't exist yet. The build-or-don't decision gets quietly replaced by an infinite runway of activity that feels like progress and isn't a decision at all.\n\nI understand why. A decision is binary and final-feeling. Research is safe — you can do it forever and never be wrong, because you never committed to anything that could be checked.\n\nHere's the tell: ask yourself what result would make you stop. If there isn't one, you're not researching. You're deferring.",
+    "text": "Most founders don't decide not to build. They just keep researching.\n\nA few more conversations. Another pass at the deck for a product that doesn't exist yet. The build-or-don't decision gets quietly replaced by an infinite runway of activity that feels like progress and isn't a decision at all.\n\nI understand why. A decision is binary and final-feeling. Research is safe – you can do it forever and never be wrong, because you never committed to anything that could be checked.\n\nHere's the tell, and it only works from the outside: ask what result would make them stop. If there isn't one, they are not researching. They are deferring.",
     "firstComment": "The full piece: https://digitalventurestudio.com/blog/the-build-or-dont-decision.html"
   },
   {
@@ -256,7 +256,7 @@
     "date": "2026-09-13",
     "visibility": "PUBLIC",
     "status": "ready",
-    "text": "\"Build something you need\" has sunk more good founders than bad ideas ever have.\n\nIt's half right, and that's exactly what makes it dangerous. Scratching your own itch gives you two real things: proof the problem exists for at least one person, and the drive to keep going long after the novelty wears off. That's worth a lot.\n\nIt's also everything it gives you. \"I have this problem\" is evidence of exactly one customer — and that customer is the least objective judge alive of whether anyone else shares it.\n\nYour itch proves the problem is real. It can't tell you it's common.",
+    "text": "\"Build something you need\" has sunk more good founders than bad ideas ever have.\n\nIt's half right, and that's exactly what makes it dangerous. Scratching your own itch gives you two real things: proof the problem exists for at least one person, and the drive to keep going long after the novelty wears off. That's worth a lot.\n\nIt's also everything it gives you. \"I have this problem\" is evidence of exactly one customer – and that customer is the least objective judge alive of whether anyone else shares it.\n\nThe itch proves the problem is real. It cannot tell them it is common, and they will never hear that from themselves.",
     "firstComment": "The full piece: https://digitalventurestudio.com/blog/scratch-your-own-itch-is-dangerous-advice.html"
   }
 ]
