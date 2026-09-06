@@ -239,9 +239,12 @@
     "id": "will-anyone-actually-pay",
     "date": "2026-09-06",
     "visibility": "PUBLIC",
-    "status": "ready",
+    "status": "posted",
     "text": "Ask a founder whether anyone will pay for their idea. Almost all of them say yes.\n\nAsk them who, and the room gets quiet.\n\nThat gap is the whole problem. \"Will anyone pay\" isn't a yes-or-no question – it's a question about a specific person, in a specific moment, reaching for their wallet for a specific reason. Most founders answer an easier one instead: would this help someone?\n\nThat one is almost always true. It's a low bar that feels like a high one, because they are the one who thought of it.\n\n\"Would this help someone\" and \"will this person pay\" are different questions. Only one of them has a bank statement attached, and the founder is the last person in the room who can tell them apart.",
-    "firstComment": "The full piece: https://digitalventurestudio.com/blog/will-anyone-actually-pay.html"
+    "firstComment": "The full piece: https://digitalventurestudio.com/blog/will-anyone-actually-pay.html",
+    "urn": "urn:li:share:7502155715164360705",
+    "postedAt": "2026-09-06T00:08:26.590Z",
+    "commentUrn": "7502155717580357632"
   },
   {
     "id": "deferring-not-researching",
