@@ -2,16 +2,6 @@
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. NOTE (corrected S227, 28 Aug 2026): the LinkedIn teaser step in that workflow is DISABLED (if: false, since 76f0bcb on 4 Aug 2026 - the S200 ruling per MIF-128, no standalone link posts). Publishing a post does NOT post to LinkedIn. LinkedIn posting runs separately from scheduled/linkedin-queue.json via linkedin-scheduled.yml. The linkedinTeaser fields below are retained but unused. This line claimed the opposite for 24 days.",
   "queue": [
     {
-      "slug": "a-plan-i-could-never-have-run",
-      "publishDate": "2026-09-07",
-      "category": "Behind the Build",
-      "readTime": "4 min read",
-      "title": "I wrote a plan I could never have run",
-      "description": "A complete, 122-line production spec, six weeks old, zero output. The problem wasn't discipline. Every hard input in it was assigned to the one person who is hardest to schedule.",
-      "linkedinTeaser": "Founders: the plan you wrote months ago and never started probably isn't a discipline problem. Mine is six weeks old, 122 lines, complete - and every hard input in it is assigned to me.",
-      "featured": true
-    },
-    {
       "slug": "sixty-nine-users-one-i-can-email",
       "publishDate": "2026-09-11",
       "category": "Behind the Build",
