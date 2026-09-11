@@ -2,16 +2,6 @@
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. NOTE (corrected S227, 28 Aug 2026): the LinkedIn teaser step in that workflow is DISABLED (if: false, since 76f0bcb on 4 Aug 2026 - the S200 ruling per MIF-128, no standalone link posts). Publishing a post does NOT post to LinkedIn. LinkedIn posting runs separately from scheduled/linkedin-queue.json via linkedin-scheduled.yml. The linkedinTeaser fields below are retained but unused. This line claimed the opposite for 24 days.",
   "queue": [
     {
-      "slug": "sixty-nine-users-one-i-can-email",
-      "publishDate": "2026-09-11",
-      "category": "Behind the Build",
-      "readTime": "4 min read",
-      "title": "Sixty-nine users. One I am allowed to email.",
-      "description": "I checked the consent flag on my own database this week. Sixty-eight of sixty-nine had said no. Users are not an audience, and the gap between them is where most founders keep their optimism.",
-      "linkedinTeaser": "Founders: I ran the consent query on my own database this week - sixty-nine users, one of them contactable. Users are not an audience, and the gap between them is where most of us keep our optimism.",
-      "featured": true
-    },
-    {
       "slug": "i-do-not-have-a-network",
       "publishDate": "2026-09-14",
       "category": "Behind the Build",

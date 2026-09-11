@@ -46,6 +46,7 @@
 - [Your best reader will never use your vocabulary](https://digitalventurestudio.com/blog/your-best-reader-will-never-use-your-vocabulary): One reader answered six of my posts in two weeks and never once used a word I'd written. He understood all six. That gap is worth more than any survey.
 - [Everyone likes it and nobody is buying](https://digitalventurestudio.com/blog/everyone-likes-it-and-nobody-is-buying): Thirty-one posts, twenty-three verdicts, zero paying customers. My own numbers, and the two questions I should have asked before I called it a demand problem.
 - [I wrote a plan I could never have run](https://digitalventurestudio.com/blog/a-plan-i-could-never-have-run): A complete, 122-line production spec, six weeks old, zero output. The problem wasn't discipline. Every hard input in it was assigned to the one person who is hardest to schedule.
+- [Sixty-nine users. One I am allowed to email.](https://digitalventurestudio.com/blog/sixty-nine-users-one-i-can-email): I checked the consent flag on my own database this week. Sixty-eight of sixty-nine had said no. Users are not an audience, and the gap between them is where most founders keep their optimism.
 
 ## Products
 
