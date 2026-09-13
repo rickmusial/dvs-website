@@ -261,8 +261,11 @@
     "id": "itch-proves-one-customer",
     "date": "2026-09-13",
     "visibility": "PUBLIC",
-    "status": "ready",
+    "status": "posted",
     "text": "\"Build something you need\" has sunk more good founders than bad ideas ever have.\n\nIt's half right, and that's exactly what makes it dangerous. Scratching your own itch gives you two real things: proof the problem exists for at least one person, and the drive to keep going long after the novelty wears off. That's worth a lot.\n\nIt's also everything it gives you. \"I have this problem\" is evidence of exactly one customer – and that customer is the least objective judge alive of whether anyone else shares it.\n\nThe itch proves the problem is real. It cannot tell them it is common, and they will never hear that from themselves.",
-    "firstComment": "The full piece: https://digitalventurestudio.com/blog/scratch-your-own-itch-is-dangerous-advice.html"
+    "firstComment": "The full piece: https://digitalventurestudio.com/blog/scratch-your-own-itch-is-dangerous-advice.html",
+    "urn": "urn:li:share:7504692587048386560",
+    "postedAt": "2026-09-13T00:09:04.149Z",
+    "commentUrn": "7504692590177316865"
   }
 ]
