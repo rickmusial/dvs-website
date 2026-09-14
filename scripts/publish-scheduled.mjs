@@ -1,5 +1,7 @@
 // publish-scheduled.mjs
-// Publishes any staged blog post whose publishDate is due (<= today, UTC).
+// Publishes any staged blog post whose publishDate is due (<= today in Australia/Sydney).
+// NOT UTC - see the todaySydney declaration below; a UTC compare would publish every
+// AEST-dated post one run late (Monday posts would slip to Friday).
 // For each due post: moves scheduled/<slug>.html -> blog/<slug>.html, adds a
 // sitemap entry, inserts/promotes its card in blog/index.html, and removes it
 // from scheduled/manifest.json. Records published posts to $PUBLISHED_OUT so the
@@ -25,7 +27,7 @@ const SITE = 'https://digitalventurestudio.com';
 // "Today" in the venue's local timezone (Australia/Sydney = AEST/AEDT, DST-safe),
 // NOT UTC — the cron fires at 08:15 AEST when the UTC date is still the day before,
 // so a UTC compare would publish AEST-dated posts a run late. en-CA → YYYY-MM-DD.
-const todayUTC = new Intl.DateTimeFormat('en-CA', { timeZone: 'Australia/Sydney' }).format(new Date());
+const todaySydney = new Intl.DateTimeFormat('en-CA', { timeZone: 'Australia/Sydney' }).format(new Date());
 
 function readJSON(p) { return JSON.parse(fs.readFileSync(p, 'utf8')); }
 function displayDate(iso) {
@@ -37,11 +39,11 @@ function displayDate(iso) {
 const manifest = readJSON(MANIFEST);
 const queue = Array.isArray(manifest.queue) ? manifest.queue : [];
 const due = queue
-  .filter(e => e.publishDate && e.publishDate <= todayUTC)
+  .filter(e => e.publishDate && e.publishDate <= todaySydney)
   .sort((a, b) => a.publishDate.localeCompare(b.publishDate));
 
 if (due.length === 0) {
-  console.log(`No posts due as of ${todayUTC}.`);
+  console.log(`No posts due as of ${todaySydney}.`);
   fs.writeFileSync(PUBLISHED_OUT, '[]');
   process.exit(0);
 }
