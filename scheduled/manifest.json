@@ -1,15 +1,4 @@
 {
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. NOTE (corrected S227, 28 Aug 2026): the LinkedIn teaser step in that workflow is DISABLED (if: false, since 76f0bcb on 4 Aug 2026 - the S200 ruling per MIF-128, no standalone link posts). Publishing a post does NOT post to LinkedIn. LinkedIn posting runs separately from scheduled/linkedin-queue.json via linkedin-scheduled.yml. The linkedinTeaser fields below are retained but unused. This line claimed the opposite for 24 days.",
-  "queue": [
-    {
-      "slug": "i-do-not-have-a-network",
-      "publishDate": "2026-09-14",
-      "category": "Behind the Build",
-      "readTime": "4 min read",
-      "title": "I do not have a network",
-      "description": "Four months of a weekly outreach target, never once met. Not discipline. The plan assumed a network I have never had, and nobody checked whether the input existed.",
-      "linkedinTeaser": "Founders: I set a target of two qualified contacts a week in July. Four months on the count is zero - not because of discipline, but because the plan drew on a network I have never had.",
-      "featured": true
-    }
-  ]
+  "queue": []
 }
