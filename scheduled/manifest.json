@@ -1,4 +1,23 @@
 {
   "_doc": "Queue of approved, staged blog posts awaiting their publish date. See scheduled/README.md. Each entry's HTML lives at scheduled/<slug>.html and is moved to blog/<slug>.html on its publishDate by the publish-scheduled GitHub Action. NOTE (corrected S227, 28 Aug 2026): the LinkedIn teaser step in that workflow is DISABLED (if: false, since 76f0bcb on 4 Aug 2026 - the S200 ruling per MIF-128, no standalone link posts). Publishing a post does NOT post to LinkedIn. LinkedIn posting runs separately from scheduled/linkedin-queue.json via linkedin-scheduled.yml. The linkedinTeaser fields below are retained but unused. This line claimed the opposite for 24 days.",
-  "queue": []
+  "queue": [
+    {
+      "slug": "the-fallback-became-the-path",
+      "publishDate": "2026-09-21",
+      "category": "Behind the Build",
+      "readTime": "4 min read",
+      "title": "My fallback became the only path anyone took",
+      "description": "I added a six-second safety net for a widget that takes eight and a half seconds, and it won the race every time for five weeks. The check I built to catch it could only ever agree with me.",
+      "featured": true
+    },
+    {
+      "slug": "your-no-arrives-as-one-more-opinion",
+      "publishDate": "2026-09-25",
+      "category": "The Reviewer's Problem",
+      "readTime": "3 min read",
+      "title": "Your no arrives as one more opinion",
+      "description": "If you assess other people's ventures for a living, your no arrives as the twelfth opinion in a list where the first eleven said yes. Reaching the verdict was never the hard part.",
+      "featured": true
+    }
+  ]
 }
