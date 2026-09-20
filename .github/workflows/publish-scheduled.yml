@@ -78,3 +78,20 @@ jobs:
           # LINKEDIN_TOKEN intentionally NOT declared here — arrives via GITHUB_ENV.
           LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
         run: node scripts/fire-linkedin-direct.mjs
+
+      # ─────────────────────────────────────────────────────────────────────────
+      # THE EMPTY-QUEUE CHECK (S247). Origin: 18 Sep 2026 — this workflow ran on
+      # time, read `"queue": []`, published nothing and exited 0. A success with
+      # nothing in it is the one state none of the instruments watch for, and the
+      # post went out ten hours late.
+      #
+      # Sited LAST and `if: always()` ON PURPOSE. It reads the manifest AFTER the
+      # publish step has rewritten it, so it counts what is genuinely left, and it
+      # can never block or alter a publish — an earlier-sited or in-script guard
+      # would abort the `run:` block that writes PUBLISHED_OUT.
+      #
+      # Exit 2 fails this step, which is the point: GitHub emails a failed run,
+      # and a ::warning alone does not. Nothing published is affected by it.
+      - name: Blog queue runway guard — is there anything left to publish?
+        if: always()
+        run: node scripts/queue-runway-guard.mjs

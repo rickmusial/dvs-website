@@ -270,17 +270,17 @@
   },
   {
     "id": "network-unverified-input",
-    "date": "2026-09-16",
+    "date": "2026-09-21",
     "visibility": "PUBLIC",
-    "status": "held",
+    "status": "ready",
     "text": "In July I set myself a target: contact two qualified prospects a week. I wrote it down properly, in a decision record, with a review date.\n\nFour months on, the count is zero. Not low. Zero.\n\nMy first explanation was discipline, and it survived about a minute of checking. Over the same stretch I published thirty-one posts, built four internal tools and closed more than two hundred working sessions.\n\nThe real reason was simpler. The target said to contact two qualified people a week, sourced from my network. I don't have one.\n\nI checked whether the target was realistic. I never checked whether the input was real.\n\nSo write the plan, then go back through it and mark every step that draws on something you haven't verified you possess. A network. An audience. A list. A tool you've never opened.\n\nThose are the steps that will quietly not happen. And when they don't, they won't look like a flaw in the plan. They'll look like a personal failing, week after week.",
     "firstComment": "The full piece: https://digitalventurestudio.com/blog/i-do-not-have-a-network"
   },
   {
     "id": "access-not-audience-ten-names",
-    "date": "2026-09-19",
+    "date": "2026-09-24",
     "visibility": "PUBLIC",
-    "status": "held",
+    "status": "ready",
     "text": "A developer asked how to get the first ten users for something he hadn't finished building. He opened by asking how to get eyeballs. He closed by asking whether to build at all.\n\nThose are two different questions, and the second one is the real one.\n\nThe distribution question is the comfortable one. Not easy, comfortable. There are courses, threads, playbooks, forty people in any comment section with a channel strategy. You can spend a productive month on it and feel, correctly, that you're learning something.\n\n\"Is this worth building\" has no literature, because the only people who can answer it are people who have the problem. So the mind files the unanswerable question under the answerable one.\n\nThe tell is the timing. Distribution anxiety after launch is a real distribution problem. Distribution anxiety that stops you building is something else.\n\nAn audience is people who know you and trust you, which takes years. Access is being able to message one person who has the exact problem you're solving, which takes an afternoon.\n\nTen names. Not ten thousand views, not a channel, not a launch. Ten people you could actually write to before dinner.",
     "firstComment": "The full piece: https://digitalventurestudio.com/blog/you-dont-have-a-distribution-problem-yet"
   },
@@ -288,7 +288,7 @@
     "id": "marketing-no-container",
     "date": "2026-09-22",
     "visibility": "PUBLIC",
-    "status": "held",
+    "status": "ready",
     "text": "A founder on r/startups had built the product, shipped features on schedule for months, and done no marketing at all. He didn't say he was too busy. He said there was no forcing function, and it was more comfortable to do work he already knew how to do.\n\nThen he worked out why the freeze was specific to marketing. Code has a spec, a scope, a definition of done, and a place the work lives whether or not he feels like doing it.\n\nEvery feature you have ever built had one. Someone wrote it down, gave it edges, put it on a board with a date. You never had to decide what building meant before you could build.\n\n\"Do marketing\" has no edges, no done, and no date that argues back. Same person, same week, same energy, and one kind of work starts on its own while the other doesn't.\n\nThe missing thing is the container. People who are excellent at starting contained work are not, for that reason, good at starting uncontained work. Those are two skills, and only one of them is why you got good at building.\n\nHis fix was a closed list of four things he is allowed to write about. Not a content strategy, a list you could read aloud. Choosing between four things is a task you can start on a Tuesday morning.",
     "firstComment": "The full piece: https://digitalventurestudio.com/blog/marketing-has-no-definition-of-done"
   },
@@ -296,7 +296,7 @@
     "id": "first-sale-is-a-fact",
     "date": "2026-09-25",
     "visibility": "PUBLIC",
-    "status": "held",
+    "status": "ready",
     "text": "The first sale is the best day a venture has had so far. Then, within about an hour, it becomes the most over-read data point in the venture.\n\nBe precise about what just happened. One person, on one day, through one channel, at one price, decided the thing was worth more than the money. That proves the ask can be survived. It proves the price wasn't absurd to at least one buyer. None of it existed yesterday.\n\nIt says nothing about repeatability, nothing about the price ceiling, and nothing about whether they'll still be using it in a month. A sale is evidence about the transaction that produced it. Founders read it as evidence about the business.\n\nSo before you screenshot the Stripe email, write down where the sale came from. A warm intro predicts warm intros, and networks run out. A stranger who arrived through a channel you can pull again tomorrow is the beginning of something.\n\nThen go back down the same path and try to produce a second. Same channel, same price, same offer, no favours called in. If it can't produce one, you haven't failed. You've learned the first sale was a gift.\n\nGifts are lovely. They're just not a market.",
     "firstComment": "The full piece: https://digitalventurestudio.com/blog/what-your-first-sale-actually-proves"
   }
