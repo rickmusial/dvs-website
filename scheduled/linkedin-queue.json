@@ -291,9 +291,12 @@
     "id": "marketing-no-container",
     "date": "2026-09-22",
     "visibility": "PUBLIC",
-    "status": "ready",
+    "status": "posted",
     "text": "A founder on r/startups had built the product, shipped features on schedule for months, and done no marketing at all. He didn't say he was too busy. He said there was no forcing function, and it was more comfortable to do work he already knew how to do.\n\nThen he worked out why the freeze was specific to marketing. Code has a spec, a scope, a definition of done, and a place the work lives whether or not he feels like doing it.\n\nEvery feature you have ever built had one. Someone wrote it down, gave it edges, put it on a board with a date. You never had to decide what building meant before you could build.\n\n\"Do marketing\" has no edges, no done, and no date that argues back. Same person, same week, same energy, and one kind of work starts on its own while the other doesn't.\n\nThe missing thing is the container. People who are excellent at starting contained work are not, for that reason, good at starting uncontained work. Those are two skills, and only one of them is why you got good at building.\n\nHis fix was a closed list of four things he is allowed to write about. Not a content strategy, a list you could read aloud. Choosing between four things is a task you can start on a Tuesday morning.",
-    "firstComment": "The full piece: https://digitalventurestudio.com/blog/marketing-has-no-definition-of-done"
+    "firstComment": "The full piece: https://digitalventurestudio.com/blog/marketing-has-no-definition-of-done",
+    "urn": "urn:li:share:7507967481748140032",
+    "postedAt": "2026-09-22T01:02:19.839Z",
+    "commentUrn": "7507967484746997760"
   },
   {
     "id": "first-sale-is-a-fact",
