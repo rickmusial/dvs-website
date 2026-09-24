@@ -283,9 +283,12 @@
     "id": "access-not-audience-ten-names",
     "date": "2026-09-24",
     "visibility": "PUBLIC",
-    "status": "ready",
+    "status": "posted",
     "text": "A developer asked how to get the first ten users for something he hadn't finished building. He opened by asking how to get eyeballs. He closed by asking whether to build at all.\n\nThose are two different questions, and the second one is the real one.\n\nThe distribution question is the comfortable one. Not easy, comfortable. There are courses, threads, playbooks, forty people in any comment section with a channel strategy. You can spend a productive month on it and feel, correctly, that you're learning something.\n\n\"Is this worth building\" has no literature, because the only people who can answer it are people who have the problem. So the mind files the unanswerable question under the answerable one.\n\nThe tell is the timing. Distribution anxiety after launch is a real distribution problem. Distribution anxiety that stops you building is something else.\n\nAn audience is people who know you and trust you, which takes years. Access is being able to message one person who has the exact problem you're solving, which takes an afternoon.\n\nTen names. Not ten thousand views, not a channel, not a launch. Ten people you could actually write to before dinner.",
-    "firstComment": "The full piece: https://digitalventurestudio.com/blog/you-dont-have-a-distribution-problem-yet"
+    "firstComment": "The full piece: https://digitalventurestudio.com/blog/you-dont-have-a-distribution-problem-yet",
+    "urn": "urn:li:share:7508687872837992448",
+    "postedAt": "2026-09-24T00:44:55.034Z",
+    "commentUrn": "7508687878072205312"
   },
   {
     "id": "marketing-no-container",
