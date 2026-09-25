@@ -50,6 +50,7 @@
 - [I do not have a network](https://digitalventurestudio.com/blog/i-do-not-have-a-network): Four months of a weekly outreach target, never once met. Not discipline. The plan assumed a network I have never had, and nobody checked whether the input existed.
 - [I fixed it and nothing happened](https://digitalventurestudio.com/blog/i-fixed-it-and-nothing-happened): For thirty-five days my sign-up flow rejected everybody, and thirty-three hours after I opened it not one stranger had walked through. The silence is the more useful finding.
 - [My fallback became the only path anyone took](https://digitalventurestudio.com/blog/the-fallback-became-the-path): I added a six-second safety net for a widget that takes eight and a half seconds, and it won the race every time for five weeks. The check I built to catch it could only ever agree with me.
+- [Your no arrives as one more opinion](https://digitalventurestudio.com/blog/your-no-arrives-as-one-more-opinion): If you assess other people's ventures for a living, your no arrives as the twelfth opinion in a list where the first eleven said yes. Reaching the verdict was never the hard part.
 
 ## Products
 
