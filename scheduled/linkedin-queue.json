@@ -305,8 +305,11 @@
     "id": "first-sale-is-a-fact",
     "date": "2026-09-25",
     "visibility": "PUBLIC",
-    "status": "ready",
+    "status": "posted",
     "text": "The first sale is the best day a venture has had so far. Then, within about an hour, it becomes the most over-read data point in the venture.\n\nBe precise about what just happened. One person, on one day, through one channel, at one price, decided the thing was worth more than the money. That proves the ask can be survived. It proves the price wasn't absurd to at least one buyer. None of it existed yesterday.\n\nIt says nothing about repeatability, nothing about the price ceiling, and nothing about whether they'll still be using it in a month. A sale is evidence about the transaction that produced it. Founders read it as evidence about the business.\n\nSo before you screenshot the Stripe email, write down where the sale came from. A warm intro predicts warm intros, and networks run out. A stranger who arrived through a channel you can pull again tomorrow is the beginning of something.\n\nThen go back down the same path and try to produce a second. Same channel, same price, same offer, no favours called in. If it can't produce one, you haven't failed. You've learned the first sale was a gift.\n\nGifts are lovely. They're just not a market.",
-    "firstComment": "The full piece: https://digitalventurestudio.com/blog/what-your-first-sale-actually-proves"
+    "firstComment": "The full piece: https://digitalventurestudio.com/blog/what-your-first-sale-actually-proves",
+    "urn": "urn:li:share:7509049598816976896",
+    "postedAt": "2026-09-25T00:42:17.336Z",
+    "commentUrn": "7509049604630282240"
   }
 ]
