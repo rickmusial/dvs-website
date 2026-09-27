@@ -311,5 +311,49 @@
     "urn": "urn:li:share:7509049598816976896",
     "postedAt": "2026-09-25T00:42:17.336Z",
     "commentUrn": "7509049604630282240"
+  },
+  {
+    "id": "fallback-became-the-only-path",
+    "date": "2026-09-28",
+    "visibility": "PUBLIC",
+    "status": "held",
+    "text": "If you've ever added a fallback so a rare failure wouldn't hurt anyone, go and check what fraction of your traffic is taking it.\n\nMine was taking all of it.\n\nA verification widget sits in front of my sign-up. Widgets can be slow or blocked, so I wrote: wait six seconds, and if it hasn't answered by then, let the visitor through anyway.\n\nThe widget answers in eight and a half seconds.\n\nThe fallback was the only path, and it had been for five weeks. Zero new users for thirty-five days. None of them knew, and neither did I, because I'd built the emergency path to be silent.\n\nA rare hiccup that happens every time stops being a hiccup and becomes the product.\n\nEvery founder has one of these. The pricing exception you'll make if the deal is good enough. The manual workaround for when the automation fails. Each is built for the rare case, each is easier than the thing it backs up, and none of them tells you how often it fires.\n\nWhatever your fallback is, make it say so when it fires.",
+    "firstComment": "The full field guide is free, no charge and no upsell: https://digitalventurestudio.com/the-no",
+    "draftedBy": "Queue Writer (evening retry, S224 rules)",
+    "sourcePost": "blog/the-fallback-became-the-path.html (published 2026-09-21)",
+    "note": "DRAFT for Rick. Compressed from his own published sentences. Not sighted. status held."
+  },
+  {
+    "id": "fixed-the-door-nobody-outside",
+    "date": "2026-10-01",
+    "visibility": "PUBLIC",
+    "status": "held",
+    "text": "For thirty-five days my sign-up flow rejected everybody. A real fault, mine, and I fixed it. The door opened at 10:15 on Monday morning.\n\nThirty-three hours later I ran the numbers. New sign-ups from people who are not me or my own test account: zero.\n\nNobody was standing outside.\n\nFor five weeks I'd had an excellent answer to why nothing was moving. The door was shut. Anybody would have been stuck. It was the kind of explanation that survives any question, because it's true. Then the door opened, the number stayed at zero, and the explanation went with it.\n\nA broken door is fixable by someone with my skills. I can read a log, find a cause, ship a change, watch a status go green. Every minute of that feels like the job. Getting a stranger to care enough to arrive has no log to read.\n\nSo when a genuine technical fault appears it gets my full attention, and the harder problem waits. Not because I decided it should. Because one of them tells me when I'm done.\n\nAfter you fix the thing you're certain is the problem, write down the number you expect to move and the date you'll check it.",
+    "firstComment": "I wrote a short field guide about this. It's free: https://digitalventurestudio.com/the-no",
+    "draftedBy": "Queue Writer (evening retry, S224 rules)",
+    "sourcePost": "blog/i-fixed-it-and-nothing-happened.html (published 2026-09-18)",
+    "note": "DRAFT for Rick. Compressed from his own published sentences. Not sighted. status held."
+  },
+  {
+    "id": "sixty-nine-users-one-consent",
+    "date": "2026-10-04",
+    "visibility": "PUBLIC",
+    "status": "held",
+    "text": "If you talk about your users as though you could reach them, run the query I ran this week. It took about a minute and it was not a good minute.\n\nMy database has sixty-nine users. There's a column on that table called consent_market, because we built the signup flow properly: explicit opt-in, plainly worded, no pre-ticked box.\n\nOne of them is true. Sixty-eight said no.\n\nI'd been describing sixty-nine people as an audience. I have one person I can send an email to.\n\nNothing here is broken. Nobody made a mistake. The consent design did exactly what it was built to do, and I'd build it the same way again.\n\nA bug you can fix. A number that's correct, honest and much smaller than the one in your head is a different problem. It doesn't announce itself.\n\nUsers are people who turned up and did something. A list is people you're permitted to contact. Mine were sixty-nine and one.\n\nA signup feels like permission, which is worse than nothing, because it stops you looking.\n\nRun the actual query. If your product has no such field, that is the finding.",
+    "firstComment": "The field guide is free and arrives by email: https://digitalventurestudio.com/the-no",
+    "draftedBy": "Queue Writer (evening retry, S224 rules)",
+    "sourcePost": "blog/sixty-nine-users-one-i-can-email.html (published 2026-09-11)",
+    "note": "DRAFT for Rick. Compressed from his own published sentences. Not sighted. status held."
+  },
+  {
+    "id": "your-no-is-the-twelfth-opinion",
+    "date": "2026-10-07",
+    "visibility": "PUBLIC",
+    "status": "held",
+    "text": "If you review other people's ventures for a living, the verdict isn't the hard part. You reach it early. The hard part starts when you say it out loud.\n\nYou're not the first person to give this founder an opinion. You're roughly the twelfth, and the first eleven all said yes.\n\nBy the time they sit down with you they have a stack of encouraging coffees behind them. Friends, a former colleague, the person at the meetup who said it sounded great. None of those people had anything at stake and all of them were kind.\n\nSo your reading arrives as an entry in a list, and every previous entry disagrees with it. The founder isn't being stubborn when they discount you. They're doing arithmetic, and on the numbers you lose.\n\nAdding force makes it worse. So does adding evidence.\n\nWhat works is to stop supplying the conclusion and start supplying the question that produces it. Ask what result would make them stop. Ask what their customer does today instead of using the thing. Ask who would feel its absence.\n\nEach of those hands the founder the instrument rather than the reading.\n\nA founder will argue with you for an hour and agree with themselves in a sentence.",
+    "firstComment": "The full field guide is free: https://digitalventurestudio.com/the-no",
+    "draftedBy": "Queue Writer (evening retry, S224 rules)",
+    "sourcePost": "blog/your-no-arrives-as-one-more-opinion.html (published 2026-09-25)",
+    "note": "DRAFT for Rick. Compressed from his own published sentences. Not sighted. status held."
   }
 ]
