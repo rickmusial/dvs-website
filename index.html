@@ -1367,6 +1367,7 @@
       .services-grid .service-card[style*="span 2"] > div[style*="grid-template-columns"] { grid-template-columns: 1fr; gap: 32px; }
       .products-grid { grid-template-columns: 1fr; }
       .dvs-labs-panel { grid-template-columns: 1fr !important; }
+      .dvs-labs-body { flex-direction: column !important; align-items: stretch !important; gap: 24px !important; padding: 28px 24px !important; }
       .dvs-labs-inner { flex-direction: column !important; gap: 24px !important; border-left: none !important; padding-left: 0 !important; border-top: 1px solid rgba(190,130,35,0.15) !important; padding-top: 24px !important; }
       .roadmap-phases { grid-template-columns: repeat(4, 1fr); }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -1647,7 +1648,7 @@
             The DVS methodology doesn't care what it builds. This space is where the engine goes beyond venture validation – proof-of-concept products that demonstrate range and speed. As DVS grows, so does this space.
           </p>
         </div>
-        <div style="background:var(--cream);padding:36px;display:flex;align-items:center;gap:48px;">
+        <div class="dvs-labs-body" style="background:var(--cream);padding:36px;display:flex;align-items:center;gap:48px;">
           <div style="flex:1;">
             <span class="product-badge badge-live" style="margin-bottom:12px;">Live Now</span>
             <h4 style="font-family:var(--serif);font-size:22px;font-weight:500;color:var(--near-black);margin-bottom:8px;">Eulogize This</h4>
