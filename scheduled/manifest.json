@@ -10,6 +10,16 @@
       "description": "Every business case carries its benefit numbers, but whether anyone collects them depends on who holds the authority to make the change stick.",
       "linkedinTeaser": "Every business case carries its benefit numbers. Whether anyone collects them depends on who holds the authority to make the change stick.",
       "featured": true
+    },
+    {
+      "slug": "the-risk-everyone-knew-about",
+      "publishDate": "2026-10-09",
+      "category": "The Reviewer’s Problem",
+      "readTime": "4 min read",
+      "title": "The risk everyone knew about",
+      "description": "Most of the projects I was sent in to rescue started with a risk everyone knew about and nobody had put in the schedule.",
+      "linkedinTeaser": "A risk everyone knows about, with no treatment in the schedule or money in the budget, is the problem a rescue manager ends up being sent in to fix.",
+      "featured": true
     }
   ]
 }
