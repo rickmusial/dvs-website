@@ -6,14 +6,16 @@ name: Post to LinkedIn (scheduled queue)
 # Spec: DVS-LPS-2026-001 v2.0 §5. Authorship stays human — this only ships queued,
 # already-approved text (MIF-067).
 #
-# GitHub Actions cron is UTC. Rick is AEST (UTC+10).
-#   30 22 * * *  (UTC)  =  08:30 AEST daily  — the morning slot.
+# GitHub Actions cron is UTC and has no DST. Canberra is AEDT (UTC+11) from the
+# first Sunday in October to the first Sunday in April, AEST (UTC+10) otherwise.
+#   NOW (AEDT, set S263 6 Oct 2026):  30 21 * * *  (UTC)  =  08:30 AEDT daily
+#   FROM Sun 5 Apr 2027 (AEST):       change back to '30 22 * * *'
 # An entry only posts on/after its `date`, so a daily check is safe: most days
 # nothing is due and the run is a no-op.
 
 on:
   schedule:
-    - cron: '30 22 * * *'    # 22:30 UTC = 08:30 AEST, every day
+    - cron: '30 21 * * *'    # 21:30 UTC = 08:30 AEDT, every day (revert to 22 on 5 Apr 2027)
   workflow_dispatch: {}        # manual trigger — for testing / catch-up
 
 permissions:

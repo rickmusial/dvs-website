@@ -4,13 +4,17 @@ name: Publish scheduled posts
 # the LinkedIn teaser (after the site is live). Removes the need to publish from
 # a terminal. Setup + how-to: see scheduled/README.md.
 #
-# IMPORTANT: GitHub Actions cron is in UTC (NOT local time). Rick is AEST (UTC+10).
-#   Sun 22:15 UTC = Mon 08:15 AEST   |   Thu 22:15 UTC = Fri 08:15 AEST
-# So the Mon/Fri 08:15 local cadence is expressed as the day-before in UTC.
+# IMPORTANT: GitHub Actions cron is in UTC (NOT local time) and has no DST.
+# Canberra is AEDT (UTC+11) from the first Sunday in October to the first Sunday
+# in April, and AEST (UTC+10) the rest of the year. The cron must be moved twice a year.
+#   NOW (AEDT, set S263 6 Oct 2026):  Sun/Thu 21:15 UTC = Mon/Fri 08:15 AEDT
+#   FROM Sun 5 Apr 2027 (AEST):       change back to '15 22 * * 0,4'
+# The publish script's date check uses Australia/Sydney, so the cron hour does not
+# change WHICH day a post publishes, only the hour.
 
 on:
   schedule:
-    - cron: '15 22 * * 0,4'   # Sun + Thu 22:15 UTC  →  Mon + Fri 08:15 AEST
+    - cron: '15 21 * * 0,4'   # Sun + Thu 21:15 UTC  →  Mon + Fri 08:15 AEDT (revert to 22 on 5 Apr 2027)
   workflow_dispatch: {}        # manual trigger — use this to TEST before relying on it
 
 permissions:
