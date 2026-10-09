@@ -55,6 +55,7 @@
 - [A pilot is a loan of attention](https://digitalventurestudio.com/blog/a-pilot-is-a-loan-of-attention): A signed pilot proves someone will give you their time. It says nothing yet about whether they'll pay. The one question to ask before day one.
 - [Your boss said yes. The board is reading a different case.](https://digitalventurestudio.com/blog/the-board-is-reading-a-different-case): In a corporation, a business case can pass your manager and the CEO and still get a no from the board. They are reading a different document.
 - [The benefit was never in the project](https://digitalventurestudio.com/blog/the-benefit-was-never-in-the-project): Every business case carries its benefit numbers, but whether anyone collects them depends on who holds the authority to make the change stick.
+- [The risk everyone knew about](https://digitalventurestudio.com/blog/the-risk-everyone-knew-about): Most of the projects I was sent in to rescue started with a risk everyone knew about and nobody had put in the schedule.
 
 ## Products
 
