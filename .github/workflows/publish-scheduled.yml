@@ -7,14 +7,19 @@ name: Publish scheduled posts
 # IMPORTANT: GitHub Actions cron is in UTC (NOT local time) and has no DST.
 # Canberra is AEDT (UTC+11) from the first Sunday in October to the first Sunday
 # in April, and AEST (UTC+10) the rest of the year. The cron must be moved twice a year.
-#   NOW (AEDT, set S263 6 Oct 2026):  Sun/Thu 21:15 UTC = Mon/Fri 08:15 AEDT
-#   FROM Sun 5 Apr 2027 (AEST):       change back to '15 22 * * 0,4'
+#   NOW (AEDT, set S269 12 Oct 2026): Sun/Thu 18:15 UTC = Mon/Fri 05:15 AEDT
+#   FROM Sun 5 Apr 2027 (AEST):       change to '15 19 * * 0,4' (= 05:15 AEST)
+# WHY 05:15, NOT 08:15 (S269, Rick's ruling): GitHub's scheduler is best-effort.
+#   Fri 9 Oct the 08:15 run fired at 12:14 AEDT (~4h late); Mon 12 Oct it fired at
+#   11:33 AEDT (3h18m late), both after a manual run had already published. Starting
+#   three hours early keeps a typical delay inside the morning. A run that fires late
+#   finds an empty queue and publishes nothing, so there is no double-post risk.
 # The publish script's date check uses Australia/Sydney, so the cron hour does not
 # change WHICH day a post publishes, only the hour.
 
 on:
   schedule:
-    - cron: '15 21 * * 0,4'   # Sun + Thu 21:15 UTC  →  Mon + Fri 08:15 AEDT (revert to 22 on 5 Apr 2027)
+    - cron: '15 18 * * 0,4'   # Sun + Thu 18:15 UTC  →  Mon + Fri 05:15 AEDT (move to 19 on 5 Apr 2027)
   workflow_dispatch: {}        # manual trigger — use this to TEST before relying on it
 
 permissions:
