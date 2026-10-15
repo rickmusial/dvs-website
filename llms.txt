@@ -57,6 +57,7 @@
 - [The benefit was never in the project](https://digitalventurestudio.com/blog/the-benefit-was-never-in-the-project): Every business case carries its benefit numbers, but whether anyone collects them depends on who holds the authority to make the change stick.
 - [The risk everyone knew about](https://digitalventurestudio.com/blog/the-risk-everyone-knew-about): Most of the projects I was sent in to rescue started with a risk everyone knew about and nobody had put in the schedule.
 - [The resource plan names roles, not people](https://digitalventurestudio.com/blog/the-resource-plan-names-roles-not-people): The resource plan had counted each of them as a filled role. Nobody recorded the load they were still carrying as a risk.
+- [The only ones left to take the blame](https://digitalventurestudio.com/blog/the-only-ones-left-to-take-the-blame): When a project’s commitments live in someone’s head, they leave with that person, and the blame lands on whoever’s left.
 
 ## Products
 
