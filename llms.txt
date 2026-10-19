@@ -5,7 +5,7 @@
 ## Core
 
 - [Digital Venture Studio — home](https://digitalventurestudio.com/): What DVS is, the method, products, and services.
-- [Writing (blog index)](https://digitalventurestudio.com/blog/): All essays on the go/no-go decision and founder counterintuitions.
+- [Writing (blog index)](https://digitalventurestudio.com/blog/): All essays on the go/no-go decision, for the people who assess business cases and the founders who make them.
 
 ## Writing
 
