@@ -60,6 +60,7 @@
 - [The only ones left to take the blame](https://digitalventurestudio.com/blog/the-only-ones-left-to-take-the-blame): When a project’s commitments live in someone’s head, they leave with that person, and the blame lands on whoever’s left.
 - [The best business case he’d seen](https://digitalventurestudio.com/blog/the-best-business-case-hed-seen): A business case that multiplies the expected cost has every reason to be sent back. This one wasn’t.
 - [Their own words were in it](https://digitalventurestudio.com/blog/their-own-words-were-in-it): Researchers study the projects that failed. One sign a project was going right was sitting in the approval dates.
+- [Agile never got rid of the business case](https://digitalventurestudio.com/blog/agile-never-got-rid-of-the-business-case): On one project, the most important document came before the business case. What the Agile Manifesto said about documents, and the question it was never written to answer.
 
 ## Products
 
