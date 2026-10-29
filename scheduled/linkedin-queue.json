@@ -377,10 +377,11 @@
     "id": "plated-business-case",
     "date": "2026-10-29",
     "visibility": "PUBLIC",
-    "status": "ready",
+    "status": "failed",
     "text": "Business cases have been plated up for decades. I reviewed plenty that looked finished, every heading in place, resting on assumptions nobody had checked.\n\nThe question I learned to ask was where each number came from: the business, or hope.\n\nIn one organisation, a new portfolio management structure meant the marketing department had to prepare business cases for the first time.\n\nPreviously, they were accustomed to getting the funding they requested. Nobody had required them to demonstrate why the expenditure was justified. Their first business cases reflected that. They were full of assumptions that had never been tested.\n\nI spent several sessions with the team working through the numbers, challenging the assumptions and getting each proposal into a form the senior management team could properly assess.\n\nThey all got there.\n\nSenior management had traditionally operated on the principle that whoever shouted the loudest won the day.\n\nThe portfolio management structure helped change that. It introduced a common basis for assessing competing proposals and made the assumptions visible.\n\nIt didn't take the decision away from management or the board. Nor should it have.\n\nWhat it did was make it harder to approve expenditure without understanding what was being assumed.\n\nAI makes the plating cheaper, but it doesn't make the ingredients any better.",
     "sightedBy": "Rick Musial",
     "sightedAt": "2026-10-28T07:25+11:00",
-    "note": "S285 Thursday slot test, post 1 of 4 (Documents/DVS_Thursday_Slot_Test_S284.md). Rick's own rewrite (07:23) + two edits he approved 07:25 (bridge line and last line cut); agent draft went through 5 panel+judge rounds first (knowledge/raw/S285_post_review.md). No firstComment and no link by test design. date is the Sydney date: fires at the 08:30 AEDT run on Thu 29 Oct."
+    "note": "S285 Thursday slot test, post 1 of 4 (Documents/DVS_Thursday_Slot_Test_S284.md). Rick's own rewrite (07:23) + two edits he approved 07:25 (bridge line and last line cut); agent draft went through 5 panel+judge rounds first (knowledge/raw/S285_post_review.md). No firstComment and no link by test design. date is the Sydney date: fires at the 08:30 AEDT run on Thu 29 Oct.",
+    "lastError": "LinkedIn POST failed: HTTP 401 — {\"status\":401,\"serviceErrorCode\":65602,\"code\":\"EXPIRED_ACCESS_TOKEN\",\"message\":\"The token used in the request has expired\"}"
   }
 ]
