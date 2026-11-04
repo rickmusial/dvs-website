@@ -386,5 +386,82 @@
     "urn": "urn:li:share:7521393140877058049",
     "postedAt": "2026-10-29T02:10:00Z",
     "postedBy": "Rick Musial, by hand ~13:10 AEDT after the 01:05Z run failed (LinkedIn token expired). Live text verified identical in Claude in Chrome 13:1x AEDT (S286). Thursday-test timing for this post: ~13:10, not 08:30."
+  },
+  {
+    "id": "own-words-whose-words",
+    "date": "2026-11-08",
+    "visibility": "PUBLIC",
+    "status": "held",
+    "text": "For most of my career, one sign told me a project was going well: the documentation.\n\nIf the key governance documents were written on time and approved by senior management, the project was usually in good shape. If they weren't getting done or weren't getting approved, that was a red flag, often weeks before the problem showed up in the budget or the schedule.\n\nBut a date alone wasn't enough. A document can be approved on time without anyone seriously questioning it.\n\nSo when I was drafting, I'd take each document to the senior managers one by one and have them tell me where they had difficulty with it. We'd resolve it at the time, with the general manager. Those discussions changed the document. Their concerns were addressed, and their wording often went into the text.\n\nThe credit belongs to the managers who gave the time. Reading a draft properly and arguing with it is work.\n\nIf you're reviewing a project, look at whose words are in the approved version.\n\nIt's very hard not to approve a document when your own words are in it.",
+    "firstComment": "The full post: https://digitalventurestudio.com/blog/their-own-words-were-in-it",
+    "draftedBy": "Agent, S293 (cut from Rick's published post; his sentences compressed, no new claims)",
+    "sourcePost": "blog/their-own-words-were-in-it.html (published 2026-10-23)",
+    "note": "DRAFT for Rick. Not sighted. status held until Rick sights it (sightedBy/sightedAt), then ready."
+  },
+  {
+    "id": "agile-cut-1-impact-document",
+    "date": "2026-11-11",
+    "visibility": "PUBLIC",
+    "status": "held",
+    "text": "Before one project was formally approved, a colleague who knew the system and I spent more than six weeks reviewing every point where the public met the organisation, and what would have to change behind each one.\n\nThe most important document we produced came before the business case. It was the impact document.\n\nIt set out three options – the minimum, the middle and the full – and the assumptions behind each. The business case used it to set out the investment decision. The design drew on it, and was complete enough that the programmers used it as their specification. So did the testing.\n\nThe people who approved, built and tested the system all worked from that one piece of work.\n\nNo methodology asked for those six weeks. We spent them finding out what would have to change.",
+    "firstComment": "The full post: https://digitalventurestudio.com/blog/agile-never-got-rid-of-the-business-case",
+    "draftedBy": "Agent, S293 (cut from Rick's published post; his sentences compressed, no new claims)",
+    "sourcePost": "blog/agile-never-got-rid-of-the-business-case.html (published 2026-10-26)",
+    "note": "DRAFT for Rick. Not sighted. status held until Rick sights it (sightedBy/sightedAt), then ready."
+  },
+  {
+    "id": "agile-cut-2-manifesto",
+    "date": "2026-11-22",
+    "visibility": "PUBLIC",
+    "status": "held",
+    "text": "Admitting you wrote a complete design document can sound like a confession these days. Agile is supposed to have settled that.\n\nThe Agile Manifesto (2001) values \"Working software over comprehensive documentation\". It also says, \"while there is value in the items on the right, we value the items on the left more\".\n\nDocuments still had value. Working software came first.\n\nAnd the Manifesto wasn't written to answer the question that comes first: should the organisation spend the money at all? SAFe calls for a lean business case for large initiatives. PRINCE2 Agile keeps continued business justification as a principle.\n\nAgile changed how teams could learn during delivery. It didn't remove the need to learn before committing the organisation's money.",
+    "firstComment": "The full post: https://digitalventurestudio.com/blog/agile-never-got-rid-of-the-business-case",
+    "draftedBy": "Agent, S293 (cut from Rick's published post; his sentences compressed, no new claims)",
+    "sourcePost": "blog/agile-never-got-rid-of-the-business-case.html (published 2026-10-26)",
+    "note": "DRAFT for Rick. Not sighted. status held until Rick sights it (sightedBy/sightedAt), then ready. Moved off Thursday (S293, Rick: Thursday Slot Test continues)."
+  },
+  {
+    "id": "green-binders-on-the-shelf",
+    "date": "2026-11-15",
+    "visibility": "PUBLIC",
+    "status": "held",
+    "text": "Early in my career, in the mid-1980s, I worked for the Chief of Air Force Materiel in Canberra, where the Air Force's major and minor projects were managed.\n\nThe project management method was called Spectrum. It took up two shelves of a bookcase, in green binders.\n\nThey mostly sat on the shelf.\n\nI wasn't a project officer on the major projects, so I can't say how well it was enforced. The organisation was changing, and I suspect Spectrum belonged to an earlier way of managing projects. It remained the formal doctrine. I couldn't tell from those binders how much of it was still practised.\n\nA method can remain formally current without telling you how projects are being managed.\n\nWhen an organisation changes, how does it know whether its project management standards still describe the way projects are actually run?",
+    "firstComment": "The full post: https://digitalventurestudio.com/blog/two-shelves-of-green-binders",
+    "draftedBy": "Agent, S293 (cut from Rick's published post; his sentences compressed, no new claims)",
+    "sourcePost": "blog/two-shelves-of-green-binders.html (published 2026-10-30)",
+    "note": "DRAFT for Rick. Not sighted. status held until Rick sights it (sightedBy/sightedAt), then ready."
+  },
+  {
+    "id": "ssrp-cut-1-steel-washer",
+    "date": "2026-11-18",
+    "visibility": "PUBLIC",
+    "status": "held",
+    "text": "When I was in the Air Force in Canberra, there was a famous project called the Supply Systems Redevelopment Project, the SSRP. It was Defence's attempt to put the supply systems of the Army, Navy and Air Force onto one common system.\n\nI remember going into the Cameron Offices. The analysis was metres and metres of data mapping, up on the windows.\n\nIn 1990 the Canberra Times put the job at more than 1.5 million line items, worth over $5 billion. One steel washer had been found recorded more than a hundred times across the separate systems. Before three systems could become one, someone had to agree what each record meant.\n\nThe studies began in the mid-1970s. By July 1990, some of the team had taken to calling it the Tricentennial Project.",
+    "firstComment": "The full post: https://digitalventurestudio.com/blog/the-tricentennial-project",
+    "draftedBy": "Agent, S293 (cut from Rick's published post; his sentences compressed, no new claims)",
+    "sourcePost": "blog/the-tricentennial-project.html (published 2026-11-02)",
+    "note": "DRAFT for Rick. Not sighted. status held until Rick sights it (sightedBy/sightedAt), then ready."
+  },
+  {
+    "id": "ssrp-cut-2-paper-is-cheap",
+    "date": "2026-11-25",
+    "visibility": "PUBLIC",
+    "status": "held",
+    "text": "Paper is cheap while each draft settles a question.\n\nI've argued for iterating on paper first, because drafts cost less than delivery. The SSRP, Defence's long-running supply systems project, shows what that argument depends on. When an early decision or the politics keeps reopening the questions, the paper becomes the expense: years of salaries, offices and computers.\n\nThe people doing the work did eventually replace most of the old supply systems. Defence had a hard problem, and it would be wrong to call the whole undertaking a failure.\n\nBut delivery doesn't tell you whether the earlier years were well spent. Some analysis goes on because the problem is hard. Some goes on because the organisation can't agree on a decision.\n\nIs each round of analysis closing a question, or opening the next one?\n\nHowever many metres of paper went up on the windows, only the decisions told you whether the project was moving.",
+    "firstComment": "The full post: https://digitalventurestudio.com/blog/the-tricentennial-project",
+    "draftedBy": "Agent, S293 (cut from Rick's published post; his sentences compressed, no new claims)",
+    "sourcePost": "blog/the-tricentennial-project.html (published 2026-11-02)",
+    "note": "DRAFT for Rick. Not sighted. status held until Rick sights it (sightedBy/sightedAt), then ready. Moved off Thursday (S293, Rick: Thursday Slot Test continues)."
+  },
+  {
+    "id": "just-another-hub",
+    "date": "2026-11-05",
+    "visibility": "PUBLIC",
+    "status": "ready",
+    "text": "I once developed a project management method for an organisation. But the real test of whether it worked came after I left.\n\nWhile the author is still there, a method can appear to be working well. People know where to go with questions, problems and decisions. Everything flows through the person who designed it.\n\nThat can look like success. It can also disguise a dependency.\n\nThe organisation continued using the method long after I'd gone. I'd like to say that was because I'd written something particularly clever. It was because the people responsible for using it had taken ownership. They understood it, adapted it and made it part of how they worked.\n\nThe credit belongs to them.\n\nReviewers examining a method, a project plan or a business case should look past whether it works today, to whether the organisation has the capability and ownership to make it work tomorrow.\n\nA method that only works while its author is in the room is just another hub.",
+    "draftedBy": "Rick's own rewrite (07:55) of an agent draft from his S284 Erhan reply; two floor fixes + one opener fix by agent, approved by Rick 07:56",
+    "note": "Thursday Slot Test post 2 of 4 (Documents/DVS_Thursday_Slot_Test_S284.md). No firstComment and no link by test design. date is the Sydney date: fires at the 08:30 AEDT run on Thu 5 Nov.",
+    "sightedBy": "Rick Musial",
+    "sightedAt": "2026-11-05T07:56+11:00"
   }
 ]
