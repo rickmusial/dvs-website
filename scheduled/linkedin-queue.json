@@ -457,11 +457,13 @@
     "id": "just-another-hub",
     "date": "2026-11-05",
     "visibility": "PUBLIC",
-    "status": "ready",
+    "status": "posted",
     "text": "I once developed a project management method for an organisation. But the real test of whether it worked came after I left.\n\nWhile the author is still there, a method can appear to be working well. People know where to go with questions, problems and decisions. Everything flows through the person who designed it.\n\nThat can look like success. It can also disguise a dependency.\n\nThe organisation continued using the method long after I'd gone. I'd like to say that was because I'd written something particularly clever. It was because the people responsible for using it had taken ownership. They understood it, adapted it and made it part of how they worked.\n\nThe credit belongs to them.\n\nReviewers examining a method, a project plan or a business case should look past whether it works today, to whether the organisation has the capability and ownership to make it work tomorrow.\n\nA method that only works while its author is in the room is just another hub.",
     "draftedBy": "Rick's own rewrite (07:55) of an agent draft from his S284 Erhan reply; two floor fixes + one opener fix by agent, approved by Rick 07:56",
     "note": "Thursday Slot Test post 2 of 4 (Documents/DVS_Thursday_Slot_Test_S284.md). No firstComment and no link by test design. date is the Sydney date: fires at the 08:30 AEDT run on Thu 5 Nov.",
     "sightedBy": "Rick Musial",
-    "sightedAt": "2026-11-05T07:56+11:00"
+    "sightedAt": "2026-11-05T07:56+11:00",
+    "urn": "urn:li:share:7523897924922003456",
+    "postedAt": "2026-11-05T00:04:13.674Z"
   }
 ]
