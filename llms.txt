@@ -67,6 +67,7 @@
 - [Handing over the controls](https://digitalventurestudio.com/blog/handing-over-the-controls): A Wing Commander flew each manoeuvre first, then handed over the controls, his hand still on the stick. When a method changes hands, can the new people run it?
 - [The second reader](https://digitalventurestudio.com/blog/the-second-reader): A checking tool we’d built said three reviewers had read a report. One had dropped out part-way. When AI removes the delay, who still reads it second?
 - [Give way on everything except the finding](https://digitalventurestudio.com/blog/give-way-on-everything-except-the-finding): When a review disappoints the person who owns the work, there are two easy ways to get it wrong. The answer is in how water behaves.
+- [Taking it upward](https://digitalventurestudio.com/blog/taking-it-upward): A flight trial doesn’t wait for a purchase order. Knowing where your authority ends tells you when to take the decision upward, and to whom.
 
 ## Products
 
