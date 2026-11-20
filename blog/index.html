@@ -247,6 +247,24 @@
       color: var(--mid-grey);
       margin-left: auto;
     }
+    /* Small cards: category on its own line, date + read time on one line beneath (S307, Rick 20:20) */
+    .post-card:not(.featured) .post-meta {
+      display: grid;
+      grid-template-columns: auto auto;
+      align-items: center;
+      row-gap: 10px;
+    }
+    .post-card:not(.featured) .post-category {
+      grid-column: 1 / -1;
+      justify-self: start;
+    }
+    .post-card:not(.featured) .post-date,
+    .post-card:not(.featured) .post-read-time {
+      white-space: nowrap;
+    }
+    .post-card:not(.featured) .post-read-time {
+      justify-self: end;
+    }
     .post-card h2 {
       font-family: var(--serif);
       font-size: 21px;
