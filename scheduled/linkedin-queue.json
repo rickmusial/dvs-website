@@ -39,13 +39,16 @@
     "id": "used-not-usefully-thursday",
     "date": "2026-11-26",
     "visibility": "PUBLIC",
-    "status": "ready",
+    "status": "posted",
     "text": "A system can be used by everyone and still fail to deliver the value that justified buying it.\n\nMost of my projects were in corporates and government. One I remember involved a document management system.\n\nIt was implemented, and people used it. But not quite in the way the organisation had intended.\n\nThey were used to saving their work on their D drive.\n\nPeople used the parts that were useful to themselves. The parts that were useful to the organisation as a whole took longer and helped someone else.\n\nSo they were the parts that got skipped.\n\nA login count won't show you that. The system is busy. The value isn't there.\n\nNewer tools haven't changed the habit. The D drive just has a new name. It's called OneDrive.",
     "firstComment": "Who does the extra work, and who gets the benefit? If they're different people, what makes the first one do it?\n\nThe full article: https://www.linkedin.com/pulse/used-usefully-rick-musial-msymc/",
     "draftedBy": "Rick's own rewrite (13:44 S312) of an agent cut built only from his published 'Used, but not usefully'; first comment = his article's question + 'The full article:' link",
     "note": "Thursday post pointing at the latest Article (Rick S312 13:22). Approved by Rick 13:45 25 Nov ('Yes.'). date is the Sydney date: fires at the 08:30 AEDT run on Thu 26 Nov.",
     "sightedBy": "Rick Musial",
-    "sightedAt": "2026-11-25T13:45+11:00"
+    "sightedAt": "2026-11-25T13:45+11:00",
+    "urn": "urn:li:share:7531562412823531520",
+    "postedAt": "2026-11-26T03:40:09.718Z",
+    "commentUrn": "7531562415570702336"
   },
   {
     "id": "second-opinion-you-already-know",
